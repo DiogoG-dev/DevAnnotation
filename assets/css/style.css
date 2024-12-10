@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    text-decoration: none;
+}
+body {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        'Open Sans',
+        'Helvetica Neue',
+        sans-serif;
+    padding-top: 87px;
+}
+header {
+    width: 100%;
+    background-color: rgb(25, 25, 25);
+    position: fixed;
+    top: 0px;
+}
+
+#title {
+    text-align: center;
+}
+
+main {
+    width: 50%;
+}
+
+footer {
+    height: 150px;
+    align-content: center;
+}

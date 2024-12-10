@@ -1,0 +1,104 @@
+#formTitle {
+    text-align: center;
+}
+
+.displayBlock {
+    display: block;
+}
+
+.cardWithExample{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#mediaCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imgWidth {
+    width: 300px;
+}
+
+#widthHeigthCard {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pai {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}
+
+#filho {
+    width: 50%;
+    height: 50%;
+    background-color: yellow;
+    color: black;
+}
+
+#cardBoxModel {    
+    background-color: rgb(255, 255, 255);
+    color: black;
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#boxPai {
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+#boxFilhoUm {
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    margin: 15px 7px;
+    border: 5px dashed black;
+}
+
+#boxFilhoDois {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    margin: 100px 30px;
+    border-radius: 50%;
+    border: 7px double white;
+}
+
+#bodyEx{
+    background-color: green;
+    height: 400px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imgEx {
+    background-image: url('../assets/images/Project_Zomboid_Capa.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 12%;
+    height: 350px;
+    width: 300px;
+}

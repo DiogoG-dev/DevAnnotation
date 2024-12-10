@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/modules.css">
+    <link rel="stylesheet" href="style-htmlCss.css">
+    <title>DevAnnotation</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <h1>HTML e CSS Modernos</h1>
+        </div>
+    </header>
+    <main>
+        <div>
+            <div>
+                <div class="topics" id="topicOne">
+                    <h2>Tags:</h2>
+                    <p>
+                        As tags em <b>HTML</b> são utilizadas para estruturar um conteúdo, definir a aparência e o comportamente dos 
+                        elementos em uma página web. A maioria das tags seguem o padrão de abertura e fechamento, mas existem tags sem fechamento.
+                    </p>
+                    <h4>Tags de Estruturação:</h4>
+                    <div class="card">
+                        <div class="comment">[ html ]</div>
+                        <code>
+                            <pre>&lt;html&gt;&lt;/html&gt; <span class="comment">&lt;!--Define o documento HTML como um todo--&gt;</span></pre>
+                            <pre>&lt;head&gt;&lt;/head&gt; <span class="comment">&lt;!--Responsável por conter informações sobre a página (metadados), títulos e links CSS--&gt;</span></pre>
+                            <pre>&lt;title&gt;&lt;/title&gt; <span class="comment">&lt;!--Define o título da página, exibido na aba de navegação--&gt;</span></pre>
+                            <pre>&lt;body&gt;&lt;/body&gt; <span class="comment">&lt;!--Contém todo o conteúdo visível da página--&gt;</span></pre>
+                            <pre>&lt;header&gt;&lt;/header&gt; <span class="comment">&lt;!--Define todo o conteúdo do cabeçalho, geralmente a navegação--&gt;</span></pre>
+                            <pre>&lt;main&gt;&lt;/main&gt; <span class="comment">&lt;!--Define o conteúdo central da página, geralmente os mais importantes--&gt;</span></pre>
+                            <pre>&lt;footer&gt;&lt;/footer&gt; <span class="comment">&lt;!--Define o conteúdo do rodapé, geralmente informações extras e de domínio--&gt;</span></pre><br>
+                            <pre>&lt;div&gt;&lt;/div&gt; <span class="comment">&lt;!--É uma tag genérica e não segue uma regra semântica, útil em diversas situações--&gt;</span></pre>
+                            <pre>&lt;span&gt;&lt;/span&gt; <span class="comment">&lt;!--Assim como &lt;div&gt; não segue uma regra semântica, útil para estilizar partes específicas de texto--&gt;</span></pre>
+                        </code>
+                    </div>
+
+                    <h4>Tags de Texto:</h4>
+                    <div class="card">
+                        <div class="comment">[ html ]</div>
+                        <code>
+                            <pre>&lt;h1&gt;&lt;/h1&gt; <span class="comment">&lt;!--Define títulos em diferentes níveis, do &lt;h1&gt; (maior) até o &lt;h6&gt; (menor)--&gt;</span></pre>
+                            <pre>&lt;p&gt;&lt;/p&gt; <span class="comment">&lt;!--Define um parágrafo--&gt;</span></pre>
+                            <pre>&lt;b&gt;&lt;/b&gt; <span class="comment">&lt;!--Define um texto em negrito, ênfase--&gt;</span></pre>
+                            <pre>&lt;i&gt;&lt;/i&gt; <span class="comment">&lt;!--Define um texto em itálico, ênfase--&gt;</span></pre>
+                            <pre>&lt;br&gt; <span class="comment">&lt;!--Insere uma quebra de linha--&gt;</span></pre>
+                        </code>
+                    </div>
+
+                    <h4>Tags de Links:</h4>
+                    <div class="card">
+                        <div class="comment">[ html ]</div>
+                        <code>
+                            <pre>&lt;img&gt; <span class="comment">&lt;!--Insere uma imagem a página--&gt;</span></pre>
+                            <pre>&lt;a&gt;&lt;/a&gt; <span class="comment">&lt;!--Insere um link a página--&gt;</span></pre>
+                        </code>
+                    </div>
+                    
+                    <h4>Tags de Lista:</h4>
+                    <div class="card">
+                        <div class="comment">[ html ]</div>
+                        <code>
+                            <pre>&lt;ul&gt;&lt;/ul&gt; <span class="comment">&lt;!--Cria uma lista não ordenada (com marcadores) e contém os itens de lista--&gt;</span></pre>
+                            <pre>&lt;ol&gt;&lt;/ol&gt; <span class="comment">&lt;!--Cria uma lista ordenada (com números) e também contém os itens de lista--&gt;</span></pre>
+                            <pre>&lt;li&gt;&lt;/li&gt; <span class="comment">&lt;!--Define os itens da lista--&gt;</span></pre>
+                        </code>
+                    </div>
+
+                    <h4>Tags de Tabela:</h4>
+                    <div class="card">
+                        <div class="comment">[ html ]</div>
+                        <code>
+                            <pre>&lt;table&gt;&lt;/table&gt; <span class="comment">&lt;!--Define uma tabela--&gt;</span></pre>
+                            <pre>&lt;tr&gt;&lt;/tr&gt; <span class="comment">&lt;!--Define uma linha da tabela--&gt;</span></pre>
+                            <pre>&lt;td&gt;&lt;/td&gt; <span class="comment">&lt;!--Define uma cédula de dados dentro da tabela--&gt;</span></pre>
+                        </code>
+                    </div>
+                </div>
+
+                <div class="topics" id="topicTwo">
+                    <h2>Atributos:</h2>
+                    <p>
+                        Os atributos em <b>HTML</b> tem o objetivo de modificar o comportamento e a aparência dos elementos na tag, 
+                        configurar seus valores e definir como eles interagem com o usuário ou com outros elementos. Existem diversos 
+                        atributos para tags e muitas tags tem seus próprios atributos.
+                    </p>
+                    <h4>Exemplos de Atributos:</h4>
+                    <div class="card">
+                        <div class="comment">[ html ]</div>
+                        <code>
+                            <pre>&lt;div class=""&gt; &lt;/div&gt; <span class="comment">&lt;!--Atribui uma classe ao elemento (utilizada para referenciar muitos elementos)--&gt;</span></pre>
+                            <pre>&lt;div id=""&gt; &lt;/div&gt; <span class="comment">&lt;!--Atribui um id ao elemento (utilizada para referenciar um único elemento)--&gt;</span></pre>
+                            <pre>&lt;div lang=""&gt; &lt;/div&gt; <span class="comment">&lt;!--Define o idioma principal do elemento--&gt;</span></pre>
+                            <pre>&lt;div alt=""&gt; &lt;/div&gt; <span class="comment">&lt;!--Muito utilizado na tag de imagem, pois define um texto alternativo, SEO--&gt;</span></pre>
+                            <pre>&lt;div title=""&gt; &lt;/div&gt; <span class="comment">&lt;!--Exibe um texto ao passar o mouse--&gt;</span></pre>
+                            <pre>&lt;div href=""&gt; &lt;/div&gt; <span class="comment">&lt;!--Usado na tag de link para definir uma URL--&gt;</span></pre>
+                            <pre>&lt;div src=""&gt; &lt;/div&gt; <span class="comment">&lt;!--Usado em tags de imagem e scripts, para especificar o caminho do arquivo e mostra-lo--&gt;</span></pre>
+                        </code>
+                    </div>
+                </div>
+
+                <div class="topics" id="topicThree">
+                    <h2>Formulários:</h2>
+                    <p>
+                        O objetivo principal dos formulários em <b>HTML</b> é coletar dados do usuário e enviá-los para algum sistema interessado. 
+                        É amplamente utilizado em páginas web para a captura de informações, como: cadastros, logins, pesquisas, comentários e etc.
+                    </p>
+                    <h4>Principais Tags:</h4>
+                    <div class="card">
+                        <div class="comment">[ html ]</div>
+                        <code>
+                            <pre>&lt;form&gt;&lt;/form&gt; <span class="comment">&lt;!--Cria um formulário para entrada de dados--&gt;</span></pre>
+                            <pre>&lt;input&gt;&lt;/input&gt; <span class="comment">&lt;!--Define um campo de entrada de dados--&gt;</span></pre>
+                            <pre>&lt;label&gt;&lt;/label&gt; <span class="comment">&lt;!--Serve como título para a tag &lt;input&gt;--&gt;</span></pre>
+                            <pre>&lt;select&gt;&lt;/select&gt; <span class="comment">&lt;!--Cria uma caixa de seleção de itens--&gt;</span></pre>
+                            <pre>&lt;option&gt;&lt;/option&gt; <span class="comment">&lt;!--Referencia um item dentro &lt;select&gt;--&gt;</span></pre>
+                            <pre>&lt;button&gt;&lt;/button&gt; <span class="comment">&lt;!--Cria um botão interativo--&gt;</span></pre>
+                        </code>
+                    </div>
+
+                    <h4>Principais Atributos:</h4>
+                    <div class="card">
+                        <div class="comment">[ html ]</div>
+                        <code>
+                            <pre>&lt;input placeholder=""&gt; <span class="comment">&lt;!--Usado em tags de campo de entrada para dar mais informações--&gt;</span></pre>
+                            <pre>&lt;input value=""&gt; <span class="comment">&lt;!--Define o valor padrão de uma tag (campo ou botão)--&gt;</span></pre>
+                            <pre>&lt;input type=""&gt; <span class="comment">&lt;!--Geralmente utilizado em formulários, definindo o tipo e o formato do objeto--&gt;</span></pre>
+                        </code>
+                    </div>
+                    <p>
+                        Para o atributo "<i>type</i>" existem diversos formatos, os principais deles são: <b>email</b> (caixa de verificação), <b>password</b> (aculta senha), 
+                        <b>text</b> (caixa de texto), <b>CheckBox</b> (caixas selecionável), <b>radio</b> (circulo selecionável), <b>range</b> (faixa arrastável), 
+                        <b>number</b> (contador de números), <b>file</b> (seleciona arquivo) e <b>date</b> (calendário selecionável).
+                    </p>
+
+                    <h4>Exemplo de Uso:</h4>
+                    <div class="doubleCard">
+                        <div class="cardWithExample">
+                            <p id="formTitle"><b>Exemplo de Formulário</b></p>
+                            <form>
+                                <label for="email" class="displayBlock">E-mail:</label>
+                                <input type="email" id="email" placeholder="Digite seu email">
+                                <label for="password" class="displayBlock">Senha</label>
+                                <input type="password" id="password" placeholder="Digite sua senha">
+                                <br><br>
+                                <button>Entrar</button>
+                            </form>
+                        </div>
+
+                        <div class="codeCard">
+                            <div class="comment">[ html ]</div>
+                            <code>
+                                <pre>&lt;form&gt;</pre>
+                                <pre>   &lt;label for="email" style="display: block;"&gt;E-mail:&lt;/label&gt;</pre>
+                                <pre>   &lt;input type="email" id="email" placeholder="Digite seu email"&gt;</pre>
+                                <pre>   &lt;label for="password" style="display: block;"&gt;E-mail:&lt;/label&gt;</pre>
+                                <pre>   &lt;input type="password" id="password" placeholder="Digite seu email"&gt;</pre>
+                                <pre>   &lt;br&gt;&lt;br&gt;</pre>
+                                <pre>   &lt;button&gt;Entrar&lt;/button&gt;</pre>
+                                <pre>&lt;/form&gt;</pre>
+                            </code>
+                        </div>
+                    </div>
+                    <p>Veja alguns exemplos mais completos de formulário <b><a href="../exercises/form/formExample.html" target="_blank">aqui!</a></b></p>
+                </div>
+                <div class="topics" id="topicFour">
+                    <h2>Tags de Mídia:</h2>
+                    <p>
+                        Como o título já diz, as tags de mídia são responsáveis por definir as mídias que poderam ser visualizadas na página web.
+                        As mídias mais comuns de serem encontradas em sites são: imagens, vídeos e audios.
+                    </p>
+                    <div class="card">
+                        <div class="comment">[ html ]</div>
+                        <code>
+                            <pre>&lt;img&gt; <span class="comment">&lt;!--Responsável por mostrar imagens na página--&gt;</span></pre>
+                            <pre>&lt;video&gt; &lt;/video&gt; <span class="comment">&lt;!--Responsável por mostrar vídeos na página--&gt;</span></pre>
+                            <pre>&lt;audio&gt; &lt;/audio&gt; <span class="comment">&lt;!--Responsável por mostrar audios na página--&gt;</span></pre><br>
+                            <pre>&lt;iframe&gt; &lt;/iframe&gt; <span class="comment">&lt;!--Apesar de não ser uma tag de mídia pode ser um adicional visualizável--&gt;</span></pre>
+                        </code>
+                    </div>
+                    <p>Ambas as tags utilizam o atributo <i>"src"</i> para mostrar o caminho da mídia a ser mostrada.</p>
+                    <h4>Exemplo de Uso:</h4>
+                    <div class="doubleCard">
+                        <div class="cardWithExample" id="mediaCard">
+                            <p><b>Exemplo de Imagem e Áudio</b></p>
+                            <img src="../assets/images/imgExample.jpg" id="imgWidth">
+                            <audio id="audio" controls>
+                                <source src="../assets/media/Ring05.wav" type="audio/wav">
+                                    Seu navegador não possui suporte para esse audio!
+                                </source>
+                            </audio>
+                            <div>
+                                <button id="buttonPlay" onclick="document.getElementById('audio').play()">Play</button>
+                                <button id="buttonPause" onclick="document.getElementById('audio').pause()">Pause</button>
+                            </div>
+                        </div>
+
+                        <div class="codeCard">
+                            <div class="comment">[ html ]</div>
+                            <code>
+                                <pre>&lt;img src="../Midias/ImgExample.jpg" styte="width: 300px;"&gt;</pre>
+                                <pre>&lt;audio id="audio" controls&gt;</pre>
+                                <pre>   &lt;source src="..Midias/Ring05.waw" type="audio/wav"&gt;</pre>
+                                <pre>       Seu navegador não possui suporte para esse audio!</pre>
+                                <pre>   &lt;/source&gt;</pre>
+                                <pre>&lt;/audio&gt;</pre>
+                                <pre>&lt;button onclick="document.getElementById('audio').play()"&gt;Play&lt;/button&gt;</pre>
+                                <pre>&lt;button onclick="document.getElementById('audio').Pause()"&gt;Pause&lt;/button&gt;</pre>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                <div class="topics" id="topicFive">
+                    <h2>Style, Script e Âncora:</h2>
+                    <p>
+                        A tag <strong>&lt;style&gt;</strong> é responsável por armazenar informações relacionadas a estilização da página, pode ser inserida diretamente 
+                        no "<i>head</i>", mas é uma boa prática criar um arquivo separado e linca-lo posteriormente. Já a tag <strong>&lt;script&gt;</strong> é 
+                        responsável por conter instruções relacionadas ao funcionamento da página, também poder ser inserida diretamente no "<i>head</i>", 
+                        mas é uma boa prática criar um arquivo separado e linca-lo posteriormente no final do <strong>&lt;body&gt;</strong>. Por fim a tag <strong>&lt;a&gt;</strong> 
+                        é responsável por definir um link navegável entre páginas.
+                    </p>
+                    <div class="card">
+                        <div class="comment">[ html ]</div>
+                        <code>
+                            <pre>&lt;style&gt; body { background-color: red;} &lt;/style&gt; <span class="comment">&lt;!--Deixa a cor de fundo da página vermelho--&gt;</span></pre>
+                            <pre>&lt;script&gt; alert("Exemplo de script js") &lt;/script&gt; <span class="comment">&lt;!--Responsável por mostrar uma caixa de alerta ao abrir a página--&gt;</span></pre>
+                            <pre>&lt;p&gt;Acesse o &lt;a href="https://google.com" target="_blank"&gt;link&lt;/a&gt;!&lt;p&gt; <span class="comment">&lt;!--Gera um link de navegação para o Google em uma nova aba--&gt;</span></pre>
+                        </code>
+                    </div>
+                </div>
+                <div class="topics" id="topicSix">
+                    <h2>Seletores CSS:</h2>
+                    <p>
+                        Os seletores CSS mais utilizados são "<i>id</i>" (representado por #), "<i>class</i>" (presentado por .) e a própria "<i>tag</i>" (presentada pelo nome da tag).
+                    </p>
+                    <div class="doubleCard">
+                        <div class="codeCard">
+                            <div class="comment">[ html ]</div>
+                            <code>
+                                <pre>&lt;div id="form"&gt; &lt;/div&gt; <span class="comment">&lt;!--Para elemento único--&gt;</span></pre><br><br>
+                                <pre>&lt;div class="topics"&gt; &lt;/div&gt; <span class="comment">&lt;!--Para conjunto de elementos--&gt;</span></pre><br><br>
+                                <pre>&lt;body&gt; &lt;/body&gt; <span class="comment">&lt;!--Para todas da mesma tag--&gt;</span></pre>
+                            </code>
+                        </div>
+
+                        <div class="codeCard">
+                            <div class="comment">[ css ]</div>
+                            <code>
+                                <pre>#form {</pre>
+                                <pre>   text-align: start;</pre>
+                                <pre>   width: 100%;</pre>
+                                <pre>   display: flex;</pre>
+                                <pre>   flex-direction: row;</pre>
+                                <pre>   justify-content: space-around;</pre>
+                                <pre>}</pre>
+                                <pre>.topics {</pre>
+                                <pre>   color: rgb(150, 150, 150);</pre>
+                                <pre>}</pre>
+                                <pre>body {</pre>
+                                <pre>   background-color: rgba(255, 255, 255, .1);</pre>
+                                <pre>}</pre>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                <div class="topics" id="topicSeven">
+                    <h2>Link CSS:</h2>
+                    <p>
+                        Fazer o link de estilo CSS de um arquivo externo é uma das melhores práticas que o programador deve utilizar, com isso é 
+                        possível organizar os códigos de forma mais dinâmica e armônica e reutilizar os mesmo estilos em outras páginas. Esse link 
+                        CSS será inserido no "<i>head</i>" da seguinte maneira:
+                    </p>
+                    <div class="card">
+                        <div class="comment">[ css ]</div>
+                        <code>
+                            <pre>&lt;head&gt;</pre>
+                            <pre>   &lt;link rel="stylesheet" hrf="./style.css"&gt;</pre>
+                            <pre>&lt;head&gt;</pre>
+                        </code>
+                    </div>
+                    <p>
+                        Sendo o "<i>rel</i>" responsável por definir o tipo de link como sendo "stylesheet" (Folha de estilo) e "<i>hrf</i>"
+                        definindo o caminho em que essa folha de estilo se encontra. Com isso todos o estilos definidos no arquivo seram utilizados 
+                        na página.
+                    </p>
+                </div>
+                <div class="topicEigth">
+                    <h2>Unidades de Medida:</h2>
+                    <p>
+                        As unidades de medida em CSS são divididas em dois tipos, <b>absolutas</b> (define o seu próprio valor) e <b>relativas</b> 
+                        (seu valor depende do valor da tag pai). Existem diversas unidades de medida em css, porém as mais utilizadas delas são:
+                    </p>
+                    <div class="card">
+                        <div class="comment">[ css ]</div>
+                        <code>
+                            <pre><span class="comment">&lt;!--Unidade de Medida absoluta--&gt;</span></pre>
+                            <pre>body {</pre>
+                            <pre>   font-size: 20px; <span class="comment">&lt;!--20 pixels da tela--&gt;</span></pre>
+                            <pre>}</pre><br>
+                            <pre><span class="comment">&lt;!--Unidades de Medida Relativa--&gt;</span></pre>
+                            <pre>div {</pre>
+                            <pre>   font-size: 2rem; <span class="comment">&lt;!--Refere-se a duas unidades do valor da tag "<i>html</i>", 2 x 16px = 32px--&gt;</span></pre>
+                            <pre>   font-size: 1em; <span class="comment">&lt;!--Refere-se a uma unidade do valor da tag pai "<i>body</i>", 1 x 20px = 20px--&gt;</span></pre>
+                            <pre>   width: 50%; <span class="comment">&lt;!--Define que o tamanho da largura de "<i>p</i>" é a metade da largura da tag pai "<i>body</i>"--&gt;</span></pre>
+                            <pre>}</pre>                            
+                        </code>
+                    </div>
+                </div>
+                <div class="topicNine">
+                    <h2>Width e Heigth:</h2>
+                    <p>
+                        Ainda relacionado ao tópico anterior, para definirmos a largura e a altura de uma tag podemos fazer uso das unidades de 
+                        medida absolutas e relativas. Para este tópico utilizaremos a unidade de medida relativa %(porcentagem), definindo o valor 
+                        da tag filha de acordo com o valor da tag pai.
+                    </p>
+                    <div class="tripleCard">
+                        <div id="widthHeigthCard">
+                            <h4>Exemplos de Largura e Altura</h4>
+                            <div>
+                                <div id="pai">
+                                    <div id="filho">Filho</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="codeCard">
+                            <div class="comment">[ html ]</div>
+                            <code>
+                                <pre>&lt;div id="pai"&gt;</pre>
+                                <pre>   &lt;div id="filho"&gt;Filho&lt;/div&gt;</pre>
+                                <pre>&lt;/div&gt;</pre>
+                            </code>
+                        </div>
+                        <div class="codeCard">
+                            <div class="comment">[ css ]</div>
+                            <code>
+                                <pre>#pai {</pre>
+                                <pre>   width: 200px;</pre>
+                                <pre>   heigth: 200px;</pre>
+                                <pre>   background-color: green;</pre>
+                                <pre>}</pre><br>
+                                <pre>#filho {</pre>
+                                <pre>   width: 50%</pre>
+                                <pre>   heigth: 50%</pre>
+                                <pre>   background-color: yellow;</pre>
+                                <pre>   color: black;</pre>
+                                <pre>}</pre>
+                            </code>
+                        </div>                      
+                    </div>
+                <div class="topicTen">
+                    <h2>CSS Reset:</h2>
+                    <p>
+                        Por padrão todos os navegadores tem uma estilização própria inicial para as páginas html, que podem interferir diretamente 
+                        em estilizações futuras aplicadas a estas páginas. Por isso antes de dar início a estilização de toda página é necessário 
+                        fazer um "Reset" no arquivo CSS. 
+                    </p>
+                    <h4>Exemplo de Reset Básico:</h4>
+                    <div class="card">
+                        <div class="comment">[ css ]</div>
+                        <code>
+                            <pre>* {</pre>
+                            <pre>   margin: 0;</pre>
+                            <pre>   padding: 0;</pre>
+                            <pre>   text-decoration: none;</pre>
+                            <pre>}</pre>
+                        </code>
+                    </div>
+                    <p>
+                        O símbolo de * (asterisco) representa todos os elementos contidos no html, onde teram suas margens internas e externas e 
+                        decoração de textos resetadas.
+                    </p>
+                </div>
+                <div class="topicEleven">
+                    <h2>Box Model:</h2>
+                    <p>
+                        É importante sabermos que toda página html é constituida pela organização de diversos blocos de conteúdos, uns dentro de 
+                        outros blocos e uns ao lado de outros blocos. E para que possamos organizar esses blocos de forma adequada precisamos 
+                        aprender sobre as propriedades dos blocos, as principais propriedades deles são "margin, padding e border".
+                    </p>
+                    <ul>
+                        <li>
+                            <b>margin:</b> refere-se ao distânciamento de um elemento em relação aos elementos que estão fora dele. Tipos de uso: 
+                            "<b>margin: (n)px;</b>" ou "<b>margin: (n)px (n)px (n)px (n)px;</b>" (para todos os lados), "<b>margin: (n)px (n)px;</b>" 
+                            (top-botton e left-rigth), "<b>margin-top/rigth/botton/left: (n)px;</b>" (para lados únicos).
+                        </li>
+                        <li>
+                            <b>padding:</b> refere-se ao distânciamento de um elemento em relação aos elementos que estão dentro dele. Tipos 
+                            de uso: segue a mesma lógica de "margin".
+                        </li>
+                        <li>
+                            <b>border:</b> refere-se ao estilo da borda do bloco. Estrutura: "<b>border:</b> tamanho(<b>px ou %</b>) 
+                            tipo(<b>solid, double, dotted, dashed...</b>) cor(<b>white, black...</b>)" e "<b>border-radius:</b> tamanho do 
+                            arredondamento (<b>px ou %</b>)"
+                        </li>
+                    </ul>
+                    <div class="doubleCard">
+                        <div id="cardBoxModel">
+                            <h4>Propriedades de Bloco</h4>
+                            <div id="boxPai">
+                                <div id="boxFilhoUm"></div>
+                                <div id="boxFilhoDois"></div>
+                            </div>
+                        </div>
+                        <div class="codeCard">
+                            <div class="comment">[ css ]</div>
+                            <code>
+                                <pre>#boxPai {</pre>
+                                <pre>   background-color: green;</pre>
+                                <pre>   display: flex;</pre>
+                                <pre>   flex-direction: row;</pre>
+                                <pre>   justify-content: space-between;</pre>
+                                <pre>   padding: 5px; &lt;!--Aqui--&gt;</pre>
+                                <pre>   border-radius: 15px; &lt;!--Aqui--&gt;</pre>
+                                <pre>}</pre><br>
+                                <pre>#boxFilhoUm {</pre>
+                                <pre>   background-color: yellow;</pre>
+                                <pre>   width: 100px;</pre>
+                                <pre>   height: 100px;</pre>
+                                <pre>   margin: 15px 7px; &lt;!--Aqui--&gt;</pre>
+                                <pre>   border: 5px dashed black; &lt;!--Aqui--&gt;</pre>
+                                <pre>}</pre><br>
+                                <pre>#boxFilhoDois {</pre>
+                                <pre>   background-color: red;</pre>
+                                <pre>   width: 100px;</pre>
+                                <pre>   height: 100px;</pre>
+                                <pre>   margin: 50px 20px; &lt;!--Aqui--&gt;</pre>
+                                <pre>   border-radius: 50%; &lt;!--Aqui--&gt;</pre>
+                                <pre>   border: 7px double white &lt;!--Aqui--&gt;</pre>
+                                <pre>}</pre>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                <div class="topicTwelve">
+                    <h2>Position:</h2>
+                    <p>
+                        Outro mecanismo de estilização do CSS esta diretamente relacionado a como e onde podemos posicionar um elemento na 
+                        página. Antes de vermos os tipos de posicionamentos é importante sabermos que podemos definir o tamanho da tela 
+                        por meio de "<b>vw</b>" (no width - para largura) e "<b>vh</b>" (no height - para altura) em porcentagem. Existem 
+                        5 tipos diferentes de posicionamento:
+                    </p>
+                    <ul>
+                        <li>
+                            <b>static:</b> define que a posição do elemento vai estar na posição padrão em relação ao limite de 
+                            <b>top/botton/left/right</b> da tela.
+                        </li>
+                        <li>
+                            <b>fixed:</b> define que a posição do elemento vai estar fixa em relação ao limite de 
+                            <b>top/botton/left/right</b> da tela.
+                        </li>
+                        <li>
+                            <b>stiky:</b> define que a posição do elemento vai ficar fixa em relação ao limite alcançado de 
+                            <b>top/botton/left/right</b> da tela.
+                        </li>
+                        <li>
+                            <b>relative:</b> define que a posição do elemento vai ser relativa ao limite de <b>top/botton/left/right</b> do 
+                            bloco vizinho, semelhante a padding.
+                        </li>
+                        <li>
+                            <b>absolute:</b> em um primeiro momento se estiver inserido dentro de um elemento "static" levará em 
+                            consideração os limites de <b>top/botton/left/right</b> da tela. Em um segundo momento se estiver inserido 
+                            dentro de um elemento "relative" levará em considerção os limites de <b>top/botton/left/right</b> do elemento pai.
+                        </li>
+                    </ul>
+                </div>
+                <div class="topicThirteen">
+                    <h2>Background:</h2>
+                    <p>
+                        Existem diferentes maneira de adicionar um fundo a uma página/tag, as principais e mais utilizadas delas são:
+                    </p>
+                    <ul>
+                        <li><b>background/background-color:</b> utilizado para valores de cor [<b>red</b>, <b>rgb</b>(25, 25, 25) <b>rgba</b>(20, 20, 20, 5)]</li>
+                        <li><b>background-image:</b> utilizado para valores de imagem [<b>url</b>('<i>link remoto ou local da imagem</i>')]</li>
+                        <li><b>background-repeat:</b> para definir o tipo de repetição do valor (<b>repeat, no-repeat, around...</b>)</li>
+                        <li><b>background-size:</b> para definir o tamanho da imagem (<b>auto, contain, cover...</b>)</li>
+                        <li><b>background-position</b> para definir a posição do valor (<b>x% y%</b>).</li>
+                    </ul>
+                    <div class="doubleCard">
+                        <div id="cardBoxModel">
+                            <h4>Propriedades de Fundo</h4>
+                            <div id="bodyEx">
+                                <div id="imgEx"></div>
+                            </div>
+                        </div>
+                        <div class="codeCard">
+                            <div class="comment">[ css ]</div>
+                            <code>
+                                <pre>#bodyEx {</pre>
+                                <pre>   background-color: green;</pre>
+                                <pre>   height: 400px;</pre>
+                                <pre>   width: 350px;</pre>
+                                <pre>   display: flex;</pre>
+                                <pre>   align-items: center;</pre>
+                                <pre>   justify-content: center;</pre>
+                                <pre>}</pre><br>
+                                <pre>#imgEx {</pre>
+                                <pre>   background-image: url('../assets/images/Project_Zomboid_Capa.jpg');</pre>
+                                <pre>   background-repeat: no-repeat; &lt;!--Não se repete para ocupar o espaço--&gt;</pre>
+                                <pre>   background-size: cover; &lt;!--Ocupa todo o espaço da tag--&gt;</pre>
+                                <pre>   background-position: 0% 12%; &lt;!--Ajusta o Topo e a Base--&gt;</pre>
+                                <pre>   height: 350px;</pre>
+                                <pre>   width: 300px;</pre>
+                                <pre>}</pre><br>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p><small>&copy; 2024 Diogo Gabriel. Todos os direitos reservados.</small></p>
+    </footer>
+</body>
+</html>

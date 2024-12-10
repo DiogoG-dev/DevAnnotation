@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-formExample.css">
+    <title>Formulários</title>
+</head>
+<body>
+    <header>
+        <h1>Exemplos de Formulário</h1>
+    </header>
+    <main>
+        <div id="doubleForm">
+                <form action="Form.html">
+                    <h2>Fazer Login</h2>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email">
+                    <br><br>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password">
+                    <div id="fontSize12"><a href="">Esqueci minha Senha</a></div>
+                    <br>
+                    <div class="button">
+                        <button>Entrar</button>
+                    </div>
+                </form>
+                <form action="Form.html">
+                    <h2>Cadastrar-se</h2>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email">
+                    <br><br>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password">
+                    <br><br>
+                    <label for="RepeatPassword">Repetir Senha:</label>
+                    <input type="password" id="RepeatPassword">
+                    <div id="checkboxAgree">
+                        <input type="checkbox" name="checkboxTermsAndGuidelines">
+                        <div>Concordo com os <a href="">Termos de <br>Uso</a> e <a href="">Diretrizes</a></div>
+                    </div>
+                    <br>
+                    <div class="button">
+                        <button>Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+        <div id="singleForm">
+            <h2>Apresente-se</h2>
+            <form action="Form.html">
+                <div class="questions">
+                    <label for="file">Inserir foto de perfil:</label>
+                    <input type="file" id="file" name="file">
+                </div>
+                <br>
+                <div class="questions">
+                    <label for="name">Qual o seu nome?</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <br>
+                <div>
+                    <label>Qual seu sexo?</label>
+                    <div id="contentRadios">
+                        <input type="radio" id="radioMasculine" name="sexo" value="masculine">
+                        <label for="radioMasculine">Masculino</label>
+                        <input type="radio" id="radioFeminine" name="sexo" value="feminino">
+                        <label for="radioFeminine">Feminino</label>
+                        <input type="radio" id="radioNull" name="sexo" value="null">
+                        <label for="radioNull">Prefiro não dizer</label>
+                    </div>
+                </div>
+                <br>
+                <div class="questions">
+                    <label for="number">Quantos anos você tem?</label>
+                    <input type="number" id="number" name="number">
+                </div>
+                <br>
+                <div class="questions">
+                    <label for="date">Informe sua data de nascimento:</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                <br>
+                <div class="questions">
+                    <label>Qual dia da semana é seu mais preferido?</label>
+                    <select name="dayForTheWeek">
+                        <option value="sunday">Domingo</option>
+                        <option value="monday">Segunda</option>
+                        <option value="tuesdays">Terça</option>
+                        <option value="wednesday">Quarta</option>
+                        <option value="thursday">Quinta</option>
+                        <option value="friday">Sexta</option>
+                        <option value="saturday">Sábado</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="range">Qual o seu nível de humor hoje?</label>
+                    <div id="contentRange">
+                        <p>0</p>
+                        <input type="range" id="range" name="range">
+                        <p>100</p>
+                    </div>
+                </div>
+                <div class="questions">
+                    <label for="textarea">Fale um pouco mais sobre você:</label>
+                    <textarea id="msg" name="msg" rows="5" cols="40"></textarea>
+                </div>
+                <br>
+                <div class="button">
+                    <button>Enviar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p><small>&copy; 2024 Diogo Gabriel. Todos os direitos reservados.</small></p>
+    </footer>
+</body>
+</html>
