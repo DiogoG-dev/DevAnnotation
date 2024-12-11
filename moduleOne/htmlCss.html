@@ -543,7 +543,51 @@
                         </code>
                     </div>
                 </div>
-            </div>    
+            </div>
+            <div class="topicFifteen">
+                <h2>Pseudo Classes e Pseudo Elementos</h2>
+                <p>As Pseudo Classes (<b>:</b>) são utilizadas para estilizar o estado especial de um elemento, exemplos:</p>
+                <ul>
+                    <li><b>hover:</b> para alterar o elemento quando passado o mouse.</li>
+                    <li><b>disabled:</b> para inputs quando desabilitados.</li>
+                    <li><b>focus:</b> para dar foco no input quando clicado.</li>
+                </ul>
+                <p>Já os Pseudo Elementos (<b>::</b>) são utilizados para estilizar partes específicas de um elemento, exemplos:</p>
+                <ul>
+                    <li><b>before:</b> adicionar um novo elemento/estilo antes do elemento principal.</li>
+                    <li><b>after:</b> adicionar um novo elemento/estilo depois do elemento principal.</li>
+                </ul>
+                <div class="doubleCard">
+                    <div id="cardBoxModel">
+                        <h4>Exemplos de Uso:</h4>
+                        <div class="divHover">Passe o mouse sobre mim</div>
+                        <input class="inputFocus" placeholder="Clique para obter foco">
+                        <br>
+                        <div class="divBefore">Seta a esquerda</div>
+                        <div class="divAfter">Seta a direta</div>
+                    </div>
+                    <div class="codeCard">
+                        <div class="comment">[ css ]</div>
+                        <code>
+                            <pre>.divHover {</pre>
+                            <pre>    background-color: rgb(0, 50, 255);</pre>
+                            <pre>}</pre><br>
+                            <pre>.divHover:hover {</pre>
+                            <pre>    background-color: green;</pre>
+                            <pre>}</pre><br>
+                            <pre>.inputFocus:focus {</pre>
+                            <pre>    background-color: rgb(200, 200, 200);</pre>
+                            <pre>}</pre><br>
+                            <pre>.divBefore::before {</pre>
+                            <pre>    content: '→';</pre>
+                            <pre>}</pre><br>
+                            <pre>.divAfter::after {</pre>
+                            <pre>    content: '←';</pre>
+                            <pre>}</pre>
+                        </code>
+                    </div>
+                </div>
+            </div>
             <!--End of Container Here-->
         </div>
     </main>

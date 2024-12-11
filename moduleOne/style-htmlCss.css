@@ -138,3 +138,36 @@
     align-items: center;
     justify-content: center;
 }
+
+.divHover {
+    background-color: rgb(0, 50, 255);
+    color: white;
+    padding: 10px;
+    margin: 50px 0px;
+    border-radius: 7px;
+}
+
+.divHover:hover {
+    background-color: green;
+}
+
+.inputFocus {
+    margin: 75px 0px;
+}
+
+.inputFocus:focus {
+    background-color: rgb(200, 200, 200);
+}
+
+.divBefore, .divAfter {
+    background-color: rgba(0, 55, 255, 0.5);
+    margin: 25px;
+}
+
+.divBefore::before {
+    content: '→';
+}
+
+.divAfter::after {
+    content: '←';
+}

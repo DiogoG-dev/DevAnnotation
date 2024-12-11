@@ -40,3 +40,10 @@ footer {
     height: 150px;
     align-content: center;
 }
+.a:link {
+    color: #fff;
+}
+
+.a:visited {
+    color: #ffffff;
+}
