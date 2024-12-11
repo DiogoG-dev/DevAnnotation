@@ -187,7 +187,7 @@
                     <div class="cardWithExample" id="mediaCard">
                         <p><b>Exemplo de Imagem e Áudio</b></p>
                         <img src="../assets/images/imgExample.jpg" id="imgWidth">
-                        <audio id="audio" controls>
+                        <audio id="audio">
                             <source src="../assets/media/Ring05.wav" type="audio/wav">
                                 Seu navegador não possui suporte para esse audio!
                             </source>
@@ -196,13 +196,14 @@
                             <button id="buttonPlay" onclick="document.getElementById('audio').play()">Play</button>
                             <button id="buttonPause" onclick="document.getElementById('audio').pause()">Pause</button>
                         </div>
+                        <p>Clique para interagir com o áudio</p>
                     </div>
 
                     <div class="codeCard">
                         <div class="comment">[ html ]</div>
                         <code>
                             <pre>&lt;img src="../Midias/ImgExample.jpg" styte="width: 300px;"&gt;</pre>
-                            <pre>&lt;audio id="audio" controls&gt;</pre>
+                            <pre>&lt;audio id="audio"&gt;</pre>
                             <pre>   &lt;source src="..Midias/Ring05.waw" type="audio/wav"&gt;</pre>
                             <pre>       Seu navegador não possui suporte para esse audio!</pre>
                             <pre>   &lt;/source&gt;</pre>
@@ -508,7 +509,41 @@
                     </div>
                 </div>
             </div>
-                
+            <div class="topicFourteen">
+                <h2>Cores:</h2>
+                <p>Existem $ formas principais de representação de cores no CSS, sendo:</p>
+                <ul>
+                    <li><b>Color:</b> você pode simplismente chamar a cor pelo seu nome.</li>
+                    <li><b>#XXX ou #XXXXXX:</b> é a forma hexadecimal de representar uma cor.</li>
+                    <li><b>rgb(XX, XX, XX):</b> tem a mesma mecânica da hexadecimal de 6 digitos anterior.</li>
+                    <li><b>rgba(XX, XX, XX, Y):</b> funciona igualmente ao rgb, porém adicionando opacidade em Y, podendo alterar sua trânslucidez entre 0 e 1.</li>
+                </ul>
+                <div class="doubleCard">
+                    <div id="cardBoxModel">
+                        <h4>Exemplos de Uso:</h4>
+                        <div class="firstColor">1° cor</div>
+                        <div class="secondColor">2° cor</div>
+                        <div class="thirdColor">3° cor</div>
+                    </div>
+                    <div class="codeCard">
+                        <div class="comment">[ css ]</div>
+                        <code>
+                            <pre>.firstColor {</pre>
+                            <pre>    background-color: #123;</pre>
+                            <pre>    color: white;</pre>
+                            <pre>}</pre><br>
+                            <pre>.secondColor {</pre>
+                            <pre>    background-color: rgb(0, 50, 255);</pre>
+                            <pre>    color: gray;</pre>
+                            <pre>}</pre><br>
+                            <pre>.thirdColor {</pre>
+                            <pre>    background-color: rgba(0, 55, 255, 0.5);</pre>
+                            <pre>    color: black;</pre>
+                            <pre>}</pre>
+                        </code>
+                    </div>
+                </div>
+            </div>    
             <!--End of Container Here-->
         </div>
     </main>
