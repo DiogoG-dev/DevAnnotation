@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-.displayBlock {
+label {
     display: block;
 }
 
@@ -172,7 +172,7 @@
     content: '←';
 }
 
-.displayBlock {
+.divDisplayBlock {
     display: block;
     width: 60px;
     height: 60px;
@@ -181,7 +181,7 @@
     border: 1px solid black;
 }
 
-.displayInline {
+.divDisplayInline {
     display: inline;
     width: 60px;
     height: 60px; 
@@ -190,7 +190,7 @@
     border: 1px solid black;
 }
 
-.displayInlineBlock {
+.divDisplayInlineBlock {
     display: inline-block;
     width: 60px;
     height: 60px;
