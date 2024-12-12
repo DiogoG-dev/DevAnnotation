@@ -629,7 +629,7 @@
             <div class="topicSeventeen">
                 <h2>Display Flex:</h2>
                 <p>Será adicionado na tag pai e as suas alterações seram direcionadas as tags filhas. Alguns propriedades de estilização são:</p>
-                <p>O "<b>display: flex</b>" por padrão alinhará os itens horizontalmente, inline-block.</p>
+                <p>"<b>display: flex</b>": alinha por padrão os itens horizontalmente, inline-block.</p>
                 <p>
                     <b>flex-direction:</b> responsável por determinar a direção em que os itens estaram (horizontalmente/vertical) e a 
                     sua ordem (fluxo normal/invertido). Tipos de valores:
@@ -665,13 +665,13 @@
                 <div class="doubleCard">
                     <div id="cardBoxModel">
                         <h4>Exemplos de Uso:</h4>
-                        <div class="pai1">
-                            <div class="filho">Filho 1</div>
-                            <div class="filho">Filho 2</div>
+                        <div class="paiFlex1">
+                            <div class="filhoFlex">Filho 1</div>
+                            <div class="filhoFlex">Filho 2</div>
                         </div>
-                        <div class="pai2">
-                            <div class="filho">Filho 3</div>
-                            <div class="filho">Filho 4</div>
+                        <div class="paiFlex2">
+                            <div class="filhoFlex">Filho 3</div>
+                            <div class="filhoFlex">Filho 4</div>
                         </div>
                     </div>
                     <div class="codeCard">
@@ -697,6 +697,74 @@
                             <pre>    display: flex;</pre>
                             <pre>    justify-content: center;</pre>
                             <pre>    align-items: center;</pre>
+                            <pre>}</pre>
+                        </code>
+                    </div>
+                </div>
+            </div>
+            <div class="topicEighteen">
+                <h2>Display Grid</h2>
+                <p>É utilizado basicamentepara fazer o posicionamento dos elementos em grade. Algumas propriedades de estilização são:</p>
+                <ul>
+                    <li>"<b>display: grid</b>": alinha por padrão os itens verticalmente, em uma coluna única.</li>
+                    <li>
+                        <b>grid-template-columns:</b> vai determinar a quantidade de colunas de itens na tag pai. Seu formato pode ser 
+                        "<b>Xfr Yfr Zfr...</b>" onde a quantidade de "fr" determina a quantidade de colunas e "<b>X, Y e Z</b>" determinam 
+                        em números a proporção que a coluna terá em relação as outras colunas. Outros formato são: "<b>X% Y% Z%</b>" e 
+                        "<b>repeat(3, 1fr)</b>".
+                    </li>
+                    <li>
+                        <b>grid-template-rows:</b> vai determinar a quantidade de colunas de itens na tag pai. Seu formato pode ser 
+                        "<b>Xfr Yfr Zfr...</b>" onde a quantidade de "fr" determina a quantidade de colunas e "<b>X, Y e Z</b>" determinam 
+                        em números a proporção que a coluna terá em relação as outras colunas. Outros formato são: "<b>X% Y% Z%</b>" e 
+                        "<b>repeat(3, 1fr)</b>".
+                    </li>
+                    <li><b>column-gap:</b> ajusta o distanciamento entre as colunas.</li>
+                    <li><b>row-gap:</b> ajusta o distanciamento entre as linhas.</li>
+                </ul>
+                <p>
+                    <b>Atenção!!!</b> Na propriedade "grid-template-columns" quando a quantidade de elementos excede a quantidade de 
+                    colunas automaticamente o CSS cria uma nova linha e adiciona o elemento abaixo das colunas anteriores. Porém na 
+                    propriedade "grid-template-rows" o mesmo não ocorre com as colunas, o CSS não criará uma nova coluna para adicionar o 
+                    item restante, ele criará uma nova linha para adiciona-lo.
+                </p>
+                <div class="doubleCard">
+                    <div id="cardBoxModel">
+                        <h4>Exemplos de Uso:</h4>
+                        <div class="paiGrid1">
+                            <div class="filhoGrid">Filho 1</div>
+                            <div class="filhoGrid">Filho 2</div>
+                            <div class="filhoGrid">Filho 3</div>
+                        </div>
+                        <div class="paiGrid2">
+                            <div class="filhoGrid">Filho 4</div>
+                            <div class="filhoGrid">Filho 5</div>
+                            <div class="filhoGrid">Filho 6</div>
+                            <div class="filhoGrid">Filho 7</div>
+                            <div class="filhoGrid">Filho 8</div>
+                        </div>
+                    </div>
+                    <div class="codeCard">
+                        <div class="comment">[ css ]</div>
+                        <code>
+                            <pre>.paiGrid1 {</pre>
+                            <pre>    background-color: blue;</pre>
+                            <pre>    display: grid;</pre>
+                            <pre>    grid-template-columns: 1fr 1fr 1fr;</pre>
+                            <pre>    column-gap: 10px;</pre>
+                            <pre>}</pre><br>
+                            <pre>.paiGrid2 {</pre>
+                            <pre>    background-color: green;</pre>
+                            <pre>    display: grid;</pre>
+                            <pre>    grid-template-columns: 50% 50%;</pre>
+                            <pre>    grid-template-rows: repeat(2, 1fr); &lt;--Atenção Aqui!--&gt;</pre>
+                            <pre>    row-gap: 25px;</pre>
+                            <pre>}</pre><br>
+                            <pre>.filhoGrid {</pre>
+                            <pre>    background-color: white;</pre>
+                            <pre>    border: solid 3px red;</pre>
+                            <pre>    width: 50px;</pre>
+                            <pre>    height: 50px;</pre>
                             <pre>}</pre>
                         </code>
                     </div>

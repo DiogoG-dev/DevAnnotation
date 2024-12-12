@@ -199,7 +199,7 @@ label {
     border: 1px solid black;
 }
 
-.pai1 {
+.paiFlex1 {
     background-color: blue;
     color: black;
     width: 250px;
@@ -210,7 +210,7 @@ label {
     align-items: start;
 }
 
-.pai2 {
+.paiFlex2 {
     background-color: green;
     color: black;
     width: 250px;
@@ -221,7 +221,7 @@ label {
     align-items: center;
 }
 
-.filho {
+.filhoFlex {
     background-color: white;
     border: solid 3px red;
     display: flex;
@@ -229,4 +229,35 @@ label {
     align-items: center;
     width: 75px;
     height: 75px;
+}
+
+.paiGrid1 {
+    background-color: blue;
+    color: black;
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+.paiGrid2 {
+    background-color: green;
+    color: black;
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 25px;
+}
+
+.filhoGrid {
+    background-color: white;
+    border: solid 3px red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
 }
