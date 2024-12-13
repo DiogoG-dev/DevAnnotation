@@ -261,3 +261,63 @@ label {
     width: 50px;
     height: 50px;
 }
+
+.divPaiAnimation {
+    width: 250px;
+}
+
+.divAnimation {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: animationDiv 10s infinite;
+}
+
+@keyframes animationDiv {
+    0% {
+        top: 0px; left: 0px;
+        background-color: black; color: aqua
+    }
+
+    25% {
+        top: 0px; left: 175px;
+        background-color: aqua; color: black;
+    }
+
+    50% {
+        top: 275px; left: 175px;
+        background-color: black; color: aqua;
+    }
+
+    75% {
+        top: 275px; left: 0px;
+        background-color: aqua; color: black;
+    }
+
+    100% {
+        top: 0px; left: 0px; 
+        background-color: black; color: aqua;
+    }
+}
+
+/*Layouts de desktop e superiores*/
+.body {
+    font-size: 20px;
+}
+
+/*Layout máximo para tablet*/
+@media(max-width: 1024px){
+    .body {
+        font-size: 18px;
+    }
+}
+
+/*Layout máximo para smartphone e inferiores*/
+@media(max-width: 768px){
+    .body {
+        font-size: 16px;
+    }
+}

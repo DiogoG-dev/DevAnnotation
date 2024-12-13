@@ -650,8 +650,8 @@
                     <li><b>flex-end:</b> ajusta os itens no fim.</li>
                     <li><b>center:</b> ajusta os itens no centro.</li>
                     <li><b>space-between:</b> separa ao máximo os itens entre si.</li>
-                    <li><b>space-around:</b> separa ao máximo os itens entre si e as laterais, ambas não igualmente.</li>
-                    <li><b>space-evenly:</b> separa ao máximo os itens entre si e as laterais, ambas igualmente.</li>
+                    <li><b>space-around:</b> separa ao máximo os itens entre si e as laterais, ambos não igualmente.</li>
+                    <li><b>space-evenly:</b> separa ao máximo os itens entre si e as laterais, ambos igualmente.</li>
                 </ul>
                 <p>
                     <b>align-items:</b> Alinha os itens conforme definido no "<i>flex-direction</i>", quando "<b>row</b>" ajusta no eixo 
@@ -703,7 +703,7 @@
                 </div>
             </div>
             <div class="topicEighteen">
-                <h2>Display Grid</h2>
+                <h2>Display Grid:</h2>
                 <p>É utilizado basicamentepara fazer o posicionamento dos elementos em grade. Algumas propriedades de estilização são:</p>
                 <ul>
                     <li>"<b>display: grid</b>": alinha por padrão os itens verticalmente, em uma coluna única.</li>
@@ -715,18 +715,18 @@
                     </li>
                     <li>
                         <b>grid-template-rows:</b> vai determinar a quantidade de colunas de itens na tag pai. Seu formato pode ser 
-                        "<b>Xfr Yfr Zfr...</b>" onde a quantidade de "fr" determina a quantidade de colunas e "<b>X, Y e Z</b>" determinam 
-                        em números a proporção que a coluna terá em relação as outras colunas. Outros formato são: "<b>X% Y% Z%</b>" e 
+                        "<b>Xfr Yfr Zfr...</b>" onde a quantidade de "fr" determina a quantidade de linhas e "<b>X, Y e Z</b>" determinam 
+                        em números a proporção que a linhas terá em relação as outras colunas. Outros formato são: "<b>X% Y% Z%</b>" e 
                         "<b>repeat(3, 1fr)</b>".
                     </li>
                     <li><b>column-gap:</b> ajusta o distanciamento entre as colunas.</li>
                     <li><b>row-gap:</b> ajusta o distanciamento entre as linhas.</li>
                 </ul>
                 <p>
-                    <b>Atenção!!!</b> Na propriedade "grid-template-columns" quando a quantidade de elementos excede a quantidade de 
+                    <b>Atenção!!!</b> Na propriedade "<b>grid-template-columns</b>" quando a quantidade de elementos excede a quantidade de 
                     colunas automaticamente o CSS cria uma nova linha e adiciona o elemento abaixo das colunas anteriores. Porém na 
-                    propriedade "grid-template-rows" o mesmo não ocorre com as colunas, o CSS não criará uma nova coluna para adicionar o 
-                    item restante, ele criará uma nova linha para adiciona-lo.
+                    propriedade "<b>grid-template-rows</b>" o mesmo não ocorre com as colunas, o CSS não criará uma nova coluna para adicionar o 
+                    item restante, ele criará uma nova linha para adicioná-lo.
                 </p>
                 <div class="doubleCard">
                     <div id="cardBoxModel">
@@ -769,6 +769,127 @@
                         </code>
                     </div>
                 </div>
+            </div>
+            <div class="topicNineteen">
+                <h2>Keyframes:</h2>
+                <p>
+                    O keyframes é uma propriedade do css muito utilizada para fazer animações em tela, controlando as etapas em uma 
+                    sequência e definindo estilos CSS para pontos ao longo dessa sequência. Os pontos de mudança da animação podem ser 
+                    definidos por: 
+                </p>
+                <ul>
+                    <li>"<b>from {estilo inicial}</b>" + "<b>to {estilo final}</b>"</li>
+                    <li>
+                        "<b>0% {estilo inicial}</b>" + "<b>25% {estilo intermediário}</b>" + "<b>50% {estilo intermediário}</b>" + 
+                        "<b>100% {estilo final}</b>"</li>
+                </ul>
+                <p>
+                    Sendo "<b>from/to</b>" para dois pontos únicos de animação (inicial e final) e "<b>X%/(n)%/Y%</b>" para vários pontos 
+                    de animação (inicial, (n)intermediários e final).
+                </p>
+                <div class="doubleCard">
+                    <div id="cardBoxModel">
+                        <h4>Exemplos de Uso:</h4>
+                        <div class="divPaiAnimation">
+                            <div class="divAnimation">Hellou!</div>
+                        </div>
+                        
+                    </div>
+                    <div class="codeCard">
+                        <div class="comment">[ css ]</div>
+                        <code>
+                            <pre>.divPaiAnimation {</pre>
+                            <pre>    width: 250px;</pre>
+                            <pre>}</pre>
+                            <pre>.divAnimation {</pre>
+                            <pre>    width: 75px; height: 75px;</pre>
+                            <pre>    position: relative;</pre>
+                            <pre>    animation: animationDiv 10s infinite;</pre>
+                            <pre>}</pre>
+                            <pre>@keyframes animationDiv {</pre>
+                            <pre>    0% { top: 0px; left: 0px; background-color: black; color: aqua; }</pre>
+                            <pre>    25% { top: 0px; left: 175px; background-color: aqua; color: black; }</pre>
+                            <pre>    50% { top: 275px; left: 175px; background-color: black; color: aqua; }</pre>
+                            <pre>    75% { top: 275px; left: 0px; background-color: aqua; color: black; }</pre>
+                            <pre>    100% { top: 0px; left: 0px; background-color: black; color: aqua; }</pre>
+                            <pre>}</pre>
+                        </code>
+                    </div>
+                </div>
+            </div>
+            <div class="topicTwenty">
+                <h2>Media Query:</h2>
+                <p>
+                    Antes de entendermos o funcionamente da <b>Media Query</b> precisamos primeiramente sabermos o significado de Responsividade 
+                    e Break Points.
+                </p>
+                <p>
+                    <b>Responsividade:</b> é um termo utilizado no desenvolvimento para definir a forma visual de como um determinado 
+                    elemento/site se comporta/adapta em diferentes tipos de telas.
+                </p>
+                <p>
+                    <b>Break Points:</b> refere-se aos pontos de quebra de dimensão (largura/altura) em relação ao tamanho da tela em que os 
+                    elementos/site estam sendo exibidos. Alguns pontos de quebra mais comuns são:
+                </p>
+                <ul>
+                    <li><b>480px:</b> para smartphones</li>
+                    <li><b>768px:</b> para tablets</li>
+                    <li><b>1024px:</b> para desktops</li>
+                </ul>
+                <p>
+                    A <b>Media Query</b> em CSS é responsável por dar responsividade aos sites com base nesses break points. Veja a baixo 
+                    alguns exemplos:
+                </p>
+                <div class="doubleCard">
+                    <div class="codeCard">
+                        <div class="comment">[ css ]</div>
+                        <code>
+                            <pre><div class="comment">/*Mobile First*/</div></pre>
+                            <pre><div class="comment">/*Layouts de smartphone e inferiores*/</div></pre>
+                            <pre>.body {</pre>
+                            <pre>    font-size: 16px;</pre>
+                            <pre>}</pre>
+                            <pre><div class="comment">/*Layout mínimo para tablet*/</div></pre>
+                            <pre>@media(min-width: 768px){</pre>
+                            <pre>    .body {</pre>
+                            <pre>        font-size: 18px;</pre>
+                            <pre>    }</pre>
+                            <pre>}</pre>
+                            <pre><div class="comment">/*Layout mínimo para desktop e superiores*/</div></pre>
+                            <pre>@media(min-width: 1024px){</pre>
+                            <pre>    .body {</pre>
+                            <pre>        font-size: 20px;</pre>
+                            <pre>    }</pre>
+                            <pre>}</pre>
+                        </code>
+                    </div>
+                    <div class="codeCard">
+                        <div class="comment">[ css ]</div>
+                        <code>
+                            <pre><div class="comment">/*Desktop First*/</div></pre>
+                            <pre><div class="comment">/*Layouts de desktop e superiores*/</div></pre>
+                            <pre>.body {</pre>
+                            <pre>    font-size: 20px;</pre>
+                            <pre>}</pre>
+                            <pre><div class="comment"></div>/*Layout máximo para tablet*/</pre>
+                            <pre>@media(max-width: 1024px){</pre>
+                            <pre>    .body {</pre>
+                            <pre>        font-size: 18px;</pre>
+                            <pre>    }</pre>
+                            <pre>}</pre>
+                            <pre><div class="comment">/*Layout máximo para smartphone e inferiores*/</div></pre>
+                            <pre>@media(max-width: 768px){</pre>
+                            <pre>    .body {</pre>
+                            <pre>        font-size: 16px;</pre>
+                            <pre>    }</pre>
+                            <pre>}</pre>
+                        </code>
+                    </div>
+                </div>
+                <p>
+                    O <b>Mobile First</b> é maneira de desenvolver uma aplicação pensando no formato inicial para dispositivos móveis, 
+                    como smartphone e tablets pequenos. Já o <b>Desktop First</b> é maneira de desenvolver uma aplicação pensando no 
+                    formato inicial para desktops.</p>
             </div>
             <!--End of Container Here-->
         </div>
