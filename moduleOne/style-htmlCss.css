@@ -302,3 +302,22 @@ label {
         background-color: black; color: aqua;
     }
 }
+
+/*Layouts de desktop e superiores*/
+.body {
+    font-size: 20px;
+}
+
+/*Layout máximo para tablet*/
+@media(max-width: 1024px){
+    .body {
+        font-size: 18px;
+    }
+}
+
+/*Layout máximo para smartphone e inferiores*/
+@media(max-width: 768px){
+    .body {
+        font-size: 16px;
+    }
+}

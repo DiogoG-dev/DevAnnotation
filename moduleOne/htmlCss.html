@@ -703,7 +703,7 @@
                 </div>
             </div>
             <div class="topicEighteen">
-                <h2>Display Grid</h2>
+                <h2>Display Grid:</h2>
                 <p>É utilizado basicamentepara fazer o posicionamento dos elementos em grade. Algumas propriedades de estilização são:</p>
                 <ul>
                     <li>"<b>display: grid</b>": alinha por padrão os itens verticalmente, em uma coluna única.</li>
@@ -816,6 +816,80 @@
                         </code>
                     </div>
                 </div>
+            </div>
+            <div class="topicTwenty">
+                <h2>Media Query:</h2>
+                <p>
+                    Antes de entendermos o funcionamente da <b>Media Query</b> precisamos primeiramente sabermos o significado de Responsividade 
+                    e Break Points.
+                </p>
+                <p>
+                    <b>Responsividade:</b> é um termo utilizado no desenvolvimento para definir a forma visual de como um determinado 
+                    elemento/site se comporta/adapta em diferentes tipos de telas.
+                </p>
+                <p>
+                    <b>Break Points:</b> refere-se aos pontos de quebra de dimensão (largura/altura) em relação ao tamanho da tela em que os 
+                    elementos/site estam sendo exibidos. Alguns pontos de quebra mais comuns são:
+                </p>
+                <ul>
+                    <li><b>480px:</b> para smartphones</li>
+                    <li><b>768px:</b> para tablets</li>
+                    <li><b>1024px:</b> para desktops</li>
+                </ul>
+                <p>
+                    A <b>Media Query</b> em CSS é responsável por dar responsividade aos sites com base nesses break points. Veja a baixo 
+                    alguns exemplos:
+                </p>
+                <div class="doubleCard">
+                    <div class="codeCard">
+                        <div class="comment">[ css ]</div>
+                        <code>
+                            <pre><div class="comment">/*Mobile First*/</div></pre>
+                            <pre><div class="comment">/*Layouts de smartphone e inferiores*/</div></pre>
+                            <pre>.body {</pre>
+                            <pre>    font-size: 16px;</pre>
+                            <pre>}</pre>
+                            <pre><div class="comment">/*Layout mínimo para tablet*/</div></pre>
+                            <pre>@media(min-width: 768px){</pre>
+                            <pre>    .body {</pre>
+                            <pre>        font-size: 18px;</pre>
+                            <pre>    }</pre>
+                            <pre>}</pre>
+                            <pre><div class="comment">/*Layout mínimo para desktop e superiores*/</div></pre>
+                            <pre>@media(min-width: 1024px){</pre>
+                            <pre>    .body {</pre>
+                            <pre>        font-size: 20px;</pre>
+                            <pre>    }</pre>
+                            <pre>}</pre>
+                        </code>
+                    </div>
+                    <div class="codeCard">
+                        <div class="comment">[ css ]</div>
+                        <code>
+                            <pre><div class="comment">/*Desktop First*/</div></pre>
+                            <pre><div class="comment">/*Layouts de desktop e superiores*/</div></pre>
+                            <pre>.body {</pre>
+                            <pre>    font-size: 20px;</pre>
+                            <pre>}</pre>
+                            <pre><div class="comment"></div>/*Layout máximo para tablet*/</pre>
+                            <pre>@media(max-width: 1024px){</pre>
+                            <pre>    .body {</pre>
+                            <pre>        font-size: 18px;</pre>
+                            <pre>    }</pre>
+                            <pre>}</pre>
+                            <pre><div class="comment">/*Layout máximo para smartphone e inferiores*/</div></pre>
+                            <pre>@media(max-width: 768px){</pre>
+                            <pre>    .body {</pre>
+                            <pre>        font-size: 16px;</pre>
+                            <pre>    }</pre>
+                            <pre>}</pre>
+                        </code>
+                    </div>
+                </div>
+                <p>
+                    O <b>Mobile First</b> é maneira de desenvolver uma aplicação pensando no formato inicial para dispositivos móveis, 
+                    como smartphone e tablets pequenos. Já o <b>Desktop First</b> é maneira de desenvolver uma aplicação pensando no 
+                    formato inicial para desktops.</p>
             </div>
             <!--End of Container Here-->
         </div>
