@@ -770,6 +770,53 @@
                     </div>
                 </div>
             </div>
+            <div class="topicNineteen">
+                <h2>Keyframes:</h2>
+                <p>
+                    O keyframes é uma propriedade do css muito utilizada para fazer animações em tela, controlando as etapas em uma 
+                    sequência e definindo estilos CSS para pontos ao longo dessa sequência. Os pontos de mudança da animação podem ser 
+                    definidos por: 
+                </p>
+                <ul>
+                    <li>"<b>from {estilo inicial}</b>" + "<b>to {estilo final}</b>"</li>
+                    <li>
+                        "<b>0% {estilo inicial}</b>" + "<b>25% {estilo intermediário}</b>" + "<b>50% {estilo intermediário}</b>" + 
+                        "<b>100% {estilo final}</b>"</li>
+                </ul>
+                <p>
+                    Sendo "<b>from/to</b>" para dois pontos únicos de animação (inicial e final) e "<b>X%/(n)%/Y%</b>" para vários pontos 
+                    de animação (inicial, (n)intermediários e final).
+                </p>
+                <div class="doubleCard">
+                    <div id="cardBoxModel">
+                        <h4>Exemplos de Uso:</h4>
+                        <div class="divPaiAnimation">
+                            <div class="divAnimation">Hellou!</div>
+                        </div>
+                        
+                    </div>
+                    <div class="codeCard">
+                        <div class="comment"></div>
+                        <code>
+                            <pre>.divPaiAnimation {</pre>
+                            <pre>    width: 250px;</pre>
+                            <pre>}</pre>
+                            <pre>.divAnimation {</pre>
+                            <pre>    width: 75px; height: 75px;</pre>
+                            <pre>    position: relative;</pre>
+                            <pre>    animation: animationDiv 10s infinite;</pre>
+                            <pre>}</pre>
+                            <pre>@keyframes animationDiv {</pre>
+                            <pre>    0% { top: 0px; left: 0px; background-color: black; color: aqua; }</pre>
+                            <pre>    25% { top: 0px; left: 175px; background-color: aqua; color: black; }</pre>
+                            <pre>    50% { top: 275px; left: 175px; background-color: black; color: aqua; }</pre>
+                            <pre>    75% { top: 275px; left: 0px; background-color: aqua; color: black; }</pre>
+                            <pre>    100% { top: 0px; left: 0px; background-color: black; color: aqua; }</pre>
+                            <pre>}</pre>
+                        </code>
+                    </div>
+                </div>
+            </div>
             <!--End of Container Here-->
         </div>
     </main>
