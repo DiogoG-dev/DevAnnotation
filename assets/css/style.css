@@ -37,9 +37,25 @@ main {
 }
 
 footer {
+    width: 25%;
     height: 150px;
     align-content: center;
 }
+
+.moduleOne {
+    border-radius: 5px;
+    border: solid 1px rgb(25, 25, 25);
+    padding: 0px 10px;
+}
+.moduleOne:hover {
+    background-color: rgb(27, 27, 27);
+    border: solid 1px rgb(45, 45, 45);
+}
+
+.textFooter {
+    text-align: center;
+}
+
 .a:link {
     color: #fff;
 }
