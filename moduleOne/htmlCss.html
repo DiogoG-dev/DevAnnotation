@@ -137,7 +137,7 @@
                 </p>
 
                 <h4>Exemplo de Uso:</h4>
-                <div class="doubleCard">
+                <div class="multipleCards">
                     <div class="cardWithExample">
                         <p id="formTitle"><b>Exemplo de Formulário</b></p>
                         <form>
@@ -150,7 +150,7 @@
                         </form>
                     </div>
 
-                    <div class="codeCard">
+                    <div class="card adjustWidth">
                         <div class="comment">[ html ]</div>
                         <code>
                             <pre>&lt;form&gt;</pre>
@@ -183,7 +183,7 @@
                 </div>
                 <p>Ambas as tags utilizam o atributo <i>"src"</i> para mostrar o caminho da mídia a ser mostrada.</p>
                 <h4>Exemplo de Uso:</h4>
-                <div class="doubleCard">
+                <div class="multipleCards">
                     <div class="cardWithExample" id="mediaCard">
                         <p><b>Exemplo de Imagem e Áudio</b></p>
                         <img src="../assets/images/imgExample.jpg" id="imgWidth">
@@ -199,7 +199,7 @@
                         <p>Clique para interagir com o áudio</p>
                     </div>
 
-                    <div class="codeCard">
+                    <div class="card adjustWidth">
                         <div class="comment">[ html ]</div>
                         <code>
                             <pre>&lt;img src="../Midias/ImgExample.jpg" styte="width: 300px;"&gt;</pre>
@@ -228,7 +228,7 @@
                     <code>
                         <pre>&lt;style&gt; body { background-color: red;} &lt;/style&gt; <span class="comment">&lt;!--Deixa a cor de fundo da página vermelho--&gt;</span></pre>
                         <pre>&lt;script&gt; alert("Exemplo de script js") &lt;/script&gt; <span class="comment">&lt;!--Responsável por mostrar uma caixa de alerta ao abrir a página--&gt;</span></pre>
-                        <pre>&lt;p&gt;Acesse o &lt;a href="https://google.com" target="_blank"&gt;link&lt;/a&gt;!&lt;p&gt; <span class="comment">&lt;!--Gera um link de navegação para o Google em uma nova aba--&gt;</span></pre>
+                        <pre>&lt;p&gt;Acesse o &lt;a href="https://google.com" target="_blank"&gt;link&lt;/a&gt;!&lt;p&gt; <span class="comment">&lt;!--Gera um link de navegação do Google em uma nova aba--&gt;</span></pre>
                     </code>
                 </div>
             </div>
@@ -237,8 +237,8 @@
                 <p>
                     Os seletores CSS mais utilizados são "<i>id</i>" (representado por #), "<i>class</i>" (presentado por .) e a própria "<i>tag</i>" (presentada pelo nome da tag).
                 </p>
-                <div class="doubleCard">
-                    <div class="codeCard">
+                <div class="multipleCards">
+                    <div class="card adjustWidth">
                         <div class="comment">[ html ]</div>
                         <code>
                             <pre>&lt;div id="form"&gt; &lt;/div&gt; <span class="comment">&lt;!--Para elemento único--&gt;</span></pre><br><br>
@@ -247,7 +247,7 @@
                         </code>
                     </div>
 
-                    <div class="codeCard">
+                    <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
                             <pre>#form {</pre>
@@ -317,8 +317,8 @@
                     medida absolutas e relativas. Para este tópico utilizaremos a unidade de medida relativa %(porcentagem), definindo o valor 
                     da tag filha de acordo com o valor da tag pai.
                 </p>
-                <div class="tripleCard">
-                    <div id="widthHeigthCard">
+                <div class="multipleCards">
+                    <div class="cardWithExample">
                         <h4>Exemplos de Largura e Altura</h4>
                         <div>
                             <div id="pai">
@@ -326,7 +326,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="codeCard">
+                    <div class="card adjustWidth">
                         <div class="comment">[ html ]</div>
                         <code>
                             <pre>&lt;div id="pai"&gt;</pre>
@@ -334,7 +334,7 @@
                             <pre>&lt;/div&gt;</pre>
                         </code>
                     </div>
-                    <div class="codeCard">
+                    <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
                             <pre>#pai {</pre>
@@ -397,15 +397,15 @@
                         arredondamento (<b>px ou %</b>)"
                     </li>
                 </ul>
-                <div class="doubleCard">
-                    <div id="cardBoxModel">
+                <div class="multipleCards">
+                    <div class="cardWithExample">
                         <h4>Propriedades de Bloco</h4>
                         <div id="boxPai">
                             <div id="boxFilhoUm"></div>
                             <div id="boxFilhoDois"></div>
                         </div>
                     </div>
-                    <div class="codeCard">
+                    <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
                             <pre>#boxPai {</pre>
@@ -472,14 +472,14 @@
                     <li><b>background-size:</b> para definir o tamanho da imagem (<b>auto, contain, cover...</b>)</li>
                     <li><b>background-position</b> para definir a posição do valor (<b>x% y%</b>).</li>
                 </ul>
-                <div class="doubleCard">
-                    <div id="cardBoxModel">
+                <div class="multipleCards">
+                    <div class="cardWithExample">
                         <h4>Propriedades de Fundo</h4>
                         <div id="bodyEx">
                             <div id="imgEx"></div>
                         </div>
                     </div>
-                    <div class="codeCard">
+                    <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
                             <pre>#bodyEx {</pre>
@@ -511,14 +511,14 @@
                     <li><b>rgb(XX, XX, XX):</b> tem a mesma mecânica da hexadecimal de 6 digitos anterior.</li>
                     <li><b>rgba(XX, XX, XX, Y):</b> funciona igualmente ao rgb, porém adicionando opacidade em Y, podendo alterar sua trânslucidez entre 0 e 1.</li>
                 </ul>
-                <div class="doubleCard">
-                    <div id="cardBoxModel">
+                <div class="multipleCards">
+                    <div class="cardWithExample">
                         <h4>Exemplos de Uso:</h4>
                         <div class="firstColor">1° cor</div>
                         <div class="secondColor">2° cor</div>
                         <div class="thirdColor">3° cor</div>
                     </div>
-                    <div class="codeCard">
+                    <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
                             <pre>.firstColor {</pre>
@@ -550,8 +550,8 @@
                     <li><b>before:</b> adicionar um novo elemento/estilo antes do elemento principal.</li>
                     <li><b>after:</b> adicionar um novo elemento/estilo depois do elemento principal.</li>
                 </ul>
-                <div class="doubleCard">
-                    <div id="cardBoxModel">
+                <div class="multipleCards">
+                    <div class="cardWithExample">
                         <h4>Exemplos de Uso:</h4>
                         <div class="divHover">Passe o mouse sobre mim</div>
                         <input class="inputFocus" placeholder="Clique para obter foco">
@@ -559,7 +559,7 @@
                         <div class="divBefore">Seta a esquerda</div>
                         <div class="divAfter">Seta a direta</div>
                     </div>
-                    <div class="codeCard">
+                    <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
                             <pre>.divHover {</pre>
@@ -594,8 +594,8 @@
                     <li><b>none:</b> aculta os elementos por não existir nenhum tipo de display.</li>
                 </ul>
                 <p>Existem também os display <b>Flex</b> e <b>Grid</b>, por serem mais complexos teram tópicos separados a seguir.</p>
-                <div class="doubleCard">
-                    <div id="cardBoxModel">
+                <div class="multipleCards">
+                    <div class="cardWithExample">
                         <h4>Exemplos de Uso:</h4>
                         <div>
                             <div class="divDisplayBlock">1° Tag</div>
@@ -610,7 +610,7 @@
                             <div class="divDisplayInlineBlock">6° Tag</div>
                         </div>
                     </div>
-                    <div class="codeCard">
+                    <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
                             <pre>.displayBlock {</pre>
@@ -662,8 +662,8 @@
                     <li><b>end:</b> ajusta os itens no fim.</li>
                     <li><b>center:</b> ajusta os itens no centro.</li>
                 </ul>
-                <div class="doubleCard">
-                    <div id="cardBoxModel">
+                <div class="multipleCards">
+                    <div class="cardWithExample">
                         <h4>Exemplos de Uso:</h4>
                         <div class="paiFlex1">
                             <div class="filhoFlex">Filho 1</div>
@@ -674,7 +674,7 @@
                             <div class="filhoFlex">Filho 4</div>
                         </div>
                     </div>
-                    <div class="codeCard">
+                    <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
                             <pre>.pai1 {</pre>
@@ -728,8 +728,8 @@
                     propriedade "<b>grid-template-rows</b>" o mesmo não ocorre com as colunas, o CSS não criará uma nova coluna para adicionar o 
                     item restante, ele criará uma nova linha para adicioná-lo.
                 </p>
-                <div class="doubleCard">
-                    <div id="cardBoxModel">
+                <div class="multipleCards">
+                    <div class="cardWithExample">
                         <h4>Exemplos de Uso:</h4>
                         <div class="paiGrid1">
                             <div class="filhoGrid">Filho 1</div>
@@ -744,7 +744,7 @@
                             <div class="filhoGrid">Filho 8</div>
                         </div>
                     </div>
-                    <div class="codeCard">
+                    <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
                             <pre>.paiGrid1 {</pre>
@@ -787,15 +787,15 @@
                     Sendo "<b>from/to</b>" para dois pontos únicos de animação (inicial e final) e "<b>X%/(n)%/Y%</b>" para vários pontos 
                     de animação (inicial, (n)intermediários e final).
                 </p>
-                <div class="doubleCard">
-                    <div id="cardBoxModel">
+                <div class="multipleCards">
+                    <div class="cardWithExample">
                         <h4>Exemplos de Uso:</h4>
                         <div class="divPaiAnimation">
                             <div class="divAnimation">Hellou!</div>
                         </div>
                         
                     </div>
-                    <div class="codeCard">
+                    <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
                             <pre>.divPaiAnimation {</pre>
@@ -840,8 +840,8 @@
                     A <b>Media Query</b> em CSS é responsável por dar responsividade aos sites com base nesses break points. Veja a baixo 
                     alguns exemplos:
                 </p>
-                <div class="doubleCard">
-                    <div class="codeCard">
+                <div class="multipleCards">
+                    <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
                             <pre><div class="comment">/*Mobile First*/</div></pre>
@@ -863,7 +863,7 @@
                             <pre>}</pre>
                         </code>
                     </div>
-                    <div class="codeCard">
+                    <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
                             <pre><div class="comment">/*Desktop First*/</div></pre>
