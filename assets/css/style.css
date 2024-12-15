@@ -2,6 +2,7 @@
     padding: 0;
     text-decoration: none;
 }
+
 body {
     background-color: rgb(25, 25, 25);
     color: white;
@@ -21,15 +22,12 @@ body {
         sans-serif;
     padding-top: 87px;
 }
+
 header {
     width: 100%;
     background-color: rgb(25, 25, 25);
     position: fixed;
     top: 0px;
-}
-
-.title {
-    text-align: center;
 }
 
 main {
@@ -42,11 +40,16 @@ footer {
     align-content: center;
 }
 
+.title {
+    text-align: center;
+}
+
 .moduleOne {
     border-radius: 5px;
     border: solid 1px rgb(25, 25, 25);
     padding: 0px 10px;
 }
+
 .moduleOne:hover {
     background-color: rgb(27, 27, 27);
     border: solid 1px rgb(45, 45, 45);
