@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <div id="title">
+        <div class="title">
             <h1>HTML e CSS Modernos</h1>
         </div>
     </header>
@@ -92,7 +92,7 @@
                     <div class="comment">[ html ]</div>
                     <code>
                         <pre>&lt;div class=""&gt; &lt;/div&gt; <span class="comment">&lt;!--Atribui uma classe ao elemento (utilizada para referenciar muitos elementos)--&gt;</span></pre>
-                        <pre>&lt;div id=""&gt; &lt;/div&gt; <span class="comment">&lt;!--Atribui um id ao elemento (utilizada para referenciar um único elemento)--&gt;</span></pre>
+                        <pre>&lt;div id=""&gt; &lt;/div&gt; <span class="comment">&lt;!--Atribui um id ao elemento (utilizada para referenciar um único elemento ou exclusivamente para utilização do javascript)--&gt;</span></pre>
                         <pre>&lt;div lang=""&gt; &lt;/div&gt; <span class="comment">&lt;!--Define o idioma principal do elemento--&gt;</span></pre>
                         <pre>&lt;div alt=""&gt; &lt;/div&gt; <span class="comment">&lt;!--Muito utilizado na tag de imagem, pois define um texto alternativo, SEO--&gt;</span></pre>
                         <pre>&lt;div title=""&gt; &lt;/div&gt; <span class="comment">&lt;!--Exibe um texto ao passar o mouse--&gt;</span></pre>
@@ -139,7 +139,7 @@
                 <h4>Exemplo de Uso:</h4>
                 <div class="multipleCards">
                     <div class="cardWithExample">
-                        <p id="formTitle"><b>Exemplo de Formulário</b></p>
+                        <p class="formTitle"><b>Exemplo de Formulário</b></p>
                         <form>
                             <label for="email">E-mail:</label>
                             <input type="email" id="email" placeholder="Digite seu email">
@@ -184,9 +184,9 @@
                 <p>Ambas as tags utilizam o atributo <i>"src"</i> para mostrar o caminho da mídia a ser mostrada.</p>
                 <h4>Exemplo de Uso:</h4>
                 <div class="multipleCards">
-                    <div class="cardWithExample" id="mediaCard">
+                    <div class="cardWithExample" class="mediaCard">
                         <p><b>Exemplo de Imagem e Áudio</b></p>
-                        <img src="../assets/images/imgExample.jpg" id="imgWidth">
+                        <img src="../assets/images/imgExample.jpg" class="imgWidth">
                         <audio id="audio">
                             <source src="../assets/media/Ring05.wav" type="audio/wav">
                                 Seu navegador não possui suporte para esse audio!
@@ -202,7 +202,7 @@
                     <div class="card adjustWidth">
                         <div class="comment">[ html ]</div>
                         <code>
-                            <pre>&lt;img src="../Midias/ImgExample.jpg" styte="width: 300px;"&gt;</pre>
+                            <pre>&lt;src="../assets/images/imgExample.jpg" class="imgWidth""&gt;</pre>
                             <pre>&lt;audio id="audio"&gt;</pre>
                             <pre>   &lt;source src="..Midias/Ring05.waw" type="audio/wav"&gt;</pre>
                             <pre>       Seu navegador não possui suporte para esse audio!</pre>
@@ -297,15 +297,15 @@
                 <div class="card">
                     <div class="comment">[ css ]</div>
                     <code>
-                        <pre><span class="comment">&lt;!--Unidade de Medida absoluta--&gt;</span></pre>
+                        <pre><span class="comment">/*Unidade de Medida absoluta*/</span></pre>
                         <pre>body {</pre>
-                        <pre>   font-size: 20px; <span class="comment">&lt;!--20 pixels da tela--&gt;</span></pre>
+                        <pre>   font-size: 20px; <span class="comment">/*20 pixels da tela*/</span></pre>
                         <pre>}</pre><br>
-                        <pre><span class="comment">&lt;!--Unidades de Medida Relativa--&gt;</span></pre>
+                        <pre><span class="comment">/*Unidades de Medida Relativa*/</span></pre>
                         <pre>div {</pre>
-                        <pre>   font-size: 2rem; <span class="comment">&lt;!--Refere-se a duas unidades do valor da tag "<i>html</i>", 2 x 16px = 32px--&gt;</span></pre>
-                        <pre>   font-size: 1em; <span class="comment">&lt;!--Refere-se a uma unidade do valor da tag pai "<i>body</i>", 1 x 20px = 20px--&gt;</span></pre>
-                        <pre>   width: 50%; <span class="comment">&lt;!--Define que o tamanho da largura de "<i>p</i>" é a metade da largura da tag pai "<i>body</i>"--&gt;</span></pre>
+                        <pre>   font-size: 2rem; <span class="comment">/*Refere-se a duas unidades do valor da tag "<i>html</i>", 2 x 16px = 32px*/</span></pre>
+                        <pre>   font-size: 1em; <span class="comment">/*Refere-se a uma unidade do valor da tag pai "<i>body</i>", 1 x 20px = 20px*/</span></pre>
+                        <pre>   width: 50%; <span class="comment">/*Define que o tamanho da largura de "<i>p</i>" é a metade da largura da tag pai "<i>body</i>"*/</span></pre>
                         <pre>}</pre>                            
                     </code>
                 </div>
@@ -321,28 +321,28 @@
                     <div class="cardWithExample">
                         <h4>Exemplos de Largura e Altura</h4>
                         <div>
-                            <div id="pai">
-                                <div id="filho">Filho</div>
+                            <div class="mainTagWH">
+                                <div class="supportingTagWH">Filho</div>
                             </div>
                         </div>
                     </div>
                     <div class="card adjustWidth">
                         <div class="comment">[ html ]</div>
                         <code>
-                            <pre>&lt;div id="pai"&gt;</pre>
-                            <pre>   &lt;div id="filho"&gt;Filho&lt;/div&gt;</pre>
+                            <pre>&lt;div class="mainTagWH"&gt;</pre>
+                            <pre>   &lt;div class="supportingTagWH"&gt;Filho&lt;/div&gt;</pre>
                             <pre>&lt;/div&gt;</pre>
                         </code>
                     </div>
                     <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
-                            <pre>#pai {</pre>
-                            <pre>   width: 200px;</pre>
-                            <pre>   heigth: 200px;</pre>
+                            <pre>.mainTagWH {</pre>
+                            <pre>   width: 120px;</pre>
+                            <pre>   heigth: 120px;</pre>
                             <pre>   background-color: green;</pre>
                             <pre>}</pre><br>
-                            <pre>#filho {</pre>
+                            <pre>.supportingTagWH {</pre>
                             <pre>   width: 50%</pre>
                             <pre>   heigth: 50%</pre>
                             <pre>   background-color: yellow;</pre>
@@ -400,25 +400,25 @@
                 <div class="multipleCards">
                     <div class="cardWithExample">
                         <h4>Propriedades de Bloco</h4>
-                        <div id="boxPai">
-                            <div id="boxFilhoUm"></div>
-                            <div id="boxFilhoDois"></div>
+                        <div class="mainTagBM">
+                            <div class="supportingTagOneBM"></div>
+                            <div class="supportingTagTwoBM"></div>
                         </div>
                     </div>
                     <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
-                            <pre>#boxPai {</pre>
+                            <pre>.mainTagBM {</pre>
                             <pre>   background-color: green;</pre>
                             <pre>   padding: 5px;</pre>
                             <pre>   border-radius: 15px;</pre>
-                            <pre>}</pre><br>
-                            <pre>#boxFilhoUm {</pre>
+                            <pre>}</pre>
+                            <pre>.supportingTagOneBM {</pre>
                             <pre>   background-color: yellow;</pre>
                             <pre>   margin: 15px 7px;</pre>
                             <pre>   border: 5px dashed black;</pre>
-                            <pre>}</pre><br>
-                            <pre>#boxFilhoDois {</pre>
+                            <pre>}</pre>
+                            <pre>.supportingTagTwoBM {</pre>
                             <pre>   background-color: red;</pre>
                             <pre>   margin: 50px 20px;</pre>
                             <pre>   border-radius: 50%;</pre>
@@ -475,28 +475,28 @@
                 <div class="multipleCards">
                     <div class="cardWithExample">
                         <h4>Propriedades de Fundo</h4>
-                        <div id="bodyEx">
-                            <div id="imgEx"></div>
+                        <div class="bodyB">
+                            <div class="imgB"></div>
                         </div>
                     </div>
                     <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
-                            <pre>#bodyEx {</pre>
+                            <pre>.bodyB {</pre>
                             <pre>   background-color: green;</pre>
-                            <pre>   height: 400px;</pre>
-                            <pre>   width: 350px;</pre>
+                            <pre>   height: 240px;</pre>
+                            <pre>   width: 190px;</pre>
                             <pre>   display: flex;</pre>
                             <pre>   align-items: center;</pre>
                             <pre>   justify-content: center;</pre>
-                            <pre>}</pre><br>
-                            <pre>#imgEx {</pre>
+                            <pre>}</pre>
+                            <pre>.imgB {</pre>
                             <pre>   background-image: url('../assets/images/Project_Zomboid_Capa.jpg');</pre>
-                            <pre>   background-repeat: no-repeat; &lt;!--Não se repete para ocupar o espaço--&gt;</pre>
-                            <pre>   background-size: cover; &lt;!--Ocupa todo o espaço da tag--&gt;</pre>
-                            <pre>   background-position: 0% 12%; &lt;!--Ajusta o Topo e a Base--&gt;</pre>
-                            <pre>   height: 350px;</pre>
-                            <pre>   width: 300px;</pre>
+                            <pre>   background-repeat: no-repeat; <span class="comment">/*Não se repete para ocupar o espaço*/</span></pre>
+                            <pre>   background-size: cover; <span class="comment">/*Ocupa todo o espaço da tag*/</span></pre>
+                            <pre>   background-position: 0% 12%; <span class="comment">/*Ajusta o Topo e a Base*/</span></pre>
+                            <pre>   height: 200px;</pre>
+                            <pre>   width: 150px;</pre>
                             <pre>}</pre><br>
                         </code>
                     </div>
@@ -514,22 +514,22 @@
                 <div class="multipleCards">
                     <div class="cardWithExample">
                         <h4>Exemplos de Uso:</h4>
-                        <div class="firstColor">1° cor</div>
-                        <div class="secondColor">2° cor</div>
-                        <div class="thirdColor">3° cor</div>
+                        <div class="firstColorC">1° cor</div>
+                        <div class="secondColorC">2° cor</div>
+                        <div class="thirdColorC">3° cor</div>
                     </div>
                     <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
-                            <pre>.firstColor {</pre>
+                            <pre>.firstColorC {</pre>
                             <pre>    background-color: #123;</pre>
                             <pre>    color: white;</pre>
-                            <pre>}</pre><br>
-                            <pre>.secondColor {</pre>
+                            <pre>}</pre>
+                            <pre>.secondColorC {</pre>
                             <pre>    background-color: rgb(0, 50, 255);</pre>
                             <pre>    color: gray;</pre>
-                            <pre>}</pre><br>
-                            <pre>.thirdColor {</pre>
+                            <pre>}</pre>
+                            <pre>.thirdColorC {</pre>
                             <pre>    background-color: rgba(0, 55, 255, 0.5);</pre>
                             <pre>    color: black;</pre>
                             <pre>}</pre>
@@ -553,28 +553,27 @@
                 <div class="multipleCards">
                     <div class="cardWithExample">
                         <h4>Exemplos de Uso:</h4>
-                        <div class="divHover">Passe o mouse sobre mim</div>
-                        <input class="inputFocus" placeholder="Clique para obter foco">
-                        <br>
-                        <div class="divBefore">Seta a esquerda</div>
-                        <div class="divAfter">Seta a direta</div>
+                        <div class="divHoverPCPE">Passe o mouse sobre mim</div>
+                        <input class="inputFocusPCPE" placeholder="Clique para obter foco">
+                        <div class="divBeforePCPE">Seta a esquerda</div>
+                        <div class="divAfterPCPE">Seta a direta</div>
                     </div>
                     <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
-                            <pre>.divHover {</pre>
+                            <pre>.divHoverPCPE {</pre>
                             <pre>    background-color: rgb(0, 50, 255);</pre>
-                            <pre>}</pre><br>
-                            <pre>.divHover:hover {</pre>
+                            <pre>}</pre>
+                            <pre>.divHoverPCPE:hover {</pre>
                             <pre>    background-color: green;</pre>
-                            <pre>}</pre><br>
-                            <pre>.inputFocus:focus {</pre>
+                            <pre>}</pre>
+                            <pre>.inputFocusPCPE:focus {</pre>
                             <pre>    background-color: rgb(200, 200, 200);</pre>
-                            <pre>}</pre><br>
-                            <pre>.divBefore::before {</pre>
+                            <pre>}</pre>
+                            <pre>.divBeforePCPE::before {</pre>
                             <pre>    content: '→';</pre>
-                            <pre>}</pre><br>
-                            <pre>.divAfter::after {</pre>
+                            <pre>}</pre>
+                            <pre>.divAfterPCPE::after {</pre>
                             <pre>    content: '←';</pre>
                             <pre>}</pre>
                         </code>
@@ -598,28 +597,28 @@
                     <div class="cardWithExample">
                         <h4>Exemplos de Uso:</h4>
                         <div>
-                            <div class="divDisplayBlock">1° Tag</div>
-                            <div class="divDisplayBlock">2° Tag</div>
+                            <div class="displayBlockD">1° Tag</div>
+                            <div class="displayBlockD">2° Tag</div>
                         </div>
                         <div>
-                            <div class="divDisplayInline">3° Tag</div>
-                            <div class="divDisplayInline">4° Tag</div>
+                            <div class="displayInlineD">3° Tag</div>
+                            <div class="displayInlineD">4° Tag</div>
                         </div>
                         <div>
-                            <div class="divDisplayInlineBlock">5° Tag</div>
-                            <div class="divDisplayInlineBlock">6° Tag</div>
+                            <div class="displayInlineBlockD">5° Tag</div>
+                            <div class="displayInlineBlockD">6° Tag</div>
                         </div>
                     </div>
                     <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
-                            <pre>.displayBlock {</pre>
+                            <pre>.displayBlockD {</pre>
                             <pre>    display: block;</pre>
                             <pre>}</pre>
-                            <pre>.displayInline {</pre>
+                            <pre>.displayInlineD {</pre>
                             <pre>    display: inline;</pre>
                             <pre>}</pre>
-                            <pre>.displayInlineBlock {</pre>
+                            <pre>.displayInlineBlockD {</pre>
                             <pre>    display: inline-block;</pre>
                             <pre>}</pre>
                         </code>
@@ -665,33 +664,33 @@
                 <div class="multipleCards">
                     <div class="cardWithExample">
                         <h4>Exemplos de Uso:</h4>
-                        <div class="paiFlex1">
-                            <div class="filhoFlex">Filho 1</div>
-                            <div class="filhoFlex">Filho 2</div>
+                        <div class="mainTagOneDF">
+                            <div class="supportingTagDF">Filho 1</div>
+                            <div class="supportingTagDF">Filho 2</div>
                         </div>
-                        <div class="paiFlex2">
-                            <div class="filhoFlex">Filho 3</div>
-                            <div class="filhoFlex">Filho 4</div>
+                        <div class="mainTagTwoDF">
+                            <div class="supportingTagDF">Filho 3</div>
+                            <div class="supportingTagDF">Filho 4</div>
                         </div>
                     </div>
                     <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
-                            <pre>.pai1 {</pre>
+                            <pre>.mainTagOneDF {</pre>
                             <pre>    background-color: blue;</pre>
                             <pre>    display: flex;</pre>
                             <pre>    flex-direction: row;</pre>
                             <pre>    justify-content: space-between;</pre>
                             <pre>    align-items: start;</pre>
-                            <pre>}</pre><br>
-                            <pre>.pai2 {</pre>
+                            <pre>}</pre>
+                            <pre>.mainTagTwoDF {</pre>
                             <pre>    background-color: green;</pre>
                             <pre>    display: flex;</pre>
                             <pre>    flex-direction: column;</pre>
                             <pre>    justify-content: space-around;</pre>
                             <pre>    align-items: center;</pre>
                             <pre>}</pre>
-                            <pre>.filho {</pre>
+                            <pre>.supportingTagDF {</pre>
                             <pre>    background-color: white;</pre>
                             <pre>    border: solid 3px red;</pre>
                             <pre>    display: flex;</pre>
@@ -731,40 +730,40 @@
                 <div class="multipleCards">
                     <div class="cardWithExample">
                         <h4>Exemplos de Uso:</h4>
-                        <div class="paiGrid1">
-                            <div class="filhoGrid">Filho 1</div>
-                            <div class="filhoGrid">Filho 2</div>
-                            <div class="filhoGrid">Filho 3</div>
+                        <div class="mainTagOneDG">
+                            <div class="supportingTagDG">1</div>
+                            <div class="supportingTagDG">2</div>
+                            <div class="supportingTagDG">3</div>
                         </div>
-                        <div class="paiGrid2">
-                            <div class="filhoGrid">Filho 4</div>
-                            <div class="filhoGrid">Filho 5</div>
-                            <div class="filhoGrid">Filho 6</div>
-                            <div class="filhoGrid">Filho 7</div>
-                            <div class="filhoGrid">Filho 8</div>
+                        <div class="mainTagTwoDG">
+                            <div class="supportingTagDG">4</div>
+                            <div class="supportingTagDG">5</div>
+                            <div class="supportingTagDG">6</div>
+                            <div class="supportingTagDG">7</div>
+                            <div class="supportingTagDG">8</div>
                         </div>
                     </div>
                     <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
-                            <pre>.paiGrid1 {</pre>
+                            <pre>.mainTagOneDG {</pre>
                             <pre>    background-color: blue;</pre>
                             <pre>    display: grid;</pre>
                             <pre>    grid-template-columns: 1fr 1fr 1fr;</pre>
                             <pre>    column-gap: 10px;</pre>
-                            <pre>}</pre><br>
-                            <pre>.paiGrid2 {</pre>
+                            <pre>}</pre>
+                            <pre>.mainTagTwoDG {</pre>
                             <pre>    background-color: green;</pre>
                             <pre>    display: grid;</pre>
                             <pre>    grid-template-columns: 50% 50%;</pre>
-                            <pre>    grid-template-rows: repeat(2, 1fr); <div class="comment">/*Atenção Aqui!*/</div></pre>
+                            <pre>    grid-template-rows: repeat(2, 1fr); <span class="comment">/*Atenção Aqui!*/</span></pre>
                             <pre>    row-gap: 25px;</pre>
-                            <pre>}</pre><br>
-                            <pre>.filhoGrid {</pre>
+                            <pre>}</pre>
+                            <pre>.supportingTagDG {</pre>
                             <pre>    background-color: white;</pre>
                             <pre>    border: solid 3px red;</pre>
-                            <pre>    width: 50px;</pre>
-                            <pre>    height: 50px;</pre>
+                            <pre>    width: 20px;</pre>
+                            <pre>    height: 20px;</pre>
                             <pre>}</pre>
                         </code>
                     </div>
@@ -790,18 +789,18 @@
                 <div class="multipleCards">
                     <div class="cardWithExample">
                         <h4>Exemplos de Uso:</h4>
-                        <div class="divPaiAnimation">
-                            <div class="divAnimation">Hellou!</div>
+                        <div class="mainTagKF">
+                            <div class="supportingTagKF">Hellou!</div>
                         </div>
                         
                     </div>
                     <div class="card adjustWidth">
                         <div class="comment">[ css ]</div>
                         <code>
-                            <pre>.divPaiAnimation {</pre>
+                            <pre>.mainTagKF {</pre>
                             <pre>    width: 250px;</pre>
                             <pre>}</pre>
-                            <pre>.divAnimation {</pre>
+                            <pre>.supportingTagKF {</pre>
                             <pre>    width: 75px; height: 75px;</pre>
                             <pre>    position: relative;</pre>
                             <pre>    animation: animationDiv 10s infinite;</pre>
