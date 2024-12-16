@@ -2,6 +2,7 @@
     padding: 0;
     text-decoration: none;
 }
+
 body {
     background-color: rgb(25, 25, 25);
     color: white;
@@ -21,15 +22,13 @@ body {
         sans-serif;
     padding-top: 87px;
 }
+
 header {
     width: 100%;
     background-color: rgb(25, 25, 25);
     position: fixed;
     top: 0px;
-}
-
-.title {
-    text-align: center;
+    z-index: 10;
 }
 
 main {
@@ -42,24 +41,27 @@ footer {
     align-content: center;
 }
 
-.moduleOne {
-    border-radius: 5px;
-    border: solid 1px rgb(25, 25, 25);
-    padding: 0px 10px;
-}
-.moduleOne:hover {
-    background-color: rgb(27, 27, 27);
-    border: solid 1px rgb(45, 45, 45);
-}
-
-.textFooter {
+.textAlignCenter {
     text-align: center;
 }
 
-.a:link {
+.linkModules {
+    display: block;
+    border-radius: 5px;
+    border: solid 1px rgb(25, 25, 25);
+    padding: 0px 10px;
+    margin: 10px 0px;
+}
+
+.linkModules:hover {
+    background-color: rgb(30, 30, 30);
+    border: solid 1px rgb(45, 45, 45);
+}
+
+.linkModules:link {
     color: #fff;
 }
 
-.a:visited {
+.linkModules:visited {
     color: #ffffff;
 }
