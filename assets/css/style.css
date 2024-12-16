@@ -1,3 +1,19 @@
+:root {
+    --bg-color-01: #191919;
+    --bg-color-02: #1e1e1e;
+    --bg-color-03: #ffffff;
+    --bg-color-04: #e1e1e1;
+
+    --bg-color-alpha-01: #ffffff1a;
+
+    --color-01: #000000;
+    --color-02: #191919;
+    --color-03: #2d2d2d;
+    --color-04: #7d7d7d;
+    --color-05: #969696;
+    --color-06: #ffffff;
+}
+
 * {
     padding: 0;
     text-decoration: none;
@@ -5,11 +21,12 @@
 }
 
 body {
-    background-color: rgb(25, 25, 25);
+    background-color: var(--bg-color-01);
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 87px;
     font-family: system-ui,
         -apple-system,
         BlinkMacSystemFont,
@@ -21,12 +38,11 @@ body {
         'Open Sans',
         'Helvetica Neue',
         sans-serif;
-    padding-top: 87px;
 }
 
 header {
     width: 100%;
-    background-color: rgb(25, 25, 25);
+    background-color: var(--bg-color-01);
     position: fixed;
     top: 0px;
     z-index: 10;
@@ -46,6 +62,19 @@ section {
     scroll-margin-top: 106px;
 }
 
+.textAlignCenter {
+    text-align: center;
+}
+
+.textAlignCenter h1 a:link {
+    color: var(--color-06);
+}
+
+.textAlignCenter h1 a:visited {
+    color: var(--color-06);
+}
+
+/*Box Selection Section*/
 .selectSection h5 {
     padding: 0px;
     margin: 0px;
@@ -58,21 +87,21 @@ section {
 }
 
 .selectSection a:link {
-    color: rgb(125, 125, 125);
+    color: var(--color-04);
 }
 
 .selectSection a:visited {
-    color: rgb(125, 125, 125);
+    color: var(--color-04);
 }
 
 .selectSection a:hover {
-    color: rgb(225, 225, 225);
+    color: var(--bg-color-04);
 }
 
 .selectSection {
-    background-color: rgb(30, 30, 30);
-    border: solid 1px rgb(45, 45, 45);
-    color: rgb(125, 125, 125);
+    background-color: var(--bg-color-02);
+    border: solid 1px var(--color-03);
+    color: var(--color-05);
     border-radius: 5px;
     padding: 10px 15px;
     margin: 10px;
@@ -82,27 +111,24 @@ section {
     transition: 0.5s;
 }
 
-.textAlignCenter {
-    text-align: center;
-}
-
+/*Style Links*/
 .linkModules {
     display: block;
     border-radius: 5px;
-    border: solid 1px rgb(25, 25, 25);
+    border: solid 1px var(--color-02);
     padding: 0px 10px;
     margin: 10px 0px;
 }
 
 .linkModules:hover {
-    background-color: rgb(30, 30, 30);
-    border: solid 1px rgb(45, 45, 45);
+    background-color: var(--bg-color-02);
+    border: solid 1px var(--color-03);
 }
 
 .linkModules:link {
-    color: #fff;
+    color: var(--color-06);
 }
 
 .linkModules:visited {
-    color: #ffffff;
+    color: var(--color-06);
 }
