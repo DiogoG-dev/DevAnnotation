@@ -2,7 +2,6 @@
     --bg-color-01: #191919;
     --bg-color-02: #1e1e1e;
     --bg-color-03: #ffffff;
-    --bg-color-04: #e1e1e1;
 
     --bg-color-alpha-01: #ffffff1a;
 
@@ -11,7 +10,8 @@
     --color-03: #2d2d2d;
     --color-04: #7d7d7d;
     --color-05: #969696;
-    --color-06: #ffffff;
+    --color-06: #e1e1e1;
+    --color-07: #ffffff;
 }
 
 * {
@@ -66,11 +66,35 @@ section {
     text-align: center;
 }
 
+.comment {
+    color: var(--color-05);
+}
+
+/*Button return to Top*/
 .textAlignCenter h1 a:link {
     color: var(--color-06);
 }
 
 .textAlignCenter h1 a:visited {
+    color: var(--color-06);
+}
+
+/*Button return to Home*/
+.return {
+    position: fixed;
+    top: 15px;
+    left: 30px;
+}
+
+.return h3:hover {
+    color: var(--color-05);
+}
+
+ .return:link {
+    color: var(--color-06);
+ }
+
+.return:visited {
     color: var(--color-06);
 }
 
@@ -95,7 +119,7 @@ section {
 }
 
 .selectSection a:hover {
-    color: var(--bg-color-04);
+    color: var(--color-06);
 }
 
 .selectSection {
@@ -130,5 +154,5 @@ section {
 }
 
 .linkModules:visited {
-    color: var(--color-06);
+    color: var(--color-07);
 }
