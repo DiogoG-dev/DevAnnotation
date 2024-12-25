@@ -20,6 +20,7 @@
             <p class="textAlignCenter">Tópicos do Módulo</p>
             <a href="#topicOne">- Introdução</a>
             <a href="#topicTwo">- Variáveis</a>
+            <a href="#topicThree">- Tipos de Dados</a>
         </h5>
     </div>
     <main>
@@ -56,23 +57,23 @@
                 que se comuniquem entre e executem uma deterniada função.
             </p>
             <h4>Tipos de Linguagens de Programação:</h4>
-            <ul>
-                <li>
-                    <b>Linguagem de Máquina:</b> A linguagem de máquina é a forma mais básica de comunicação com o computador. Ela é 
-                    diretamente compreendida pela máquina e funciona por meio de sequências de 0s e 1s, representando os estados de ligado 
-                    (1) e desligado (0) dos componentes do computador.
-                </li><br>
-                <li>
-                    <b>Linguagem de Baixo Nível:</b> As linguagens de baixo nível são mais próximas da arquitetura do computador e, 
-                    portanto, de difícil compreensão para os humanos. Elas permitem maior controle sobre o hardware, mas exigem um maior 
-                    conhecimento técnico para serem usadas corretamente.
-                </li><br>
-                <li>
-                    <b>Linguagem de Alto Nível:</b> As linguagens de alto nível são mais intuitivas e próximas da linguagem humana, 
-                    facilitando o processo de programação. No entanto, elas não são diretamente compreendidas pela máquina e precisam ser 
-                    convertidas para um formato que o computador possa entender.
-                </li>
-            </ul>
+
+            <li>
+                <b>Linguagem de Máquina:</b> A linguagem de máquina é a forma mais básica de comunicação com o computador. Ela é 
+                diretamente compreendida pela máquina e funciona por meio de sequências de 0s e 1s, representando os estados de ligado 
+                (1) e desligado (0) dos componentes do computador.
+            </li><br>
+            <li>
+                <b>Linguagem de Baixo Nível:</b> As linguagens de baixo nível são mais próximas da arquitetura do computador e, 
+                portanto, de difícil compreensão para os humanos. Elas permitem maior controle sobre o hardware, mas exigem um maior 
+                conhecimento técnico para serem usadas corretamente.
+            </li><br>
+            <li>
+                <b>Linguagem de Alto Nível:</b> As linguagens de alto nível são mais intuitivas e próximas da linguagem humana, 
+                facilitando o processo de programação. No entanto, elas não são diretamente compreendidas pela máquina e precisam ser 
+                convertidas para um formato que o computador possa entender.
+            </li><br>
+
             <div class="card">
                 <span class="comment">[ txt ]</span>
                 <code>
@@ -92,25 +93,25 @@
                 Como as linguagens de alto nível não são compreendidas diretamente pela máquina, é necessário realizar uma conversão do 
                 código-fonte para um formato executável. Existem duas abordagens principais para essa conversão:
             </p>
-            <ul>
-                <li>
-                    <b>Compilação:</b> O compilador traduz o código-fonte para um formato executável e o salva em um arquivo. Esse arquivo 
-                    pode ser executado independentemente em qualquer sistema compatível. Um exemplo de linguagem compilada é o <b>C</b>.
-                </li><br>
-                <li>
-                    <b>Interpretação:</b> O interpretador traduz as instruções do código-fonte em tempo real, linha por linha, e as executa 
-                    imediatamente, sem salvar um arquivo executável. Um exemplo de linguagem interpretada é o <b>JavaScript</b>.
-                </li>
-            </ul>
+
+            <li>
+                <b>Compilação:</b> O compilador traduz o código-fonte para um formato executável e o salva em um arquivo. Esse arquivo 
+                pode ser executado independentemente em qualquer sistema compatível. Um exemplo de linguagem compilada é o <b>C</b>.
+            </li><br>
+            <li>
+                <b>Interpretação:</b> O interpretador traduz as instruções do código-fonte em tempo real, linha por linha, e as executa 
+                imediatamente, sem salvar um arquivo executável. Um exemplo de linguagem interpretada é o <b>JavaScript</b>.
+            </li>
+
         </section>
         <section id="topicTwo">
             <h2>Variáveis:</h2>
             <p>Existem três tipos de variáveis em javascript:</p>
-            <ul>
-                <li><b>var:</b> permite redefinir e redeclarar valores, mas é pouco utilizado atualmente.</li>
-                <li><b>let:</b> permite redefinir valores, sendo a forma mais comum de declaração.</li>
-                <li><b>const:</b> os valores não podem ser alterados após a declaração.</li>
-            </ul>
+
+            <li><b>var:</b> permite redefinir e redeclarar valores, mas é pouco utilizado atualmente.</li>
+            <li><b>let:</b> permite redefinir valores, sendo a forma mais comum de declaração.</li>
+            <li><b>const:</b> os valores não podem ser alterados após a declaração.</li><br>
+
             <div class="card">
                 <code>
                     <span class="comment">[ js ]</span>
@@ -132,6 +133,103 @@
                 ou <b>caracteres especiais</b>, exceto <i>"$"</i> e <i>"_"</i>. Dois padrões comuns de nomenclatura são o <b>camelCase</b> 
                 (exemploDeVariavelEmCamelCase) e o <b>snake_case</b> (exemplo_de_variavel_em_snake_case).
             </p>
+        </section>
+        <section id="topicThree">
+            <h2>Tipos de Dados:</h2>
+            <p><b>String:</b></p>
+
+            <li>Sequência de caracteres, delimitada por aspas simples ou duplas.</li>
+            <li>Pode ser concatenada com outras strings.</li>
+            <li>Permite inserir variáveis dentro de texto usando Template Strings (${}).</li><br>
+
+            <div class="card">
+                <code>
+                    <span class="comment">[ js ]</span>
+                    <pre><span class="comment">// Usando aspas simples ou duplas</span></pre>
+                    <pre>let nome = "João";</pre>
+                    <pre>let saudacao = 'Olá, ' + nome + '!'; <span class="comment">// Concatenando strings</span></pre>
+                    <pre>console.log(saudacao);  <span class="comment">// Exibe: Olá, João!</span></pre><br>
+                    <pre><span class="comment">// Usando Template String (interpolação de variáveis)</span></pre>
+                    <pre>let idade = 30;</pre>
+                    <pre>let mensagem = `Meu nome é ${nome} e eu tenho ${idade} anos.`;</pre>
+                    <pre>console.log(mensagem); <span class="comment">// Exibe: Meu nome é João e eu tenho 30 anos.</span></pre>
+                </code>
+            </div>
+
+            <p><b>Number:</b></p>
+
+            <li>Representa números sem aspas.</li>
+            <li>Não pode ser concatenado como uma string.</li>
+            <li>Suporta operações matemáticas.</li><br>
+
+            <div class="card">
+                <code>
+                    <span class="comment">[ js ]</span>
+                    <pre>let idade = 30; <span class="comment">// Número inteiro</span></pre>
+                    <pre>let preco = 19.99; <span class="comment">// Número decimal</span></pre>
+                    <pre>let soma = idade + preco; <span class="comment">// Operação matemática</span></pre>
+                    <pre>console.log(soma);  <span class="comment">// Exibe: 49.99</span></pre><br>
+                </code>
+            </div>
+
+            <p><b>Boolean:</b></p>
+
+            <li>Define valores verdadeiro (true) ou falso (false).</li>
+            <li>Falso pode ser representado por 0, NaN, null, undefined e string vazia ("").</li>
+            <li>Verdadeiro é qualquer valor diferente de false, incluindo números diferentes de 0 e strings não vazias.</li><br>
+
+            <div class="card">
+                <code>
+                    <span class="comment">[ js ]</span>
+                    <pre>let isAdulto = true;</pre>
+                    <pre>let temCarro = false;</pre><br>
+                    <pre>if (isAdulto) {</pre>
+                    <pre>  console.log("Você é maior de idade.");</pre>
+                    <pre>} else {</pre>
+                    <pre>  console.log("Você é menor de idade.");</pre>
+                    <pre>}</pre><br>
+                    <pre>if (temCarro) {</pre>
+                    <pre>  console.log("Você tem um carro.");</pre>
+                    <pre>} else {</pre>
+                    <pre>  console.log("Você não tem um carro.");</pre>
+                    <pre>}</pre>
+                </code>
+            </div>
+
+            <p><b>Null:</b></p>
+
+            <li>Indica que a variável foi intencionalmente definida como "sem valor".</li>
+            <li>É um objeto especial, mas não tem valor.</li><br>
+
+            <div class="card">
+                <code>
+                    <span class="comment">[ js ]</span>
+                    <pre>let usuario = null;</pre><br>
+                    <pre>if (usuario === null) {</pre>
+                    <pre>  console.log("O valor de 'usuario' é nulo.");</pre>
+                    <pre>} else {</pre>
+                    <pre>  console.log("O valor de 'usuario' é definido.");</pre>
+                    <pre>}</pre>
+                </code>
+            </div>
+
+            <p><b>Undefined:</b></p>
+
+            <li>Significa que a variável foi declarada, mas não foi atribuída um valor.</li><br>
+
+            <div class="card">
+                <code>
+                    <span class="comment">[ js ]</span>
+                    <pre>let nome;</pre>
+                    <pre>console.log(nome); <span class="comment">// Exibe: undefined (porque a variável 'nome' não foi inicializada)</span></pre><br>
+                    <pre>let idade;</pre>
+                    <pre>if (idade === undefined) {</pre>
+                    <pre>  console.log("A variável 'idade' não foi definida.");</pre>
+                    <pre>} else {</pre>
+                    <pre>  console.log("A variável 'idade' tem um valor.");</pre>
+                    <pre>}</pre>
+                </code>
+            </div>
         </section>
         <!--End of Container Here-->
     </main>
