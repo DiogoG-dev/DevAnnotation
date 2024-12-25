@@ -19,6 +19,7 @@
         <h5>
             <p class="textAlignCenter">Tópicos do Módulo</p>
             <a href="#topicOne">- Introdução</a>
+            <a href="#topicTwo">- Variáveis</a>
         </h5>
     </div>
     <main>
@@ -101,6 +102,36 @@
                     imediatamente, sem salvar um arquivo executável. Um exemplo de linguagem interpretada é o <b>JavaScript</b>.
                 </li>
             </ul>
+        </section>
+        <section id="topicTwo">
+            <h2>Variáveis:</h2>
+            <p>Existem três tipos de variáveis em javascript:</p>
+            <ul>
+                <li><b>var:</b> permite redefinir e redeclarar valores, mas é pouco utilizado atualmente.</li>
+                <li><b>let:</b> permite redefinir valores, sendo a forma mais comum de declaração.</li>
+                <li><b>const:</b> os valores não podem ser alterados após a declaração.</li>
+            </ul>
+            <div class="card">
+                <code>
+                    <span class="comment">[ js ]</span>
+                    <pre><span class="comment">// Exemplo let:</span></pre>
+                    <pre>let idade = 25; <span class="comment">// A variável 'idade' é inicializada com 25</span></pre>
+                    <pre>console.log(idade); <span class="comment">// Exibe: 25</span></pre><br>
+                    <pre>idade = 30; <span class="comment">// O valor da variável pode ser alterado</span></pre>
+                    <pre>console.log(idade); <span class="comment">// Exibe: 30</span></pre><br>
+                    <pre><span class="comment">// Exemplo const:</span></pre>
+                    <pre>const nome = "João"; <span class="comment">// A variável 'nome' recebe o valor "João"</span></pre>
+                    <pre>console.log(nome) <span class="comment">// Exibe: João</span></pre><br>
+                    <pre><span class="comment">// Tentar alterar o valor de 'nome' resultará em um erro:</span></pre>
+                    <pre>nome = "Maria"; <span class="comment">// Erro! Não é possível reatribuir valor a uma variável 'const'</span></pre><br>
+                    <pre><span class="comment">// A variável var tem a mesma propriedades de let, porém já não é mais tão utilizada</span></pre>
+                </code>
+            </div>
+            <p>
+                Além disso, ao nomear variáveis, devem seguir algumas regras: não podem começar com <b>números</b>, nem conter <b>acentos</b> 
+                ou <b>caracteres especiais</b>, exceto <i>"$"</i> e <i>"_"</i>. Dois padrões comuns de nomenclatura são o <b>camelCase</b> 
+                (exemploDeVariavelEmCamelCase) e o <b>snake_case</b> (exemplo_de_variavel_em_snake_case).
+            </p>
         </section>
         <!--End of Container Here-->
     </main>
