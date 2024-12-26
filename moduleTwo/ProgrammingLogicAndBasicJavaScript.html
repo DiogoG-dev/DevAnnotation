@@ -25,7 +25,8 @@
             <a href="#topicFour">- Funções</a>
             <a href="#topicFive">- Objetos</a>
             <a href="#topicSix">- Arrays</a>
-            <a href="#topicSeven">- Operadores Aritimétricos</a>
+            <a href="#topicSeven">- Operadores Aritmétricos</a>
+            <a href="#topicEight">- Operadores de Atribuição</a>
         </h5>
     </div>
     <main>
@@ -325,11 +326,12 @@
             </div>
         </section>
         <section id="topicSeven">
-            <h2>Operadores Aritimétricos:</h2>
+            <h2>Operadores Aritmétricos:</h2>
             <p>
-                Os Operadores aritméticos são usados para realizar operações matemáticas em valores numéricos. Eles são fundamentais para 
+                Os Operadores Aritméticos são usados para realizar operações matemáticas em valores numéricos. Eles são fundamentais para 
                 manipular números e realizar cálculos em programas.
             </p>
+            <h4>Exemplos de Uso:</h4>
             <div class="card">
                 <span class="comment">[ js ]</span>
                 <code>
@@ -351,11 +353,40 @@
                     <pre><span class="comment">// Incremento</span></pre>
                     <pre>console.log(++a); <span class="comment">// soma uma unidade e mostra o valor final como 6</span></pre>
                     <pre>console.log(a++); <span class="comment">// mostra o valor atual 6 e soma uma unidade depois</span></pre>
-                    <pre>console.log(a); <span class="comment">// resultado: 7</span></pre><br><br>
+                    <pre>console.log(a); <span class="comment">// resultado: 7</span></pre><br>
                     <pre><span class="comment">// Decremento</span></pre>
                     <pre>console.log(--b); <span class="comment">// subtrai uma unidade e mostra o valor final como 2</span></pre>
                     <pre>console.log(b--); <span class="comment">// mostra o valor atual 2 e subtrai uma unidade depois</span></pre>
                     <pre>console.log(b); <span class="comment">// resultado: 1</span></pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicEight">
+            <h2>Operadores de Atribuição:</h2>
+            <p>
+                Os Operadores de Atribuição são usados para atribuir valores a variáveis. Eles são fundamentais para manipular e atualizar 
+                o valor de uma variável ao longo do código. O operador de atribuição mais simples é o =, mas há vários outros operadores 
+                que combinam atribuição com outras operações.
+            </p>
+            <h4>Exemplos de Atribuição:</h4>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <span class="comment">// </span>
+                <code>
+                    <pre><span class="comment">// Atribuição simples (=)</span></pre>
+                    <pre>let a = 10; <span class="comment">// A variável "a" recebe o valor 10</span></pre><br>
+                    <pre><span class="comment">// Atribuição de soma (+=)</span></pre>
+                    <pre>a += 5; <span class="comment">// a = a + 5, "a" agora será 15</span></pre><br>
+                    <pre><span class="comment">// Atribuição de subtração (-=)</span></pre>
+                    <pre>a -= 3; <span class="comment">// a = a - 3, "a" agora será 12</span></pre><br>
+                    <pre><span class="comment">// Atribuição de multiplicação (*=)</span></pre>
+                    <pre>a *= 2; <span class="comment">// a = a * 2, "a" agora será 24</span></pre><br>
+                    <pre><span class="comment">// Atribuição de multiplicação (/=)</span></pre>
+                    <pre>a /= 2; <span class="comment">// a = a / 2, "a" agora será 12</span></pre><br>
+                    <pre><span class="comment">// Atribuição de resto da divisão (%=)</span></pre>
+                    <pre>a %= 3; <span class="comment">// a = a % 3, o resto da divisão de 12 por 3 será 0</span></pre><br>
+                    <pre><span class="comment">// Atribuição de exponenciação (**=)</span></pre>
+                    <pre>a **= 3; <span class="comment">// a = a ** 3, "a" agora será 1728 (12 elevado a 3)</span></pre>
                 </code>
             </div>
         </section>
