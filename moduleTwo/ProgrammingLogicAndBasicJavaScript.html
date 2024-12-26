@@ -23,6 +23,7 @@
             <a href="#topicTwo">- Variáveis</a>
             <a href="#topicThree">- Tipos de Dados</a>
             <a href="#topicFour">- Função</a>
+            <a href="#topicFive">- Objetos</a>
         </h5>
     </div>
     <main>
@@ -253,6 +254,41 @@
             <li><b>nomeDaFuncao:</b> o nome que você dá a função. Ele é utilizado para chamar a função posteriormente.</li>
             <li><b>parametro:</b> são variáveis passadas para a função, que servem como entrada. Pode conter um ou vários parâmetros.</li>
             <li><b>return:</b> o valor que a função retorna após ser executada. Opcional, quando não utilizado,  retornará undefined por padrão.</li>
+        </section>
+        <section id="topicFive">
+            <h2>Objetos:</h2>
+            <p>
+                Objetos são estruturas de dados que permitem armazenar e manipular coleções de <b>dados</b> e <b>funcionalidades</b>. Eles 
+                são compostos por uma <b>lista de pares chave-valo</b>r, onde a chave é uma string (ou símbolo) e o valor pode ser qualquer 
+                tipo de dado, incluindo outros objetos ou métodos. Um objeto é criado com uma notação literal entre <b>chaves {}</b>, onde 
+                cada par chave-valor é separado por vírgula.
+            </p>
+            <h4>Estrutura Básica:</h4>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>const pessoa = {</pre>
+                    <pre>   nome: "João", <span class="comment">// Chave: nome, Valor: "João"</span></pre>
+                    <pre>   idade: 30, <span class="comment">// Chave: idade, Valor: 30</span></pre>
+                    <pre>   saudacao: function() { <span class="comment">// Chave: saudacao, Valor: função</span></pre>
+                    <pre>      return (`Olá, me chamo ${this.nome} e tenho ${this.idade} anos de idade.`)</pre>
+                    <pre>    }</pre>
+                    <pre>};</pre>
+                </code>
+            </div>
+            <p>O objeto pessoa tem três propriedades: nome (dado), idade (dado) e saudacao (método), e cada uma possui um valor associado.</p>
+            <h4>Acessando as Propriedades de um Objeto:</h4>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre><span class="comment">// Notação por Ponto</span></pre>
+                    <pre>console.log(pessoa.nome); <span class="comment">// "João"</span></pre>
+                    <pre>console.log(pessoa.saudacao()); <span class="comment">// Olá, me chamo João e tenho 30 anos de idade.</span></pre><br>
+                    <pre><span class="comment">// Notação por Colchetes</span></pre>
+                    <pre>console.log(pessoa['idade']); <span class="comment">// 30</span></pre>
+                    <pre>console.log(pessoa['saudacao']()) <span class="comment">// Olá, me chamo João e tenho 30 anos de idade.</span></pre>
+                </code>
+            </div>
         </section>
         <!--End of Container Here-->
     </main>
