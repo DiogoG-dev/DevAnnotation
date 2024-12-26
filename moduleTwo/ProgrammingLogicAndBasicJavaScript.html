@@ -22,8 +22,9 @@
             <a href="#topicOne">- Introdução</a>
             <a href="#topicTwo">- Variáveis</a>
             <a href="#topicThree">- Tipos de Dados</a>
-            <a href="#topicFour">- Função</a>
+            <a href="#topicFour">- Funções</a>
             <a href="#topicFive">- Objetos</a>
+            <a href="#topicSix">- Arrays</a>
         </h5>
     </div>
     <main>
@@ -235,7 +236,7 @@
             </div>
         </section> 
         <section id="topicFour">
-            <h2>Função:</h2>
+            <h2>Funções:</h2>
             <p>
                 Função é um bloco de código que pode ser executado quando chamada. As funções permitem que você escreva o código uma única 
                 vez e reutilize sempre que necessário. Exemplo de função:
@@ -287,6 +288,38 @@
                     <pre><span class="comment">// Notação por Colchetes</span></pre>
                     <pre>console.log(pessoa['idade']); <span class="comment">// 30</span></pre>
                     <pre>console.log(pessoa['saudacao']()) <span class="comment">// Olá, me chamo João e tenho 30 anos de idade.</span></pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicSix">
+            <h2>Arrays:</h2>
+            <p>
+                Um array, também chamado de vetor, é um objeto especial usado para armazenar uma coleção de dados de forma ordenada. Arrays 
+                podem conter diferentes tipos de dados em uma única estrutura, incluindo números, strings, objetos, funções e até outros 
+                arrays.
+            </p>
+            <h4>Estrutura Básica:</h4>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre><span class="comment">// Exemplo de Array/Vetor</span></pre>
+                    <pre>const pessoasIdade = ['Paulo', 22, 'Marta', 28, 'Raissa', 19]</pre><br>
+                    <pre><span class="comment">// Exemplo de Matriz</span></pre>
+                    <pre>const carros = [</pre>
+                    <pre>	['Willys-Overland', 'Troller', 'Caoa'],</pre>
+                    <pre>	['Toyota', 'Honda', 'Nissan'],</pre>
+                    <pre>	['Ferrari', 'Lamborghini', 'Maserati'],</pre>
+                    <pre>]</pre>
+                </code>
+            </div>
+            <h4>Acessando Elementos de um Array:</h4>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>console.log(pessoas[0]) <span class="comment">// "Paulo"</span></pre>
+                    <pre>console.log(pessoas[1]) <span class="comment">// 22</span></pre>
+                    <pre>console.log(carros[2]) <span class="comment">// ['Ferrari', 'Lamborghini', 'Maserati']</span></pre>
+                    
                 </code>
             </div>
         </section>
