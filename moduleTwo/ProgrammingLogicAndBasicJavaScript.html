@@ -27,6 +27,7 @@
             <a href="#topicSix">- Arrays</a>
             <a href="#topicSeven">- Operadores Aritmétricos</a>
             <a href="#topicEight">- Operadores de Atribuição</a>
+            <a href="#topicTen">- Operador Ternário</a>
         </h5>
     </div>
     <main>
@@ -415,6 +416,39 @@
                     <pre>console.log(5 <= 3); <span class="comment">// false</span></pre>
                 </code>
             </div>
+        </section>
+        <section id="topicTen">
+            <h2>Operador Ternário:</h2>
+            <p>
+                O operador ternário é uma forma compacta de escrever uma expressão condicional, onde você tem três partes: uma condição, um 
+                valor para quando a condição for verdadeira e outro valor para quando a condição for falsa. Ele é chamado de "ternário" 
+                porque envolve três componentes. A sintaxe básica do operador ternário é a seguinte:
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>condição ? valor_se_verdadeiro : valor_se_falso;</pre>
+                </code>
+            </div>
+            <h4>Explicação:</h4>
+            
+            <li><b>condição:</b> expressão que será avaliada, poderá retornar "true" ou "false".</li>
+            <li><b>valor_se_verdadeiro:</b> será executado se o valor retornado de "condição" for "true".</li>
+            <li><b>valor_se_falso:</b> será executado se o valor retornado de "condição" for "false".</li>
+
+            <h4>Exemplo de Uso Real:</h4>
+            <div class="card">
+                <code>
+                    <span class="comment">[ js ]</span>
+                    <pre>let idade = 18;</pre>
+                    <pre>let resultado = idade >= 18 ? "Maior de idade" : "Menor de idade";</pre>
+                    <pre>console.log(resultado); <span class="comment">// Saída: "Maior de idade"</span></pre>
+                </code>
+            </div>
+            <p>
+                Se a condição "idade >= 18" for verdadeira, o valor "Maior de idade" é atribuído à variável "resultado". Se for falsa, o 
+                valor "Menor de idade" seria atribuído. Neste caso a condição "idade >= 18" é verdadeira, logo a saída será "Maior de idade".
+            </p>
         </section>
         <!--End of Container Here-->
     </main>
