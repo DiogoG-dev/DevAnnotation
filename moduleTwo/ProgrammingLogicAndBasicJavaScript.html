@@ -29,6 +29,7 @@
             <a href="#topicEight">- Operadores de Atribuição</a>
             <a href="#topicNine">- Operadores de Comparação</a>
             <a href="#topicTen">- Operador Ternário</a>
+            <a href="#topicEleven">- Operadores Lógicos</a>
         </h5>
     </div>
     <main>
@@ -450,6 +451,47 @@
                 Se a condição "idade >= 18" for verdadeira, o valor "Maior de idade" é atribuído à variável "resultado". Se for falsa, o 
                 valor "Menor de idade" seria atribuído. Neste caso a condição "idade >= 18" é verdadeira, logo a saída será "Maior de idade".
             </p>
+        </section>
+        <section id="topicEleven">
+            <h2>Operadores Lógicos:</h2>
+            <p>
+                Operadores lógicos são fundamentais em programação, eles permitem combinar ou manipular expressões lógicas de forma a 
+                realizar decisões em um controle de fluxo em programas.
+            </p>
+            <p>
+                Esses operadores permitem combinar expressões booleanas, ou seja, verificações que resultam em "true" ou "false". Os 
+                principais operadores lógicos são:
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre><span class="comment">// AND (retorna "true" se ambas as expressões forem verdadeiras)</span></pre>
+                    <pre>true && true <span class="comment">// true</span></pre>
+                    <pre>true && false <span class="comment">// false</span></pre>
+                    <pre>false && false <span class="comment">// false</span></pre><br>
+                    <pre><span class="comment">// OR (retorna "true" se pelo menos uma expressão for verdadeira)</span></pre>
+                    <pre>true || false <span class="comment">// true</span></pre>
+                    <pre>false || false <span class="comment">// false</span></pre><br>
+                    <pre><span class="comment">// NOT (inverte o valor de uma expressão booleana)</span></pre>
+                    <pre>!true <span class="comment">// false</span></pre>
+                    <pre>!false <span class="comment">// true</span></pre><br>
+                    <pre><span class="comment">// Expressão Complexa</span></pre>
+                    <pre>let a = 10;</pre>
+                    <pre>let b = 20;</pre>
+                    <pre>let c = 30;</pre><br>
+                    <pre>if (a > 5 && !(b < 15) || c > 30) {</pre>
+                    <pre>    console.log("Condição atendida!"); <span class="comment">// Será executado</span></pre>
+                    <pre>} else {</pre>
+                    <pre>    console.log("Condição não atendida!");</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Explicação:</span></pre>
+                    <pre><span class="comment">// 1°: "a" é MAIOR que 5 -> TRUE</span></pre>
+                    <pre><span class="comment">// 2°:  "b" é MENOR que 15 -> !FALSE --> TRUE</span></pre>
+                    <pre><span class="comment">// 3°:  "c" é MAIOR que 30 - FALSE</span></pre>
+                    <pre><span class="comment">// 4°: TRUE and TRUE --> TRUE</span></pre>
+                    <pre><span class="comment">// 5°: TRUE or FALSE --> TRUE</span></pre>
+                </code>
+            </div>
         </section>
         <!--End of Container Here-->
     </main>
