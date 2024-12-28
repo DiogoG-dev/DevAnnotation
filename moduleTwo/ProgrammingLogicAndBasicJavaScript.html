@@ -30,6 +30,7 @@
             <a href="#topicNine">- Operadores de Comparação</a>
             <a href="#topicTen">- Operador Ternário</a>
             <a href="#topicEleven">- Operadores Lógicos</a>
+            <a href="#topicTwelve">- Condicionais</a>
         </h5>
     </div>
     <main>
@@ -490,6 +491,54 @@
                     <pre><span class="comment">// 3°:  "c" é MAIOR que 30 - FALSE</span></pre>
                     <pre><span class="comment">// 4°: TRUE and TRUE --> TRUE</span></pre>
                     <pre><span class="comment">// 5°: TRUE or FALSE --> TRUE</span></pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicTwelve">
+            <h2>Condicionais:</h2>
+            <p>
+                Assim como os operadores lógicos, as condicionais são fundamentais em programação, pois manipular expressões lógicas de forma a 
+                realizar o controle de fluxo em programas.
+            </p>
+            <p>
+                Essas estruturas são usadas para tomar decisões no fluxo do programa, permitindo que o código execute diferentes blocos 
+                dependendo de condições específicas. Eles são:
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre><span class="comment">// if (se), else if (se não se) e else (se não)</span></pre>
+                    <pre>let nota = 75;</pre><br>
+                    <pre>if (nota >= 90) {</pre>
+                    <pre>    console.log("Excelente!");</pre>
+                    <pre>} else if (nota >= 70) {</pre>
+                    <pre>    console.log("Bom!"); <span class="comment">// Será executado</span></pre>
+                    <pre>} else {</pre>
+                    <pre>    console.log("Insuficiente.");</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Switch que contém vários case (condicional de caso) e um default (padrão quando não atendido)</span></pre>
+                    <pre>let diaUtil = 2;</pre>
+                    <pre>let nomeDoDia;</pre><br>
+                    <pre>switch (dia) {</pre>
+                    <pre>    case 1:</pre>
+                    <pre>        nomeDoDia = "Segunda-feira";</pre>
+                    <pre>        break;</pre>
+                    <pre>    case 2:</pre>
+                    <pre>        nomeDoDia = "Terça-feira";</pre>
+                    <pre>        break;</pre>
+                    <pre>    case 3:</pre>
+                    <pre>        nomeDoDia = "Quarta-feira";</pre>
+                    <pre>        break;</pre>
+                    <pre>    case 4:</pre>
+                    <pre>        nomeDoDia = "Quinta-feira";</pre>
+                    <pre>        break;</pre>
+                    <pre>    case 5:</pre>
+                    <pre>        nomeDoDia = "Sexta-feira";</pre>
+                    <pre>        break;</pre>
+                    <pre>    default:</pre>
+                    <pre>        nomeDoDia = "Dia inválido";</pre>
+                    <pre>}:</pre><br>
+                    <pre>console.log(nomeDoDia); <span class="comment">// Terça-feira"</span></pre>
                 </code>
             </div>
         </section>
