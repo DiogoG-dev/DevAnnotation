@@ -31,6 +31,7 @@
             <a href="#topicTen">- Operador Ternário</a>
             <a href="#topicEleven">- Operadores Lógicos</a>
             <a href="#topicTwelve">- Condicionais</a>
+            <a href="#topicThirteen">- Estruturas de Repetição</a>
         </h5>
     </div>
     <main>
@@ -539,6 +540,42 @@
                     <pre>        nomeDoDia = "Dia inválido";</pre>
                     <pre>}:</pre><br>
                     <pre>console.log(nomeDoDia); <span class="comment">// Terça-feira"</span></pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicThirteen">
+            <h2>Estruturas de Repetição:</h2>
+            <p>
+                As estruturas de repetição (ou loops) são usadas para executar um bloco de código múltiplas vezes, dependendo de uma 
+                condição. As estruturas mais utilizadas são "for", "for in", "for of" e "while".
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>let a = 0;</pre>
+                    <pre><span class="comment">// While - Repete até que uma condição seja satisfeita.</span></pre>
+                    <pre>while (a < 5;) {</pre>
+                    <pre>	console.log(a);</pre>
+                    <pre>	a++</pre>
+                    <pre>}</pre>
+                    <pre><span class="comment">// For - Semelhante a "while", porém toda a declaração é feita dentro do próprio "for".</span></pre>
+                    <pre>for (let a = 0; a < 5; a++) {</pre>
+                    <pre>	console.log(a);</pre>
+                    <pre>}</pre><br>
+                    <pre>const pessoa = {</pre>
+                    <pre>  nome: 'João',</pre>
+                    <pre>  idade: 30,</pre>
+                    <pre>  cidade: 'São Paulo'</pre>
+                    <pre>}</pre>
+                    <pre><span class="comment">// For in - Repete até percorrer todas as chaves/índices do objeto/array.</span></pre>
+                    <pre>for (let chave in pessoa) {</pre>
+                    <pre>  console.log(chave + ': ' + pessoa[chave]);</pre>
+                    <pre>}</pre><br>
+                    <pre>const frutas = ['maçã', 'banana', 'laranja'];</pre>
+                    <pre><span class="comment">// For of - Repete até percorrer todos os valores do objeto/array.</span></pre>
+                    <pre>for (let fruta of frutas) {</pre>
+                    <pre>  console.log(fruta);</pre>
+                    <pre>}</pre>
                 </code>
             </div>
         </section>
