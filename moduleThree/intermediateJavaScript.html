@@ -90,6 +90,27 @@
                     <pre>factoryFunction('João').deslogou(); <span class="comment">// 'O usuário João deslogou'</span></pre>
                 </code>
             </div>
+            <h4>Construction Function;</h4>
+            <p>
+                É semelhante a Factory Function, pois é responsável por criar e retonar um objeto, porém esse pode criar mais de um objeto e 
+                atribuir a eles características (atributos) herdáveis.
+            </p>
+            <div class="card">
+                <span class="comment"> [ js ]</span>
+                <code>
+                    <pre>function Pessoa(nome, idade) {</pre>
+                    <pre>	this.nome = nome</pre>
+                    <pre>	this.idade = idade</pre>
+                    <pre>	this.apresenteSe = function() {</pre>
+                    <pre>		console.log(`Me chamo ${nome} e tenho ${idade} anos de idade.`)</pre>
+                    <pre>	}</pre>
+                    <pre>}</pre><br>
+                    <pre>const pessoa1 = new Pessoa('João', 25); <span class="comment">// Cria um primeiro objeto</span></pre>
+                    <pre>const pessoa2 = new Pessoa('Maria', 20); <span class="comment">// Cria um segundo objeto</span></pre><br>
+                    <pre>pessoa1.apresenteSe(); <span class="comment">// 'Me chamo João e tenho 25 anos de idade.'</span></pre>
+                    <pre>pessoa2.apresenteSe(); <span class="comment">// 'Me chamo Maria e tenho 20 anos de idade.'</span></pre>
+                </code>
+            </div>
         </section>
         <!--End of Container Here-->
     </main>
