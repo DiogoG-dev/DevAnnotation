@@ -66,6 +66,24 @@
                     <pre>const teste = () => console.log('arrow function', x);</pre>
                 </code>
             </div>
+            <h4>Factory Function;</h4>
+            <p>
+                É uma função que cria e retonar um objeto quando chamada. Ela é flexível, já que pode retornar qualquer tipo de objeto.
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>function factoryFunction(nome) {</pre>
+                    <pre>	return {</pre>
+                    <pre>		logou: () => alert(`O usuário ${nome} logou`),</pre>
+                    <pre>		deslogou: () => alert(`O usuário ${nome} deslogou`),</pre>
+                    <pre>	}</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Uso:</span></pre>
+                    <pre>factoryFunction('João').logou();</pre>
+                    <pre>factoryFunction('João').deslogou();</pre>
+                </code>
+            </div>
         </section>
         <!--End of Container Here-->
     </main>
