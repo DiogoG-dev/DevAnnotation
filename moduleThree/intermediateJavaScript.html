@@ -35,9 +35,11 @@
             <div class="card">
                 <span class="comment">[ js ]</span>
                 <code>
-                    <pre>function teste (x) {</pre>
+                    <pre>function functionDeclaration (x) {</pre>
                     <pre>   console.log('function declaration', x);</pre>
-                    <pre>}</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Uso:</span></pre>
+                    <pre>functionDeclaration('valor'); <span class="comment">// 'function declaration valor'</span></pre>
                 </code>
             </div>
             <h4>Function Expression;</h4>
@@ -47,9 +49,11 @@
             <div class="card">
                 <span class="comment">[ js ]</span>
                 <code>
-                    <pre>const teste = function(x) {</pre>
+                    <pre>const functionExpression = function(x) {</pre>
                     <pre>   console.log('function expression', x);</pre>
-                    <pre>}</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Uso:</span></pre>
+                    <pre>functionExpression('valor'); <span class="comment">// 'function expression valor'</span></pre>
                 </code>
             </div>
             <h4>Arrow Function;</h4>
@@ -59,11 +63,13 @@
             <div class="card">
                 <span class="comment">[ js ]</span>
                 <code>
-                    <pre>const teste = (x) => {</pre>
+                    <pre>const arrowFunction = (x) => {</pre>
                     <pre>   console.log('arrow function', x);</pre>
                     <pre>}</pre><br>
-                    <pre>// ou</pre><br>
-                    <pre>const teste = () => console.log('arrow function', x);</pre>
+                    <pre><span class="comment">// Ou</span></pre>
+                    <pre>const arrowFunction = () => console.log('arrow function', x);</pre><br>
+                    <pre><span class="comment">// Uso:</span></pre>
+                    <pre>arrowFunction('valor'); <span class="comment">// 'arrow function valor'</span></pre>
                 </code>
             </div>
             <h4>Factory Function;</h4>
@@ -80,8 +86,8 @@
                     <pre>	}</pre>
                     <pre>}</pre><br>
                     <pre><span class="comment">// Uso:</span></pre>
-                    <pre>factoryFunction('João').logou();</pre>
-                    <pre>factoryFunction('João').deslogou();</pre>
+                    <pre>factoryFunction('João').logou(); <span class="comment">// 'O usuário João logou'</span></pre>
+                    <pre>factoryFunction('João').deslogou(); <span class="comment">// 'O usuário João deslogou'</span></pre>
                 </code>
             </div>
         </section>
