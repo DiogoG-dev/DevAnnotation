@@ -17,12 +17,55 @@
     <div class="selectSection">
         <h5>
             <p class="textAlignCenter">Tópicos do Módulo</p>
-            <a href="#topicOne">- </a>
+            <a href="#topicOne">- Funções</a>
         </h5>
     </div>
     <main>
         <section id="topicOne">
-            <h2></h2>
+            <h2>Funções:</h2>
+            <p>
+                São blocos de código projetados para realizar uma tarefa específica. Elas podem ser reutilizadas em qualquer parte do seu 
+                código e ajudam a organizar, modularizar e manter o código mais limpo e eficiente.
+            </p>
+            <h4>Function Declaration;</h4>
+            <p>
+                É o tipo mais comum e tradicional de função em JavaScript. Ela é definida usando a palavra-chave "function", seguida do nome 
+                da função, parâmetros e o corpo da função. É hoisted, podendo ser chamada antes de sua definição no código.
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>function teste (x) {</pre>
+                    <pre>   console.log('function declaration', x);</pre>
+                    <pre>}</pre>
+                </code>
+            </div>
+            <h4>Function Expression;</h4>
+            <p>
+                É uma expressão que define uma função e a atribui a uma variável. Geralmente anônima, pois a função não exige nomenclatura.
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>const teste = function(x) {</pre>
+                    <pre>   console.log('function expression', x);</pre>
+                    <pre>}</pre>
+                </code>
+            </div>
+            <h4>Arrow Function;</h4>
+            <p>
+                Introduzidas no ECMAScript 6 (ES6) e oferecerm uma sintaxe mais compacta para escrever funções. Geralmente anônima.
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>const teste = (x) => {</pre>
+                    <pre>   console.log('arrow function', x);</pre>
+                    <pre>}</pre><br>
+                    <pre>// ou</pre><br>
+                    <pre>const teste = () => console.log('arrow function', x);</pre>
+                </code>
+            </div>
         </section>
         <!--End of Container Here-->
     </main>
