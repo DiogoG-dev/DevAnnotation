@@ -18,6 +18,7 @@
         <h5>
             <p class="textAlignCenter">Tópicos do Módulo</p>
             <a href="#topicOne">- Funções</a>
+            <a href="#topicTwo">- Prototype</a>
             <a href="#exercise">- Página de Exercícios</a>
         </h5>
     </div>
@@ -110,6 +111,36 @@
                     <pre>const pessoa2 = new Pessoa('Maria', 20); <span class="comment">// Cria um segundo objeto</span></pre><br>
                     <pre>pessoa1.apresenteSe(); <span class="comment">// 'Me chamo João e tenho 25 anos de idade.'</span></pre>
                     <pre>pessoa2.apresenteSe(); <span class="comment">// 'Me chamo Maria e tenho 20 anos de idade.'</span></pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicTwo">
+            <h2>Prototype:</h2>
+            <p>
+                O prototype é o principal mecanismo no JavaScript responsável pela herança de propriedades entre objetos. Todo objeto/função 
+                no JS tem por padrão a propriedade prototype, que pode ser utilizada para armazenar outras proprieadades/métodos herdáveis 
+                entre objetos do mesmo tipo.
+            </p>
+            <h4>Por que passar uma propriedade ou método através do prototype ao em vez de diretamento no construtor?</h4>
+            <p>
+                Quando um objeto é criado o JS armazena uma cópia das propriedades do construtor na instância, ou seja, a cada novo objeto um 
+                novo código é duplicado. O que não ocorre se passado pelo método prototype, pois a herança permitirá que os objetos acessem 
+                os métodos definidos nas camadas anteriores e os executem com base nos seus dados. Tornando o código mais eficiente e 
+                escalável.
+            </p>
+            <h4>Exemplo de Utilização:</h4>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>function Carro(marca, modelo, ano) {</pre>
+                    <pre>	this.marca = marca;</pre>
+                    <pre>	this.modelo = modelo;</pre>
+                    <pre>	this.ano = ano;</pre>
+                    <pre>}</pre><br>
+                    <pre>Carro.prototype.mostrarInfo = () => `Marca: ${this.marca}, Modelo: ${this.modelo}, Ano: ${this.ano}`</pre>
+                    <pre><span class="comment">// Os objetos herdam a propriedade se haver duplicação de código</span></pre><br>
+                    <pre>let meuCarro = new Carro('Toyota', 'Corolla', 2020);</pre><br>
+                    <pre>console.log(meuCarro.mostrarInfo()); <span class="comment">// Marca: Toyota, Modelo: Corolla, Ano: 2020</span></pre>
                 </code>
             </div>
         </section>
