@@ -19,6 +19,7 @@
             <p class="textAlignCenter">Tópicos do Módulo</p>
             <a href="#topicOne">- Funções</a>
             <a href="#topicTwo">- Prototype</a>
+            <a href="#topicThree">- Class</a>
             <a href="#exercise">- Página de Exercícios</a>
         </h5>
     </div>
@@ -141,6 +142,53 @@
                     <pre><span class="comment">// Os objetos herdam a propriedade se haver duplicação de código</span></pre><br>
                     <pre>let meuCarro = new Carro('Toyota', 'Corolla', 2020);</pre><br>
                     <pre>console.log(meuCarro.mostrarInfo()); <span class="comment">// Marca: Toyota, Modelo: Corolla, Ano: 2020</span></pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicThree">
+            <h2>Class:</h2>
+            <p>
+                Pode-se dizer que as classes em JavaScript são uma versão melhorada da funções construtoras padrão, eles foram implementadas 
+                no ECMAScript 6, sua utilidade principal é facilitar a orientação a objeto no JS.
+            </p>
+            <h4>Vantagens e Usos:</h4>
+            <p>
+                Suas vantagens são: sintaxe mais limpa, leve e moderna e herança simplificada (com "extends", ao em vez da manupulação por 
+                "prototype"). Na classe quando existem métodos que só podem ser usados pelo construtor utilizar o termo "static" para privar. 
+                Já quando existem dois métodos com a mesma nomenclatura e funcionalidades nas classes extendida e extensora, o método da 
+                classe extendida será a executada, pois o metodo da extensora foi sobrescrito, se deseja manter a herança basta escrever 
+                "super.metodo{}" e não passar um método com o mesmo nome na classe extendida.
+            </p>
+            <h4>Exemplo de Utilização:</h4>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>class Mamifero {</pre>
+                    <pre>constructor(nome, idade) {</pre>
+                    <pre>		this.nome = nome;</pre>
+                    <pre>		this.idade = idade;</pre>
+                    <pre>	}</pre>
+                    <pre>	dormir() {</pre>
+                    <pre>		alert(`${this.nome} dormiu.`);</pre>
+                    <pre>	}</pre>
+                    <pre>}</pre><br>
+                    <pre>class Pessoa extends Mamifero {</pre>
+                    <pre>	constructor(nome, idade, cpf) {</pre>
+                    <pre>        super(nome, idade);</pre>
+                    <pre>		this.cpf = cpf;</pre>
+                    <pre>	}</pre><br>
+                    <pre>    	static funcaoEstaticaQualquer() {</pre>
+                    <pre>        	return "Função Estática Qualquer"</pre>
+                    <pre>    	}</pre><br>
+                    <pre>	falar() {</pre>
+                    <pre>		alert(`Eu sou ${this.nome}, tenho ${this.idade} anos de idade e meu CPF é ${this.cpf}.`)</pre>
+                    <pre>	}</pre>
+                    <pre>}</pre><br>
+                    <pre>let mamifero = new Mamifero('Panda', 15);</pre>
+                    <pre>let pessoa = new Pessoa('João', 22, 29876543210);</pre><br>
+                    <pre>mamifero.dormir();</pre>
+                    <pre>pessoa.dormir();</pre>
+                    <pre>pessoa.falar();</pre>
                 </code>
             </div>
         </section>
