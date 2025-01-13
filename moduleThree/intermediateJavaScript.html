@@ -192,6 +192,47 @@
                 </code>
             </div>
         </section>
+        <section id="topicFour">
+            <h2>Desestruturação:</h2>
+            <p>
+                A desestruturação é basicamente uma nova maneira de acessar as proprieadades de um objeto ou itens de um array. Sua 
+                utilização consiste na simplicidade e reutilização de código.
+            </p>
+            <h4>Desestruturação em Objetos:</h4>
+            <p>Sua forma de acesso é através do nome da propriedade como variável de objeto.</p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>const pessoa = {</pre>
+                    <pre>   nome: 'Diogo',</pre>
+                    <pre>   idade: 20,</pre>
+                    <pre>   altura: undefined,</pre>
+                    <pre>   endereco: {</pre>
+                    <pre>       estado: 'Ceará',</pre>
+                    <pre>       cidade: 'Brejo Santo'</pre>
+                    <pre>   }</pre>
+                    <pre>}</pre><br>
+                    <pre>const {nome, idade} = pessoa;</pre>
+                    <pre>const {altura = 1.74} = pessoa; </pre>
+                    <pre>const {estado, cidade} = pessoa.endereco;</pre><br>
+                    <pre>console.log(nome); <span class="comment">// Diogo</span></pre>
+                    <pre>console.log(altura); <span class="comment">// 1.74</span></pre>
+                    <pre>console.log(estado); <span class="comment">// Ceará</span></pre>
+                </code>
+            </div>
+            <h4>Desestruturação em Arrays:</h4>
+            <p>Sua forma de acesso é semelhante ao de objetos, porém pela sua posição no array, definida por vígulas.</p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>cosnt carros = ['Hilux', 'HB20', 'Corola'];</pre><br>
+                    <pre>const [, segundoCarro] = carros;</pre>
+                    <pre>const [, , terceiro] = carros;</pre><br>
+                    <pre>console.log(segundoCarro); <span class="comment">// HB20</span></pre>
+                    <pre>console.log(terceiro); <span class="comment">// Corola</span></pre>
+                </code>
+            </div>
+        </section>
         <section id="exercise">
             <h2>Página de Exercícios:</h2>
             <p>
