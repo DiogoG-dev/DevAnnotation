@@ -21,6 +21,7 @@
             <a href="#topicTwo">- Prototype</a>
             <a href="#topicThree">- Class</a>
             <a href="#topicFour">- Desestruturação</a>
+            <a href="#topicFive">- Rest e Spred</a>
             <a href="#exercise">- Página de Exercícios</a>
         </h5>
     </div>
@@ -233,6 +234,65 @@
                     <pre>console.log(terceiro); <span class="comment">// Corola</span></pre>
                 </code>
             </div>
+        </section>
+        <section id="topicFive">
+            <h2>Rest e Spred:</h2>
+            <p>São duas ferramentas no JavaScript que auxiliam na programação e deixam a escrita do código mais limpa.</p>
+            <h4>Rest:</h4>
+            <p>
+                Permite pegar todos os argumentos dos parametros de uma função, juntando todos em um único array ou objeto, deixando a 
+                escrita do código mais simples. Sua nomenclatura é "..." + "nomeArrayObjeto".
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre><span class="comment">// Array</span></pre>
+                    <pre>function estados(ce, ...estados){ <span class="comment"> // Recebe dois paramentros "Ce" e o resto do array</span></pre>
+                    <pre>	console.log(ce); <span class="comment">// CE</span></pre>
+                    <pre>	console.log(estados); <span class="comment">// ['RJ', 'SP', 'RR', 'SC']</span></pre>
+                    <pre>};</pre>
+                    <pre>estados('CE', 'RJ', 'SP', 'RR', 'SC');</pre><br>
+                    <pre><span class="comment">// Objeto</span></pre>
+                    <pre>function pessoa(first, last, ...info) {</pre>
+                    <pre>	console.log(first + last);</pre>
+                    <pre>	console.log(info);</pre>
+                    <pre>};</pre><br>
+                    <pre>const infoPessoa = {nome: 'Diogo', idade: 22, profissao: 'Programador, cidade: 'Brejo Santo', estado: 'CE'};</pre>
+                    <pre>pessoa(infoPessoa); <span class="comment">// {nome: 'Diogo', idade: 22, profissao: 'Programador, cidade: 'Brejo Santo', estado: 'CE'}</span></pre>
+                </code>
+            </div>
+            <h4>Spred:</h4>
+            <p>
+                Serve basicamente para destribuir as propriedades de um objeto ou itens de um array em outro. Assim como Rest sua 
+                nomenclatura também é "..." + "nomedoArrayObjeto", mas agora ele adicionar dentro de outro Objeto ou Array.
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre><span class="comment">// Array</span></pre>
+                    <pre>const carrosAltos = ['Hilux', 'S10', 'Pajero', 'ranger'];</pre>
+                    <pre>const carrosBaixos = ['HB20', 'Gol', 'Celta', 'Corsa'];</pre>
+                    <pre>const carros = [...carrosAltos, ...carrosBaixos]; <span class="comment">// Pegando todos os carros e adicionando em carros.</span></pre><br>
+                    <pre>console.log(carros); <span class="comment">// ['Hilux', 'S10', 'Pajero', 'ranger', 'HB20', 'Gol', 'Celta', 'Corsa']</span></pre><br>
+                    <pre><span class="comment">//Objeto</span></pre>
+                    <pre>const pessoa = {</pre>
+                    <pre>	nome: 'Diogo',</pre>
+                    <pre>	idade: 22</pre>
+                    <pre>};</pre>
+                    <pre>const info = {</pre>
+                    <pre>	profissao: 'Programador,</pre>
+                    <pre>	cidade: 'Brejo Santo',</pre>
+                    <pre>	estado: 'CE'</pre>
+                    <pre>};</pre>
+                    <pre>const dados = {</pre>
+                    <pre>	...pessoa,</pre>
+                    <pre>	altura: 1.74,</pre>
+                    <pre>	...info</pre>
+                    <pre>};</pre><br>
+                    <pre>console.log(dados); <span class="comment">// {nome: 'Diogo', idade: 22, altura: 1.74, profissao: 'Programador, cidade: 'Brejo Santo', estado: 'CE'}</span></pre>
+                </code>
+            </div>
+            <p>Rest e Spred compartilha da mesma nomenclatura, o que diferenciam a forma como são utilizados.</p>
         </section>
         <section id="exercise">
             <h2>Página de Exercícios:</h2>
