@@ -22,6 +22,7 @@
             <a href="#topicThree">- Class</a>
             <a href="#topicFour">- Desestruturação</a>
             <a href="#topicFive">- Rest e Spred</a>
+            <a href="#topicSix">- Métodos e Propriedad...</a>
             <a href="#exercise">- Página de Exercícios</a>
         </h5>
     </div>
@@ -297,6 +298,35 @@
                 </code>
             </div>
             <p>Rest e Spred compartilha da mesma nomenclatura, o que diferenciam a forma como são utilizados.</p>
+        </section>
+        <section id="topicSix">
+            <h2>Métodos e Propriedadas da String:</h2>
+            <p>
+                A String é um tipo de dado primitivo que representa uma sequência de caracteres. Ele é utilizado para armazenar e manipular 
+                textos. Além disso, a classe String possui diversos métodos que permitem a manipulação e análise dessas sequências de 
+                caracteres. Os principais e mais utilizados deles são:
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>const firstString = 'Olá ';</pre>
+                    <pre>const lastString = 'mundo!';</pre><br>
+                    <pre>console.log(firstString.lenght) <span class="comment">// Irá retorna a quantidade de caracteres.</span></pre>
+                    <pre>console.log(firstString.chaAt(1)) <span class="comment">// Irá retornar o caracter na posição passada.</span></pre>
+                    <pre>console.log(firstString.toLowerCase) <span class="comment">// Irá deixar todos os caracteres minúsculos.</span></pre>
+                    <pre>console.log(firstString.toUpperCase) <span class="comment">// Irá deixar todos os caracteres maiusculos.</span></pre>
+                    <pre>console.log(firstString.endsWith('lá')) <span class="comment">// Irá verificar se a String termina com o valor passado.</span></pre>
+                    <pre>console.log(firstString.startsWith('Ol')) <span class="comment">// Irá verificar se a String começa com o valor passado.</span></pre>
+                    <pre>console.log(firstString.includes(' ')) <span class="comment">// Irá verificar se a String contem o valor passado.</span></pre>
+                    <pre>console.log(firstString.concat(lastString)) <span class="comment">// Irá concatenar as duas Strings</span></pre>
+                    <pre>console.log(lastString.substring(1, 3)) <span class="comment">// Irá pegar um pedaço da String, através das posições inicial e final passado.</span></pre>
+                    <pre>console.log(lastString.slice(-3, -1)) <span class="comment">// Irá pegar um pedaço da String igual anteriormente, porém de trás para frente.</span></pre>
+                    <pre>console.log(firstString.padStart(5, '*')) <span class="comment">// Irá aumentar a quantidade de caracteres e completar o início com o valor passado.</span></pre>
+                    <pre>console.log(firstString.padEnd(5, '*')) <span class="comment">// Irá aumentar a quantidade de caracteres e completar o final com o valor passado </span></pre>
+                    <pre>console.log(firstString.split(' ')) <span class="comment">// Irá dividir a String onde houver o caracter passado e adiciona-las em listas separadas.</span></pre>
+                    <pre>console.log(firstString.replace('O', 'A')) <span class="comment">// Irá substituir a primeira String encontrada por outra.</span></pre>
+                </code>
+            </div>
         </section>
         <section id="exercise">
             <h2>Página de Exercícios:</h2>
