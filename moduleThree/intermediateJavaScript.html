@@ -22,7 +22,8 @@
             <a href="#topicThree">- Class</a>
             <a href="#topicFour">- Desestruturação</a>
             <a href="#topicFive">- Rest e Spred</a>
-            <a href="#topicSix">- Métodos e Propriedad...</a>
+            <a href="#topicSix">- Métodos e Prop... String</a>
+            <a href="#topicSeven">- Métodos e Prop... Array</a>
             <a href="#exercise">- Página de Exercícios</a>
         </h5>
     </div>
@@ -325,6 +326,39 @@
                     <pre>console.log(firstString.padEnd(5, '*')) <span class="comment">// Irá aumentar a quantidade de caracteres e completar o final com o valor passado </span></pre>
                     <pre>console.log(firstString.split(' ')) <span class="comment">// Irá dividir a String onde houver o caracter passado e adiciona-las em listas separadas.</span></pre>
                     <pre>console.log(firstString.replace('O', 'A')) <span class="comment">// Irá substituir a primeira ocorrência do valor especificado.</span></pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicSeven">
+            <h2>Métodos e Propriedades do Array:</h2>
+            <p>
+                O array é um tipo de lista onde são armazenado elementos chamados de itens, podendo esses ser manipulados como desejar atráves 
+                dos métodos do array. Os principais métodos de manipulação de array e seus itens são:
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>const array = ['gol', 'hb20', 'hilux', 'gol']</pre>
+                    <pre>const array2 = ['gol', 'hb20', 'hilux', 'gol']</pre><br>
+                    <pre><span class="comment">// Para array comum, declarado:</span></pre>
+                    <pre>console.log(array.lenght) <span class="comment">// Irá ler a quantidade de elementos no array</span></pre>
+                    <pre>console.log(array.unshift('gol quadrado')) <span class="comment">// Adicionará um novo item no início do array</span></pre>
+                    <pre>console.log(array.shift()) <span class="comment">// Removerá o primeiro item do array</span></pre>
+                    <pre>console.log(array.push('gol quadrado')) <span class="comment">// Adicionará um item no final do array</span></pre>
+                    <pre>console.log(array.pop()) <span class="comment">// Removerá o ultimo item do array </span></pre>
+                    <pre>console.log(array.includes('hb20')) <span class="comment">// Verificará se um item existe ou não no array</span></pre>
+                    <pre>console.log(array.sort()) <span class="comment">// Irá ordenar os itens de um array (numérico/outro)</span></pre>
+                    <pre>console.log(array.reverse()) <span class="comment">// Irá inverter os itens do array</span></pre>
+                    <pre>console.log(array.indexOf('gol')) <span class="comment">// Pegará o valor passado e verificará sua primeira aparição (index) no array</span></pre>
+                    <pre>console.log(array.lastIndexOf('gol')) <span class="comment">// Pegará o valor passado e verificará sua última aparição (index) no array</span></pre>
+                    <pre>console.log(array.join()) <span class="comment">// Unirá todos os itens de um array em uma única string separado por "," (padrão)</span></pre>
+                    <pre>console.log(array.concat(array2)) <span class="comment">// Irá concatenar dois arrays</span></pre><br>
+                    <pre><span class="comment">Para array construtor, métodos estáticos:</span></pre>
+                    <pre>console.log(Array.from()) <span class="comment">// Transforma algo parecido com um array em um array realmente</span></pre>
+                    <pre>console.log(Array.isArray(array)) <span class="comment">// Verifica se um elemnto é um array ou não, com boolean</span></pre>
+                    <pre>console.log(Array.of(1, 2, 3)) <span class="comment">// Uma maneira de construir um array</span></pre>
+                    <pre>console.log(new Array(1, 2, 3)) <span class="comment">// Utiliza uma class para contruir um novo array</span></pre>
+                    <pre>console.log(Array(1, 2, 3)) <span class="comment">// Outra maneira simples para contruir um novo array</span></pre>
                 </code>
             </div>
         </section>
