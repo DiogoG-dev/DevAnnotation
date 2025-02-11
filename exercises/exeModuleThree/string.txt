@@ -1,0 +1,111 @@
+Questão 1: Propriedade length
+Qual será o valoer da propriedad length para a string let str = "JavaScript"?
+
+a) 9
+b) 10 X
+c) 11
+d) 12
+
+Questão 2: Método charAt()
+Qual será o valor de str.charAt(3) quando let str = "JavaScript"?
+
+a) "S"
+b) "v"
+c) "J"
+d) "a" X
+
+Questão 3: Método toLowerCase()
+O que o código str.toLowerCase() retorna quando let str = "JavaScript"?
+
+a) "JAVASCRIPT"
+b) "JavaScript"
+c) "javascript" X
+d) "JavaScriPt"
+
+Questão 4: Método toUpperCase()
+Qual será o valor de str.toUpperCase() se let str = "javascript"?
+
+a) "JavaScript"
+b) "javascript"
+c) "JAVASCRIPT" X
+d) "JAVAscript"
+
+Questão 5: Método endsWith()
+O que o código str.endsWith("cript") retorna quando let str = "JavaScript"?
+
+a) true X
+b) false
+c) undefined
+d) "JavaScript"
+
+Questão 6: Método startsWith()
+O que o código str.startsWith("Java") retorna quando let str = "JavaScript"?
+
+a) true X
+b) false
+c) undefined
+d) "Java"
+
+Questão 7: Método includes()
+Qual será o resultado de str.includes("Scr") quando let str = "JavaScript"?
+
+a) true X
+b) false
+c) undefined
+d) "Scr"
+
+Questão 8: Método concat()
+Qual será o resultado de str.concat(" é incrível") quando let str = "JavaScript"?
+
+a) "JavaScript é incrível" X
+b) "JavaScripté incrível"
+c) "JavaScript e incrível"
+d) "JavaScriptincrível"
+
+Questão 9: Método substring()
+Qual será o resultado de str.substring(4, 10) quando let str = "JavaScript"?
+
+a) "Java"
+b) "Scri"
+c) "Script" X
+d) "JavaScript"
+
+Questão 10: Método slice()
+O que o código str.slice(4, 10) retorna quando let str = "JavaScript"?
+
+a) "Scri"
+b) "Script" X
+c) "Java"
+d) "JavaScript"
+
+Questão 11: Método padStart()
+Qual será o resultado de str.padStart(5, "0") quando let str = "7"?
+
+a) "007" X
+b) "70"
+c) "700"
+d) "7"
+
+Questão 12: Método padEnd()
+O que o código str.padEnd(8, "-") retorna quando let str = "Java"?
+
+a) "Java----" X
+b) "Java---"
+c) "Java-----"
+d) "Java"
+
+Questão 13: Método split()
+O que o código str.split(" ") retorna quando let str = "Eu amo JavaScript"?
+
+a) ["Eu", "amo", "JavaScript"] X
+b) ["Eu amo", "JavaScript"]
+c) ["Eu", "amo JavaScript"]
+d) "Eu amo JavaScript"
+
+Questão 14: Método replace()
+O que o código str.replace("Java", "ECMA") retorna quando let str = "JavaScript"?
+
+a) "ECMAScript" X
+b) "JavaScript"
+c) "ECMAcript"
+d) "JavaECMAScript"
