@@ -24,6 +24,7 @@
             <a href="#topicFive">- Rest e Spred</a>
             <a href="#topicSix">- Métodos e Prop... String</a>
             <a href="#topicSeven">- Métodos e Prop... Array</a>
+            <a href="#topicEigth">- Operações com Array</a>
             <a href="#exercise">- Página de Exercícios</a>
         </h5>
     </div>
@@ -359,6 +360,47 @@
                     <pre>console.log(Array.of(1, 2, 3)) <span class="comment">// Uma maneira de construir um array</span></pre>
                     <pre>console.log(new Array(1, 2, 3)) <span class="comment">// Utiliza uma class para contruir um novo array</span></pre>
                     <pre>console.log(Array(1, 2, 3)) <span class="comment">// Outra maneira simples para contruir um novo array</span></pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicEigth">
+            <h2>Operações com Array:</h2>
+            <p>
+                Aqui você verá várias operações com arrays em JavaScript: "forEach" itera sobre os itens, "map" cria um novo array 
+                transformado, "reduce" acumula valores, "find" e "findIndex" retornam o primeiro valor verdadeiro e sua posição, "some" e 
+                "every" verificam condições e "filter" filtra elementos conforme a condição definida.
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>const pessoas = ['', 'João', 'Maria', 'José', 'Raissa', 'Gaiata', 'Raissa'];</pre>
+                    <pre>const frutas = [{nome: 'banana', quantidade: 3}, {nome: 'Imbu', quantidade: 2000}];</pre>
+                    <pre>const preco = [3.5, 5, 12, 7.2, 1];</pre><br>
+                    <pre><span class="comment">// Itera sobre todos os itens do array</span></pre>
+                    <pre>pessoas.forEach((value, index, array) => {</pre>
+                    <pre>    console.log(value, index, array);</pre>
+                    <pre>});</pre>
+                    <pre>frutas.forEach((value, index, array) => {</pre>
+                    <pre>    console.log(value.nome, index, array);</pre>
+                    <pre>});</pre><br>
+                    <pre><span class="comment">// Itera sobre todos os itens do array, podendo este criar um novo array</span></pre>
+                    <pre>const returnMap = pessoas.map((value, index) => {</pre>
+                    <pre>    return `${value} ${index}`</pre>
+                    <pre>})</pre><br>
+                    <pre><span class="comment">// Acumula o valor anterior para interagir com o atual</span></pre>
+                    <pre>const returnReduce = preco.reduce((acc, value) => {</pre>
+                    <pre>    return acc + value</pre>
+                    <pre>}, 0) <span class="comment">// 0 é o acumulado inicial</span></pre><br>
+                    <pre><span class="comment">// Retorna o primeiro valor verdadeiro do array</span></pre>
+                    <pre>const returnFind = pessoas.find((value) => value)</pre><br>
+                    <pre><span class="comment">// Retorna a posição do primeiro valor verdadeiro do array</span></pre>
+                    <pre>const returnoFindIndex = pessoas.findIndex((value) => value)</pre><br>
+                    <pre><span class="comment">// Retorna true quando existir um valor true e false quando todos forem false</span></pre>
+                    <pre>const returnoSome = pessoas.some((value) => value)</pre><br>
+                    <pre><span class="comment">// Retorna true quando todos os valores forem true e false quando ao menos um for false</span></pre>
+                    <pre>const returnEvery = pessoas.every((value) => value)</pre><br>
+                    <pre><span class="comment">// Retorna o valor especificado</span></pre>
+                    <pre>const returnFilter = pessoas.filter((value) => value === 'Raissa')</pre>
                 </code>
             </div>
         </section>
