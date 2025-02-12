@@ -25,6 +25,7 @@
             <a href="#topicSix">- Métodos e Prop... String</a>
             <a href="#topicSeven">- Métodos e Prop... Array</a>
             <a href="#topicEigth">- Operações com Array</a>
+            <a href="#topicNine">- Métodos e Pro... Função</a>
             <a href="#exercise">- Página de Exercícios</a>
         </h5>
     </div>
@@ -401,6 +402,39 @@
                     <pre>const returnEvery = pessoas.every((value) => value)</pre><br>
                     <pre><span class="comment">// Retorna o valor especificado</span></pre>
                     <pre>const returnFilter = pessoas.filter((value) => value === 'Raissa')</pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicNine">
+            <h2>Métodos e Propriedades da Função:</h2>
+            <p>
+                Em JavaScript, funções possuem propriedades como length, que indica a quantidade de parâmetros, e name, que retorna seu nome. 
+                Além disso, métodos como call e apply permitem definir o contexto de this, passando argumentos individualmente ou em um array. 
+                Já o bind retorna uma nova função com o contexto e argumentos pré-definidos, oferecendo mais controle sobre sua execução.
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre><span class="comment">// Propriedades</span></pre>
+                    <pre>function functionOne(name, age) {</pre>
+                    <pre>   console.log(name, age);</pre>
+                    <pre>}</pre>
+                    <pre>function functionTwo(name, age) {</pre>
+                    <pre>   console.log(name, age, this.profissao);</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Length</span></pre>
+                    <pre>functionOne.length; <span class="comment">// retorna 2, a quantidade de parâmetros</span></pre>
+                    <pre>functionOne.name; <span class="comment">// retorna o nome da função</span></pre><br>
+                    <pre><span class="comment">// Principais Métodos</span></pre>
+                    <pre><span class="comment">// Jeito comum de executar uma função</span></pre>
+                    <pre>functionOne('Diogo', 20);</pre><br>
+                    <pre><span class="comment">// Executa a função podendo passar um novo valor para "this"</span></pre>
+                    <pre>functionTwo.call({profissao: 'Programador'}, 'Diogo', 20);</pre><br>
+                    <pre><span class="comment">// Tem a mesma função do "Call", porém esta passa os valores através de array</span></pre>
+                    <pre>functionTwo.apply({profissao: 'Programador'}, ['Diogo', 20]);</pre><br>
+                    <pre><span class="comment">// Retorna a função com os valores já passados</span></pre>
+                    <pre>const newFunction = functionTwo.bind({profissao: 'Programador'}, 'Diogo', 20);</pre>
+                    <pre>newFunction();</pre>
                 </code>
             </div>
         </section>
