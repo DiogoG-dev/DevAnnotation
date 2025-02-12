@@ -26,6 +26,7 @@
             <a href="#topicSeven">- Métodos e Prop... Array</a>
             <a href="#topicEigth">- Operações com Array</a>
             <a href="#topicNine">- Métodos e Pro... Função</a>
+            <a href="#topicTen">- Métodos e Pro... Objeto</a>
             <a href="#exercise">- Página de Exercícios</a>
         </h5>
     </div>
@@ -435,6 +436,42 @@
                     <pre><span class="comment">// Retorna a função com os valores já passados</span></pre>
                     <pre>const newFunction = functionTwo.bind({profissao: 'Programador'}, 'Diogo', 20);</pre>
                     <pre>newFunction();</pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicTen">
+            <h2>Métodos e Propriedades do Objeto:</h2>
+            <p>
+                Em JavaScript, é possível transferir propriedades entre objetos usando "Object.assign()" ou a sintaxe de spread (...). O 
+                "Object.assign()" copia as propriedades de objeto2 para objeto1, enquanto o spread cria um novo objeto, combinando as 
+                propriedades de ambos os objetos, e adicionando novas se necessário. Além disso, "Object.keys()" retorna todas as chaves de 
+                um objeto em um array, enquanto "Object.values()" retorna um array com os valores dessas chaves. Esses métodos oferecem 
+                formas práticas de manipulação de objetos.
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre><span class="comment">// Propriedades</span></pre>
+                    <pre>const objeto1 = {</pre>
+                    <pre>    nome: 'Paulo',</pre>
+                    <pre>    idade: '20'</pre>
+                    <pre>}</pre>
+                    <pre>const objeto2 = {</pre>
+                    <pre>    idade: '22'</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Permite transferir propriedades e métodos entre objetos</span></pre>
+                    <pre>Object.assign(objeto1, objeto2);</pre>
+                    <pre>console.log(objeto1);</pre><br>
+                    <pre><span class="comment">// Outra forma de fazer essa transferência é com Rest</span></pre>
+                    <pre>const objeto3 = {</pre>
+                    <pre>    ...objeto1,</pre>
+                    <pre>    ...objeto2,</pre>
+                    <pre>    cidade: 'Brejo Santo'</pre>
+                    <pre>};</pre><br>
+                    <pre><span class="comment">// Retorna um array com todas as chaves do objeto</span></pre>
+                    <pre>console.log(Object.keys(objeto1));</pre><br>
+                    <pre><span class="comment">// Retorna um array com todos os valores do objeto</span></pre>
+                    <pre>console.log(Object.values(objeto2));</pre>                        
                 </code>
             </div>
         </section>
