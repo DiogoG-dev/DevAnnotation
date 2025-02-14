@@ -28,6 +28,7 @@
             <a href="#topicNine">- Métodos e Pro... Função</a>
             <a href="#topicTen">- Métodos e Pro... Objeto</a>
             <a href="#topicEleven">- Métodos e Pr... Number</a>
+            <a href="#topicTwelve">- Escopo</a>
             <a href="#exercise">- Página de Exercícios</a>
         </h5>
     </div>
@@ -528,6 +529,36 @@
                     <pre>console.log(hoje.getMinutes());</pre>
                     <pre><span class="comment">// Retorna o dia da semana</span></pre>
                     <pre>console.log(hoje.getDay());</pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicTwelve">
+            <h2>Escopo:</h2>
+            <p>
+                O código demonstra o conceito de escopo em JavaScript. Variáveis declaradas fora de funções podem ser acessadas dentro 
+                delas, enquanto variáveis declaradas dentro de uma função não são acessíveis externamente. No entanto, "var" ignora o escopo 
+                de bloco e pode causar comportamentos indesejados, como no exemplo onde a variável "se", declarada dentro do "if", não está 
+                disponível fora da função, resultando em um erro. Isso reforça a importância de usar "let" ou "const" para evitar vazamento 
+                de escopo.
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>const funcao1 = 'Função';</pre><br>
+                    <pre><span class="comment">// Escopo de função</span></pre>
+                    <pre>function funcao() {</pre>
+                    <pre>    console.log(funcao1);</pre><br>
+                    <pre>    <span class="comment">// Escopo de bloco</span></pre>
+                    <pre>    if(1) {</pre>
+                    <pre>        console.log('Se');</pre>
+                    <pre>        var se = 'se'; <span class="comment">// Má prática</span></pre>
+                    <pre>    } else {</pre>
+                    <pre>        console.log('Se não');</pre>
+                    <pre>    }</pre>
+                    <pre>}</pre><br>
+                    <pre>console.log(se); <span class="comment">// Error</span></pre><br>
+                    <pre><span class="comment">// Uma variável criada fora pode ser acessada dentro de uma função</span></pre>
+                    <pre><span class="comment">// Já uma variável criada dentro de uma função não pode ser acessada fora, exceto "var"</span></pre>
                 </code>
             </div>
         </section>
