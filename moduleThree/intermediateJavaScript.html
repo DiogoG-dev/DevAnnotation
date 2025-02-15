@@ -30,6 +30,7 @@
             <a href="#topicEleven">- Métodos e Pr... Number</a>
             <a href="#topicTwelve">- Escopo</a>
             <a href="#topicThirteen">- Promise, Then e Catch</a>
+            <a href="#topicFourteen">- Fetch e JSON</a>
             <a href="#exercise">- Página de Exercícios</a>
         </h5>
     </div>
@@ -597,6 +598,53 @@
                     <pre>    .catch(error => {</pre>
                     <pre>        console.log(error);</pre>
                     <pre>    });</pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicFourteen">
+            <h2>Fetch e JSON:</h2>
+            <p>
+                O método "fetch" é uma ferramenta essencial do JavaScript para realizar requisições HTTP e interagir com APIs, permitindo a 
+                comunicação entre o Front-End e o Back-End. Ele segue um fluxo de interação onde os dados são solicitados ou enviados 
+                através de um endpoint, que serve como ponte entre o cliente e o servidor.
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre><span class="comment">// Fetch: é um método que retorna uma promise via HTTP</span></pre>
+                    <pre><span class="comment">// HTTP: é o caminho que direciona ao local da promise</span></pre>
+                    <pre>fetch('https://api.coingecko.com/api/v3/exchange_rates', {mode: 'cors'})</pre>
+                    <pre>    .then((data) => {</pre>
+                    <pre>        console.log(data);</pre>
+                    <pre>    });</pre>
+                </code>
+            </div>
+            <p>
+                As requisições utilizam verbos HTTP, como GET, POST, PUT e PATCH e DELETE, seguindo o padrão CRUD (Create, Read, Update, 
+                Delete). O retorno dessas requisições é tratado com .then( ) para capturar os dados recebidos e .catch( ) para lidar com 
+                possíveis erros.
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre><span class="comment">// GET: Para solicitar um dado</span></pre>
+                    <pre><span class="comment">// POST: Para enviar um dado</span></pre>
+                    <pre><span class="comment">// DELETE: Para deletar um dado</span></pre>
+                    <pre><span class="comment">// PUT: Para um dado específico</span></pre>
+                    <pre><span class="comment">// PATCH: Para alterar múltiplos dados</span></pre>
+                </code>
+            </div>
+            <p>
+                Além disso, é possível personalizar as requisições para tornar a comunicação mais flexível e eficiente com os 4 parâmetros de
+                uma requisição HTTP:
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre><span class="comment">// Route Params</span></pre>
+                    <pre><span class="comment">// Query Params</span></pre>
+                    <pre><span class="comment">// Body Params</span></pre>
+                    <pre><span class="comment">// Header Params</span></pre>
                 </code>
             </div>
         </section>
