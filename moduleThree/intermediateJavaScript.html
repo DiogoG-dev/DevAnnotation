@@ -29,6 +29,7 @@
             <a href="#topicTen">- Métodos e Pro... Objeto</a>
             <a href="#topicEleven">- Métodos e Pr... Number</a>
             <a href="#topicTwelve">- Escopo</a>
+            <a href="#topicThirteen">- Promise, Then e Catch</a>
             <a href="#exercise">- Página de Exercícios</a>
         </h5>
     </div>
@@ -559,6 +560,43 @@
                     <pre>console.log(se); <span class="comment">// Error</span></pre><br>
                     <pre><span class="comment">// Uma variável criada fora pode ser acessada dentro de uma função</span></pre>
                     <pre><span class="comment">// Já uma variável criada dentro de uma função não pode ser acessada fora, exceto "var"</span></pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicThirteen">
+            <h2>Promise, Then e Catch:</h2>
+            <p>
+                A Promise em javascript é a simulação de um processo que pode ser bem sucedido (resolve) ou fracassado (reject) com base em 
+                um valor aleatório. O método "then" é chamado quando a promessa é resolvida, enquanto "catch" trata de possíveis erros. Esse 
+                mecanismo permite lidar com processos assíncronos de forma estruturada, evitando o aninhamento excessivo de callbacks.
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre><span class="comment">// Síncrono: processamento ocorre de forma sequencial</span></pre>
+                    <pre><span class="comment">// Assíncrono: podem ocorrer vários processos ao mesmo tempo</span></pre><br>
+                    <pre><span class="comment">// Promise: objeto utilizado para operações assíncronas</span></pre>
+                    <pre>const minhaPromise = new Promise((resolve, reject) => {</pre>
+                    <pre>    <span class="comment">// Gera um resultado booleano</span></pre>
+                    <pre>    let sucesso = Math.random() > 0.5;</pre><br>
+                    <pre>    <span class="comment">// Executado quando resolvido</span></pre>
+                    <pre>    if (sucesso) {</pre>
+                    <pre>        resolve('Deu certo! ✅');</pre>
+                    <pre>    }</pre>
+                    <pre>    <span class="comment">// Executado quando não resolvido</span></pre>
+                    <pre>    else {</pre>
+                    <pre>        reject('Deu errado! ❌');</pre>
+                    <pre>    }</pre>
+                    <pre>});</pre><br>
+                    <pre>minhaPromise</pre>
+                    <pre>    <span class="comment">// Recebe o valor de "resolve"</span></pre>
+                    <pre>    .then(result => {</pre>
+                    <pre>        console.log(result);</pre>
+                    <pre>    })</pre>
+                    <pre>    <span class="comment">// Recebe o valor de "reject"</span></pre>
+                    <pre>    .catch(error => {</pre>
+                    <pre>        console.log(error);</pre>
+                    <pre>    });</pre>
                 </code>
             </div>
         </section>
