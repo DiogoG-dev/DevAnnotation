@@ -30,7 +30,8 @@
             <a href="#topicEleven">- Métodos e Pr... Number</a>
             <a href="#topicTwelve">- Escopo</a>
             <a href="#topicThirteen">- Promise, Then e Catch</a>
-            <a href="#topicFourteen">- Fetch e JSON</a>
+            <a href="#topicFourteen">- Fetch</a>
+            <a href="#topicFifteen">- JSON</a>
             <a href="#exercise">- Página de Exercícios</a>
         </h5>
     </div>
@@ -602,7 +603,7 @@
             </div>
         </section>
         <section id="topicFourteen">
-            <h2>Fetch e JSON:</h2>
+            <h2>Fetch:</h2>
             <p>
                 O método "fetch" é uma ferramenta essencial do JavaScript para realizar requisições HTTP e interagir com APIs, permitindo a 
                 comunicação entre o Front-End e o Back-End. Ele segue um fluxo de interação onde os dados são solicitados ou enviados 
@@ -636,15 +637,50 @@
             </div>
             <p>
                 Além disso, é possível personalizar as requisições para tornar a comunicação mais flexível e eficiente com os 4 parâmetros de
-                uma requisição HTTP:
+                uma requisição HTTP, Route Params, Query Params, Body Params e Header Params.
+            </p>
+            <h4>Estrutura padrão Fetch:</h4>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>fetch('https://api.coingecko.com/api/v3/exchange_rates/routeParams') <span class="comment">// Route params</span></pre>
+                    <pre><span class="comment">//...</span></pre>
+                    <pre>fetch('https://api.coingecko.com/api/v3/exchange_rates?query=params'), <span class="comment">// Query params</span></pre>
+                    <pre>{  mode: 'cors',</pre>
+                    <pre>  method: GET, <span class="comment">// Método</span></pre>
+                    <pre>  body: {name: 'Diogo', age: '20'}, <span class="comment">// Body params</span></pre>
+                    <pre>  headers: {inforcoes: 'extras'}, <span class="comment">// Header params</span></pre>
+                </code>
+            </div>
+            <h4>Status HTTP:</h4>
+            <p>
+                Além dessas informações podemos definir e receber feedbacks sobre o estado dessas informações, verificar se uma requisição 
+                foi bem sucedida, se foi redirecionada, se houve erro... Para isso define-se os seguintes status: de 200 - 299 (Sucesso), 
+                300 - 399 (Redirecionado), 400 - 499 (Erro no client), 500 - 599 (Erro no server).
+            </p>
+        </section>
+        <section id="topicFifteen">
+            <h2>JSON:</h2>
+            <p>
+                O JSON (Javascript Object Notation) é um formato otimizado de organização de dados. A diferença do JSON para o objeto em JS 
+                é que a chave deve sempre estar em formato string. É comum também de ser utilizado como extensão de arquivos, normalmente 
+                para os de configuração.
             </p>
             <div class="card">
                 <span class="comment">[ js ]</span>
                 <code>
-                    <pre><span class="comment">// Route Params</span></pre>
-                    <pre><span class="comment">// Query Params</span></pre>
-                    <pre><span class="comment">// Body Params</span></pre>
-                    <pre><span class="comment">// Header Params</span></pre>
+                    <pre><span class="comment">// Objeto JS:</span></pre>
+                    <pre>const OBJ = {</pre>
+                    <pre>    nome: 'Diogo',</pre>
+                    <pre>    age: 20</pre>
+                    <pre>};</pre><br>
+                    <pre><span class="comment">// JSON:</span></pre>
+                    <pre>const JSON = '{"nome": "Diogo", "age": 20}';</pre><br>
+                    <pre><span class="comment">// Métodos JSON:</span></pre>
+                    <pre><span class="comment">// Transforma um objeto Javascript em uma string JSON</span></pre>
+                    <pre>JSON.stringify(OBJ);</pre><br>
+                    <pre><span class="comment">// Transforma uma string JSON em objeto Javascript</span></pre>
+                    <pre>JSON.parse(JSON);</pre>
                 </code>
             </div>
         </section>
