@@ -32,6 +32,7 @@
             <a href="#topicThirteen">- Promise, Then e Catch</a>
             <a href="#topicFourteen">- Fetch</a>
             <a href="#topicFifteen">- JSON</a>
+            <a href="#topicSixteen">- Async & Await</a>
             <a href="#exercise">- Página de Exercícios</a>
         </h5>
     </div>
@@ -681,6 +682,35 @@
                     <pre>JSON.stringify(OBJ);</pre><br>
                     <pre><span class="comment">// Transforma uma string JSON em objeto Javascript</span></pre>
                     <pre>JSON.parse(JSON);</pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicSixteen">
+            <h2>Async & Await:</h2>
+            <p>
+                Outra forma de definir uma função/processo assíncrono é através de "Async" e "Await". Utilizamos "Async" para declararmos que 
+                a função contém processos que demandam tempo para serem executadas, já "Await" é utilizado para pausarmos a rotina de uma função 
+                até que o evento seguinte termine. Já como alternativa aos métodos "then" e "catch", nós temos o "try" (irá tentar solucionar 
+                a promise) e catch (irá capturar o erro emitido). Exemplo de uso:
+            </p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>async function getCoinCrypto() {</pre>
+                        <pre>    try {</pre>
+                        <pre>        <span class="comment">// Faz a requisição para a API</span></pre>
+                        <pre>        const data = await fetch('https://jsonplaceholder.typicode.com/posts');</pre>                        
+                        <pre>        <span class="comment">// Converte a resposta para JSON</span></pre>
+                        <pre>        const dataJson = await data.json();</pre>                        
+                        <pre>        <span class="comment">// Exibe os dados no console</span></pre>
+                        <pre>        console.log(dataJson);</pre>
+                        <pre>    } catch (error) {</pre>
+                        <pre>        <span class="comment">// Captura e exibe erros</span></pre>
+                        <pre>        console.log(error);</pre>
+                        <pre>    }</pre>
+                        <pre>}</pre>                        
+                        <pre><span class="comment">// Chama a função</span></pre>
+                        <pre>getCoinCrypto();</pre>                        
                 </code>
             </div>
         </section>
