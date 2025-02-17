@@ -714,6 +714,42 @@
                 </code>
             </div>
         </section>
+        <section id="topicSeventeen">
+            <h2>Window e DOM:</h2>
+            <h4>Window:</h4>
+            <p>
+                O Window é um objeto global que representa a janela do navegador e oferece métodos e propriedades que permitem controlar a 
+                interação com o navegador e a página web. Ele contém tudo o que está relacionado à janela da aplicação. Exemplos de funções:
+            </p>
+            <li><b>window.document</b>: acessa o DOM da página (estrutura HTML).</li>
+            <li><b>window.location</b>: manipula um URL da página.</li>
+            <li><b>window.history</b>: controla o histórico de navegação.</li>
+            <li><b>window.alert()</b>: exibe alertas ao usuário.</li>
+            <h4>DOM (Modelo de Objeto de Documento):</h4>
+            <p>
+                O DOM ou "document" é uma interface de programação de aplicações (API) que representa a estrutura de um documento HTML ou 
+                XML de forma hierárquica. Ele permite que os desenvolvedores acessem e manipulem o conteúdo, a estrutura e o estilo de uma 
+                página web dinamicamente. Quando uma página da web é incluída no navegador, o navegador cria uma "árvore" de objetos, 
+                representando todos os elementos HTML da página.
+            </p>
+            <li>Contém os elementos HTML da página, como &lt;html&gt;, &lt;head&gt;, &lt;body&gt;, &lt;div&gt;, etc.</li>
+            <li>Utiliza métodos do documento para acessar, modificar ou criar elementos na página.</li>
+            <li><b>window.document</b> é uma referência ao DOM, permitindo a manipulação da página web.</li>
+            <h4>Exemplo de interação:</h4>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre><span class="comment">// Acessando o título da página</span></pre>
+                    <pre>console.log(window.document.title);</pre><br>
+                    <pre><span class="comment">// Alterando o texto de um elemento</span></pre>
+                    <pre>document.getElementById('minhaMensagem').innerText = 'Texto alterado';</pre><br>
+                    <pre><span class="comment">// Navegando para uma nova URL</span></pre>
+                    <pre>window.location.href = 'https://www.example.com';</pre><br>
+                    <pre><span class="comment">//Atenção!!!</span></pre>
+                    <pre><span class="comment">//Defina a tag script ao final do body para o seu correto funcionamento!</span></pre>
+                </code>
+            </div>
+        </section>
         <section id="exercise">
             <h2>Página de Exercícios:</h2>
             <p>
