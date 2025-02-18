@@ -35,6 +35,7 @@
             <a href="#topicSixteen">- Async & Await</a>
             <a href="#topicSeventeen">- Window e DOM</a>
             <a href="#topicEighteen">- Cookies, Local/Session...</a>
+            <a href="#topicNineteen">- Module</a>
             <a href="#exercise">- Página de Exercícios</a>
         </h5>
     </div>
@@ -814,6 +815,49 @@
                     <pre>sessionStorage.removeItem("sessionUser");</pre><br>
                     <pre><span class="comment">// Limpa todo o armazenamento da sessão</span></pre>
                     <pre>sessionStorage.clear();</pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicNineteen">
+            <h2>Module:</h2>
+            <p>
+                O Module é uma maneira de dividir o código JavaScript em vários arquivos, de forma que possam compartilhar seus métodos e 
+                proprieadades através das suas exportações e importações. A exportação por "default" é utilizado para quando se quer exportar 
+                uma única função, já quando se quer exportar multiplas funções não se utiliza.
+            </p>
+            <h4>Ajuste na tag script:</h4>
+            <div class="card">
+                <span class="comment">[ html ]</span>
+                <code>
+                    <pre>&lt;script type="module" src=".script.js"&gt;&lt;/script&gt; <span class="comment">&lt;!--Definindo o tipo do arquivo como module--&gt;</span></pre>
+                </code>
+            </div>
+            <h4>Formas de Exportação:</h4>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre><span class="comment">// Exportação única</span></pre>
+                    <pre>export default function sum(a, b) {</pre>
+                    <pre>   return a + b;</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Exportação multipla</span></pre>
+                    <pre>export function sub(a, b) {</pre>
+                    <pre>   return a - b;</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Exportação posterior</span></pre>
+                    <pre>export default sum; <span class="comment">// Única por defaul</span></pre>
+                    <pre>export sub; <span class="comment">// Única sem defaul</span></pre>
+                    <pre>export { sum, sub }; <span class="comment">// Múltipla</span></pre>
+                </code>
+            </div>
+            <h4>Formas de Importação:</h4>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre><span class="comment">// Importação única</span></pre>
+                    <pre>import sum from './calc.js';</pre><br>
+                    <pre><span class="comment">// Importação multipla</span></pre>
+                    <pre>import { sum, sub } from 'calc.js'</pre>
                 </code>
             </div>
         </section>
