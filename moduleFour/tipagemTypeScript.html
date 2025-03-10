@@ -23,10 +23,40 @@
     <main>
         <section id="topicOne">
             <h2>Introdução:</h2>
+            <h4>O que é tipagem:</h4>
             <p>
-                
+                É um conceito que define e restringe o tipo de dado que uma variável pode armazenar. A tipagem pode ser Estática (o tipo da 
+                variavel é definido em tempo de construção - Java, C, TypeScript) ou Dinâmico (o tipo de variável é definido em tempo de 
+                execução - JavaScript, Python), Forte (não permite ocultação de tipos - TypeScript) ou Fraca (permite ocultação de tipos - 
+                JavaScript).
             </p>
-            
+            <h4>TypeScript e sua funcionalidade:</h4>
+            <p>
+                O TypeScript é uma variante do JavaScript que adiciona tipagem estática opcional, ou seja, você pode definir 
+                especificamente o tipo de variáveis, funções e objetos, ajudando a evitar erros comuns de JavaScript.
+            </p>
+            <h4>Exemplos de Uso:</h4>
+            <p>O JavaScript é passível de erros:</p>
+            <div class="card">
+                <span class="comment">[ js ]</span>
+                <code>
+                    <pre>function somar(a, b) {</pre>
+                    <pre>  return a + b;</pre>
+                    <pre>}</pre>
+                    <pre>console.log(somar(5, "10")); <span class="comment">// Saída: "510" (erro inesperado)</span></pre>
+                </code>
+            </div>
+            <p>Já o TypeScript mitiga os erros de tipagem:</p>
+            <div class="card">
+                <span class="comment">[ ts ]</span>
+                <code>
+                    <pre>function somar(a: number, b: number): number {</pre>
+                    <pre>  return a + b;</pre>
+                    <pre>}</pre>
+                    <pre>console.log(somar(5, 10)); <span class="comment">// Saída: 15</span></pre>
+                    <pre>console.log(somar(5, "10")); <span class="comment">// Erro: Argumento do tipo 'string' não é atribuível ao parâmetro do tipo 'number'.</span></pre>
+                </code>
+            </div>
         </section>
         <!--End of Container Here-->
     </main>
