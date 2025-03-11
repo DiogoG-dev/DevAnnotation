@@ -58,6 +58,54 @@
                 </code>
             </div>
         </section>
+        <section id="topicTwo">
+            <h2>Tipagens:</h2>
+            <p>No TypeScript, existem diversas formas de tipagem de dados. Os mais comuns são:</p>
+            <div class="card">
+                <span class="comment">[ ts ]</span>
+                <code>
+                    <pre><span class="comment">// string</span></pre>
+                    <pre>const nome: string = 'Diogo';</pre><br>
+                    <pre><span class="comment">// number</span></pre>
+                    <pre>const idade: number = 20;</pre><br>
+                    <pre><span class="comment">// boolean</span></pre>
+                    <pre>const inteligente: boolean = true;</pre><br>
+                    <pre><span class="comment">// array string</span></pre>
+                    <pre>const arrayStr: Array<string> = ['João', 'Maria', 'Jose'];</pre><br>
+                    <pre><span class="comment">// array number</span></pre>
+                    <pre>const arrayNum: number[] = [20, 36, 91];</pre><br>
+                    <pre><span class="comment">// tuple</span></pre>
+                    <pre>const arrayTuple: [string, number, boolean] = ['Jose', 91, true];</pre><br>
+                    <pre><span class="comment">// null</span></pre>
+                    <pre>const nulo: null = null;</pre><br>
+                    <pre><span class="comment">// undefined</span></pre>
+                    <pre>const indefinido: undefined = undefined;</pre><br>
+                    <pre><span class="comment">// object</span></pre>
+                    <pre>type pessoaObj = {</pre>
+                    <pre>    nome: string,</pre>
+                    <pre>    idade: number,</pre>
+                    <pre>    cidade: string</pre>
+                    <pre>};</pre>
+                    <pre>let pessoa: pessoaObj = {</pre>
+                    <pre>    nome: 'Diogo',</pre>
+                    <pre>    idade: 20,</pre>
+                    <pre>    cidade: 'Brejo Santo'</pre>
+                    <pre>};</pre><br>
+                    <pre><span class="comment">// enum</span></pre>
+                    <pre>enum cores {</pre>
+                    <pre>    white = '#FFF',</pre>
+                    <pre>    black = '#000'</pre>
+                    <pre>};</pre><br>
+                    <pre><span class="comment">// any</span></pre>
+                    <pre>const dado: any = 'qualquer';</pre>
+                </code>
+            </div>
+            <p>
+                A palavra reservada "type" é utilizada para definir um tipo de dado comun ou novo ao dado. A utilização do "enum" é útil 
+                para evitar erros na chamada de valores pré-definidos. O "any" define o dado como sendo do tipo qualquer, não sendo uma boa 
+                prática utiliza-lo.
+            </p>
+        </section>
         <!--End of Container Here-->
     </main>
     <footer>
