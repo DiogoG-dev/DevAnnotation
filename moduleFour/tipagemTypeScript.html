@@ -19,6 +19,7 @@
             <p class="textAlignCenter">Tópicos do Módulo</p>
             <a href="#topicOne">- Introdução</a>
             <a href="#topicTwo">- Tipagens em TypeScript</a>
+            <a href="#topicThree">- Interface</a>
         </h5>
     </div>
     <main>
@@ -106,6 +107,40 @@
                 para evitar erros na chamada de valores pré-definidos. O "any" define o dado como sendo do tipo qualquer, não sendo uma boa 
                 prática utiliza-lo.
             </p>
+        </section>
+        <section id="topicThree">
+            <h2>Interface:</h2>
+            <p>
+                Interface é um recurso usado para definir a estrutura de um objeto, especificando quais propriedades e métodos ele deve 
+                ter e que tipos de dados eles devem armazenar. A utilização da Interface é util pois possibilita a reutilização de código 
+                e divisão de responsabilidades.
+            </p>
+            <h4>Exemplo de Uso:</h4>
+            <div class="card">
+                <span class="comment">[ ts ]</span>
+                <code>
+                    <pre><span class="comment">// Interface para endereço</span></pre>
+                    <pre>interface endereco {</pre>
+                    <pre>    cidade: string,</pre>
+                    <pre>    estado: string</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Interface para pessoa</span></pre>
+                    <pre>interface pessoa {</pre>
+                    <pre>    nome: string,</pre>
+                    <pre>    idade: number,</pre>
+                    <pre>    endereco: endereco</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Criando um objeto com a interface pessoa</span></pre>
+                    <pre>let pessoa: pessoa = {</pre>
+                    <pre>    nome: 'Diogo',</pre>
+                    <pre>    idade: 20,</pre>
+                    <pre>    endereco: {</pre>
+                    <pre>        cidade: 'Brejo Santo',</pre>
+                    <pre>        estado: 'CE'</pre>
+                    <pre>    }</pre>
+                    <pre>};</pre>
+                </code>
+            </div>
         </section>
         <!--End of Container Here-->
     </main>
