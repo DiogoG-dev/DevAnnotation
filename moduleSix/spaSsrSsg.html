@@ -17,6 +17,7 @@
         <h5>
             <p class="textAlignCenter">Tópicos do Módulo</p>
             <a href="#topicOne">- Front-End vs Back-End</a>
+            <a href="#topicTwo">- Sistema Monolítico</a>
         </h5>
     </div>
     <main>
@@ -45,6 +46,37 @@
             <li>Frameworks: Express.js (Node.js), Spring Boot (Java), Django (Python)</li>
             <li>Processar requisições do cliente (Front-End)</li>
             <li>Implementar segurança e autenticação de usuários</li>
+        </section>
+        <section id="topicTwo">
+            <h2>Sistema Monolítico:</h2>
+            <p>
+                Um sistema monolítico é uma arquitetura de software onde toda a aplicação (Front-End, Back-End, lógica de negócios e banco 
+                de dados) está integrada em um único código e executada como uma única unidade.
+            </p>
+            <h4>Principais Características:</h4>
+            <li>
+                Código único e centralizado: Todo o código da aplicação está em um único projeto ou repositório, sem divisão clara entre 
+                módulos independentes.
+            </li>
+            <li>
+                Execução unificada: O sistema roda como uma única aplicação, o que significa que todas as funcionalidades compartilham os 
+                mesmos recursos.
+            </li>
+            <li>
+                Banco de dados único: Geralmente, há um único banco de dados que atende a toda a aplicação.
+            </li>
+            <li>
+                Dependências acopladas: As partes do sistema dependem fortemente umas das outras, dificultando mudanças e escalabilidade.
+            </li>
+            <h4>Vantagens:</h4>
+            <li>Simplicidade inicial → Mais fácil de desenvolver no começo, pois tudo está centralizado.</li>
+            <li>Facilidade de teste e depuração → Como tudo está integrado, pode ser mais simples testar.</li>
+            <li>Menos complexidade inicial de infraestrutura → Não precisa dividir serviços nem gerenciar múltiplos servidores.</li>
+            <h4>Desvantagens:</h4>
+            <li>Dificuldade de escalabilidade → Se precisar aumentar a capacidade, é necessário escalar a aplicação inteira.</li>
+            <li>Atualizações arriscadas → Pequenas mudanças podem afetar toda a aplicação.</li>
+            <li>Dificuldade de manutenção → Com o tempo, o código pode se tornar um "grande emaranhado", dificultando melhorias.</li>
+            <li>Tempo de deploy alto → Uma mudança exige a recompilação e redistribuição de toda a aplicação.</li>
         </section>
         <!--End of Container Here-->
     </main>
