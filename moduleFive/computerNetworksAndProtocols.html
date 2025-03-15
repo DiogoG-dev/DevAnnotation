@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/cards.css">
+    <link rel="stylesheet" href="style.css">
     <title>DevAnnotation</title>
 </head>
 <body>
     <header>
         <div class="textAlignCenter">
             <a class="return" href="../index.html"><h3>Voltar</h3></a>
-            <h1><a href="#">Tipagem e TypeScript</a></h1>
+            <h1><a href="#">Introdução a Redes e Protocolos</a></h1>
         </div>
     </header>
     <div class="selectSection">
         <h5>
             <p class="textAlignCenter">Tópicos do Módulo</p>
             <a href="#topicOne">- Redes de Computadores...</a>
+            <a href="#topicTwo">- OSI e TCP/IP</a>
         </h5>
     </div>
     <main>
@@ -40,6 +42,145 @@
             <li>FTP → Para transferência de arquivos.</li>
             <li>DNS → Traduz endereços de sites (exemplo.com) para IPs.</li>
             <li>SMTP/POP3/IMAP → Protocolos de e-mail.</li>
+        </section>
+        <section id="topicTwo">
+            <h2>OSI e TCP/IP:</h2>
+            <h4>Modelo OSI (Open Systems Interconnection):</h4>
+            <p>
+                O modelo OSI é um padrão teórico criado pela ISO (International Organization for Standardization) para estruturar como a 
+                comunicação ocorre em redes de computadores. Ele é dividido em 7 camadas, cada uma com uma função específica.
+            </p>
+            <div class="divTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Camada</th>
+                            <th>Nome</th>
+                            <th>Função</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>7</th>
+                            <th>Aplicação</th>
+                            <td>Interface com o usuário e aplicativos (ex: HTTP, FTP, SMTP)</td>
+                        </tr>
+                        <tr>
+                            <th>6</th>
+                            <th>Apresentação</th>
+                            <td>Codifica e traduz dados (ex: criptografia, compressão)</td>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <th>Sessão</th>
+                            <td>Mantém a conexão entre os dispositivos (ex: gerenciamento de sessão)</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <th>Transporte</th>
+                            <td>Garante entrega confiável dos dados (ex: TCP, UDP)</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <th>Rede</th>
+                            <td>Roteia pacotes na rede (ex: IP, ICMP)</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <th>Enlace de Dados</th>
+                            <td>Controla o acesso ao meio físico (ex: Ethernet, MAC)</td>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <th>Física</th>
+                            <td>Transmissão de bits via cabo, fibra ou Wi-Fi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                O OSI é um modelo conceitual, ou seja, nem todas as redes seguem exatamente essa estrutura, mas ele ajuda a entender a 
+                comunicação.
+            </p>
+            <h4>Modelo TCP/IP:</h4>
+            <p>
+                O modelo TCP/IP é um modelo mais prático, usado na internet. Ele tem apenas 4 camadas, combinando algumas do OSI.
+            </p>
+            <div class="divTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Camada</th>
+                            <th>Equivalente OSI</th>
+                            <th>Função</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>4</th>
+                            <th>Aplicação (7, 6, 5)</th>
+                            <td>Interação com aplicativos (ex: HTTP, FTP, SMTP)</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <th>Transporte (4)</th>
+                            <td>Garante entrega de dados (ex: TCP, UDP)</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <th>Internet (3)</th>
+                            <td>Roteia pacotes (ex: IP, ICMP)</td>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <th>Acesso à Rede (2, 1)</th>
+                            <td>Comunicação física (ex: Ethernet, Wi-Fi)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                Ele junta as camadas Aplicação, Apresentação e Sessão em uma só, focando mais na funcionalidade do que na separação de 
+                camadas teóricas.
+            </p>
+            <h4>Diferenças entre OSI e TCP/IP:</h4>
+            <div class="divTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>OSI</th>
+                            <th>TCP/IP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Criado por</td>
+                            <td>ISO</td>
+                            <td>Departamento de Defesa dos EUA</td>
+                        </tr>
+                        <tr>
+                            <td>Camadas</td>
+                            <td>7</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Uso</td>
+                            <td>Modelo teórico</td>
+                            <td>Implementação real</td>
+                        </tr>
+                        <tr>
+                            <td>Popularidade</td>
+                            <td>Referência para estudo</td>
+                            <td>Usado na internet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                O OSI é um modelo conceitual que ajuda a entender como a comunicação funciona, enquanto o TCP/IP é o modelo real utilizado 
+                na internet.
+            </p>
         </section>
         <!--End of Container Here-->
     </main>
