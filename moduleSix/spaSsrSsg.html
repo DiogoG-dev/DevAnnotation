@@ -20,6 +20,7 @@
             <a href="#topicTwo">- Sistema Monolítico</a>
             <a href="#topicThree">- SPA</a>
             <a href="#topicFour">- SSG</a>
+            <a href="#topicFive">- SSR</a>
         </h5>
     </div>
     <main>
@@ -117,6 +118,24 @@
             <h4>Desvantagens:</h4>
             <li>Maior carga no servidor, pois ele precisa processar cada requisição</li>
             <li>Tempo de resposta pode ser maior, pois a página precisa ser gerada antes de ser exibida</li>            
+        </section>
+        <section id="topicFive">
+            <h2>SSG (Static Site Generation) - Geração de Site Estático:</h2>
+            <p>
+                SSG significa que as páginas são pré-geradas no momento da build, sendo entregues diretamente ao usuário sem precisar de 
+                processamento dinâmico no servidor. Principais tecnologias são Next.js (React), Hugo, Jekyll, Gatsby.
+            </p>
+            <h4>Como funciona?</h4>
+            <li>Durante o build do projeto, as páginas são geradas estáticamente.</li>
+            <li>O servidor ou CDN entrega a página já pronta quando o usuário acessa.</li>
+            <li>Caso precise de dados dinâmicos, pode-se usar revalidação incremental.</li>
+            <h4>Vantagens:</h4>
+            <li>Carregamento super rápido, pois as páginas são estáticas.</li>
+            <li>Menos carga no servidor, pois as páginas não precisam ser geradas dinamicamente.</li>
+            <li>Melhor escalabilidade, pois pode ser entregue via CDN.</li>
+            <h4>Desvantagens:</h4>
+            <li>Não é ideal para sites que precisam de atualizações constantes de conteúdo.</li>
+            <li>Pode ser necessário regenerar as páginas quando há mudanças nos dados.</li>
         </section>
         <!--End of Container Here-->
     </main>
