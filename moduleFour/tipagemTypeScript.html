@@ -20,6 +20,7 @@
             <a href="#topicOne">- Introdução</a>
             <a href="#topicTwo">- Tipagens em TypeScript</a>
             <a href="#topicThree">- Interface</a>
+            <a href="#topicFour">- Union e Aliases</a>
         </h5>
     </div>
     <main>
@@ -138,6 +139,56 @@
                     <pre>        cidade: 'Brejo Santo',</pre>
                     <pre>        estado: 'CE'</pre>
                     <pre>    }</pre>
+                    <pre>};</pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicFour">
+            <h2>Union e Aliases:</h2>
+            <p>
+                Union e Aliases são recursos utilizados para definir tipos flexíveis e reutilizáveis de dados. O Union permite que uma 
+                variável, parâmetro ou retorno de função tenha mais de um tipo possível. Isso significa que um valor pode ser de um tipo ou 
+                de outro.
+            </p>
+            <h4>Exemplo de Uso:</h4>
+            <div class="card">
+                <span class="comment">[ ts ]</span>
+                <code>
+                    <pre><span class="comment">// Permite que a variável aceite números ou strings</span></pre>
+                    <pre>let idade: number | string;</pre><br>
+                    <pre><span class="comment">// Atribuindo um número</span></pre>
+                    <pre>idade = 25; <span class="comment">// Válido</span></pre><br>
+                    <pre><span class="comment">// Atribuindo uma string</span></pre>
+                    <pre>idade = "vinte"; <span class="comment">// Válido</span></pre><br>
+                    <pre>idade = true; <span class="comment">// Erro: boolean não faz parte da união</span></pre>
+                </code>
+            </div>
+            <p>
+                Já o Aliases (type) permite unir diferentes tipos de dados em um único, tornando o código mais legível e reutilizável.
+            </p>
+            <h4>Exemplo de Uso:</h4>
+            <div class="card">
+                <span class="comment">[ ts ]</span>
+                <code>
+                    <pre><span class="comment">// Definição de um tipo que combina duas interfaces</span></pre>
+                    <pre>type dados = pessoa & ocupacao;</pre><br>
+                    <pre><span class="comment">// Interface para pessoa</span></pre>
+                    <pre>interface pessoa {</pre>
+                    <pre>    nome: string,</pre>
+                    <pre>    idade: number,</pre>
+                    <pre>    cidade: string</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Interface para ocupação</span></pre>
+                    <pre>interface ocupacao {</pre>
+                    <pre>    trabalho: string,</pre>
+                    <pre>    local?: string <span class="comment">// O "?" define o dado como sendo opcional</span></pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Criando um objeto combinando as interfaces</span></pre>
+                    <pre>const pessoa: dados = {</pre>
+                    <pre>    nome: 'Diogo',</pre>
+                    <pre>    idade: 20,</pre>
+                    <pre>    cidade: 'Brejo Santo',</pre>
+                    <pre>    trabalho: 'Programador'</pre>
                     <pre>};</pre>
                 </code>
             </div>
