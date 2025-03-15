@@ -19,6 +19,7 @@
             <a href="#topicOne">- Front-End vs Back-End</a>
             <a href="#topicTwo">- Sistema Monolítico</a>
             <a href="#topicThree">- SPA</a>
+            <a href="#topicFour">- SSG</a>
         </h5>
     </div>
     <main>
@@ -80,7 +81,7 @@
             <li>Tempo de deploy alto → Uma mudança exige a recompilação e redistribuição de toda a aplicação.</li>
         </section>
         <section id="topicThree">
-            <h2>SPA:</h2>
+            <h2>SPA (Single Page Application) - Renderização no Cliente:</h2>
             <p>
                 SPA (Single Page Application ou Aplicação de Página Única) é um tipo de aplicação web que carrega uma única página HTML e 
                 atualiza seu conteúdo dinamicamente, sem a necessidade de recarregar a página inteira.
@@ -98,6 +99,24 @@
             <li>Tempo de carregamento inicial maior → Como todo o código precisa ser baixado na primeira requisição, pode demorar um pouco.</li>
             <li>SEO mais difícil → Como o conteúdo é carregado dinamicamente, motores de busca podem ter dificuldade para indexar as páginas (embora isso tenha melhorado com SSR - Server Side Rendering).</li>
             <li>Problemas de segurança → Como a lógica da aplicação roda no cliente, pode ser mais vulnerável a ataques como XSS (Cross-Site Scripting).</li>
+        </section>
+        <section id="topicFour">
+            <h2>SSR (Server-Side Rendering) - Renderização no Servidor:</h2>
+            <p>
+                SSR significa que as páginas são geradas dinamicamente no servidor a cada requisição. Isso melhora SEO e desempenho inicial. 
+                Principais tecnologias são Next.js (React) e Nuxt.js (Vue.js).
+            </p>
+            <h4>Como funciona?</h4>
+            <li>O usuário acessa a página</li>
+            <li>O servidor processa a requisição e monta a página com os dados</li>
+            <li>A página completa é enviada para o navegador</li>
+            <h4>Vantagens:</h4>
+            <li>Melhor para SEO, pois o conteúdo já está pronto no servidor</li>
+            <li> Tempo de carregamento inicial mais rápido do que SPAs</li>
+            <li>Páginas sempre atualizadas com dados mais recentes</li>
+            <h4>Desvantagens:</h4>
+            <li>Maior carga no servidor, pois ele precisa processar cada requisição</li>
+            <li>Tempo de resposta pode ser maior, pois a página precisa ser gerada antes de ser exibida</li>            
         </section>
         <!--End of Container Here-->
     </main>
