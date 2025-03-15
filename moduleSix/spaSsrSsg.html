@@ -18,6 +18,7 @@
             <p class="textAlignCenter">Tópicos do Módulo</p>
             <a href="#topicOne">- Front-End vs Back-End</a>
             <a href="#topicTwo">- Sistema Monolítico</a>
+            <a href="#topicThree">- SPA</a>
         </h5>
     </div>
     <main>
@@ -77,6 +78,26 @@
             <li>Atualizações arriscadas → Pequenas mudanças podem afetar toda a aplicação.</li>
             <li>Dificuldade de manutenção → Com o tempo, o código pode se tornar um "grande emaranhado", dificultando melhorias.</li>
             <li>Tempo de deploy alto → Uma mudança exige a recompilação e redistribuição de toda a aplicação.</li>
+        </section>
+        <section id="topicThree">
+            <h2>SPA:</h2>
+            <p>
+                SPA (Single Page Application ou Aplicação de Página Única) é um tipo de aplicação web que carrega uma única página HTML e 
+                atualiza seu conteúdo dinamicamente, sem a necessidade de recarregar a página inteira.
+            </p>
+            <h4>Como Funciona?</h4>
+            <li>O navegador carrega uma única página HTML ao acessar o site.</li>
+            <li> O JavaScript gerencia as interações do usuário e faz requisições assíncronas para o Back-End usando APIs (REST ou GraphQL).</li>
+            <li>Somente partes da página são atualizadas, sem precisar recarregar tudo.</li>
+            <p>As principais tecnologias SPA são: React.js, Vue.js, Angular e Svelte</p>
+            <h4>Vantagens:</h4>
+            <li>Experiência fluida → Não há recarregamento da página, tornando a navegação mais rápida.</li>
+            <li>Melhor desempenho após o primeiro carregamento → Como os recursos já estão no cliente, apenas os dados são carregados.</li>
+            <li>Desenvolvimento mais organizado → O Front-End fica separado do Back-End, facilitando a manutenção.</li>
+            <h4>Desvantagens:</h4>
+            <li>Tempo de carregamento inicial maior → Como todo o código precisa ser baixado na primeira requisição, pode demorar um pouco.</li>
+            <li>SEO mais difícil → Como o conteúdo é carregado dinamicamente, motores de busca podem ter dificuldade para indexar as páginas (embora isso tenha melhorado com SSR - Server Side Rendering).</li>
+            <li>Problemas de segurança → Como a lógica da aplicação roda no cliente, pode ser mais vulnerável a ataques como XSS (Cross-Site Scripting).</li>
         </section>
         <!--End of Container Here-->
     </main>
