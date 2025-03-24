@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/cards.css">
+    <title>DevAnnotation</title>
+</head>
+<body>
+    <header>
+        <div class="textAlignCenter">
+            <a class="return" href="../index.html"><h3>Voltar</h3></a>
+            <h1><a href="#">Iniciando no React</a></h1>
+        </div>
+    </header>
+    <div class="selectSection">
+        <h5>
+            <p class="textAlignCenter">Tópicos do Módulo</p>
+            <a href="#topicOne">- Introdução ao React</a>
+        </h5>
+    </div>
+    <main>
+        <section id="topicOne">
+            <h2>Introdução ao React:</h2>
+            <p>
+                O React é uma biblioteca JavaScript para a construção de interfaces de usuário interativas e dinâmicas. Amplamente utilizada 
+                no desenvolvimento de aplicações web modernas, o React é especialmente adequado para SPAs (Single Page Applications), onde o 
+                conteúdo da página é atualizado sem a necessidade de um recarregamento completo.
+            </p>
+            <h4>Requisitos e passos:</h4>
+            <p>
+                Como o JavaScript não é uma linguagem compilada por padrão nas nossas máquinas, é necessário instalar algumas ferramentas 
+                antes de utilizar o React.
+            </p>
+            <li><b>Instalar o Node.js:</b></li>
+            <p>
+                O Node.js é essencial para rodar o React, pois ele fornece o npm (Node Package Manager), que gerencia as dependências do 
+                projeto. <a href="https://nodejs.org/pt">Baixar o Node.js</a>.
+            </p>
+            <li><b>Escolher uma ferramenta para criar o projeto:</b></li>
+            <p>
+                Existem duas formas populares de iniciar um projeto React rapidamente: <b>Create React App (CRA)</b> (Configuração 
+                automática mais completa, porém mais pesada) e <b>Vite</b> (Mais leve e rápido, recomendado para novos projetos).
+            </p>
+            <li><b>Criar um projeto com Vite:</b></li>
+            <p>
+                O Vite é a escolha mais eficiente para iniciar um projeto React moderno:
+            </p>
+            <div class="card">
+                <span class="comment">[ sh ]</span>
+                <code>
+                    <pre>npm create vite@latest meu-projeto</pre>
+                    <pre>cd meu-projeto</pre>
+                    <pre>npm install</pre>
+                </code>
+            </div>
+            <p>
+                Para criar um novo projeto, execute o 1° comando no terminal, depois, entre na pasta do projeto com o 2° comando e instale 
+                as dependências com o 3° comando.
+            </p>
+            <li><b>Rodar o projeto:</b></li>
+            <p>Agora basta iniciar o servidor de desenvolvimento com:</p>
+            <div class="card">
+                <span class="comment">[ sh ]</span>
+                <code>
+                    <pre>npm run dev</pre>
+                </code>
+            </div>
+            <p>Agora o React estará rodando localmente e acessível pelo navegador!</p>
+            <h4>Estrutura de Arquivos:</h4>
+            <div class="card">
+                <span class="comment">[ txt ]</span>
+                <code>
+                    <pre>📁 meu-projeto/</pre>
+                    <pre>├── 📁 node_modules/  <span class="comment"># Pacotes do projeto</span></pre>
+                    <pre>├── 📁 public/        <span class="comment"># Arquivos estáticos (ex.: favicon)</span></pre>
+                    <pre>├── 📁 src/           <span class="comment"># Código principal da aplicação</span></pre>
+                    <pre>│   ├── App.jsx       <span class="comment"># Componente principal do React</span></pre>
+                    <pre>│   ├── App.css       <span class="comment"># Estilos por Componente</span></pre>
+                    <pre>│   ├── main.jsx      <span class="comment"># Ponto de entrada da aplicação</span></pre>
+                    <pre>│   ├── index.css     <span class="comment"># Estilos globais</span></pre>
+                    <pre>├── package.json      <span class="comment"># Lista de dependências e scripts</span></pre>
+                    <pre>├── vite.config.js    <span class="comment"># Configuração do Vite</span></pre>
+                </code>
+            </div>
+            <h4>Funcionalidade dos Arquivos:</h4>
+            <li><b>App.jsx:</b> exibe o conteúdo na tela.</li>
+            <li><b>App.css:</b> arquivo onde cada componente pode ter seu próprio estilo separado.</li>
+            <li><b>main.jsx:</b> monta a aplicação no DOM, sendo o ponto de entrada da aplicação React.</li>
+            <li><b>index.css:</b> contém estilos que afetam toda a aplicação e geralmente é importado no main.jsx</li>
+        </section>
+        <!--End of Container Here-->
+    </main>
+    <footer>
+        <p class="textAlignCenter">
+            <small>&copy; 2025 Diogo Gabriel - <b>Desenvolvido para compartilhar conhecimento sobre programação e design web</b>. Todos os 
+            direitos reservados.</small>
+        </p>
+    </footer>
+</body>
+</html>
