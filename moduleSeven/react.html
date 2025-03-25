@@ -19,6 +19,7 @@
             <p class="textAlignCenter">Tópicos do Módulo</p>
             <a href="#topicOne">- Introdução ao React</a>
             <a href="#topicTwo">- Componenteirização</a>
+            <a href="#topicThree">- Webpack e Babel</a>
         </h5>
     </div>
     <main>
@@ -122,6 +123,36 @@
                     <pre>export default Contador;</pre>
                 </code>
             </div>
+        </section>
+        <section id="topicThree">
+            <h2>Webpack e Babel:</h2>
+            <p>
+                São ferramentas essenciais no desenvolvimento moderno de aplicações JavaScript. Juntas são responsáveis por permitir uma 
+                exposição e renderização eficaz em diferentes tipos de navegadores.
+            </p>
+            <h4>Webpack:</h4>
+            <p>
+                É um empacotador de módulos (module bundler). Ele page diversos arquivos e os agrupa em um único/poucos arquivos otimizados 
+                para produção.
+            </p>
+            <li><b>Modularização:</b> Permite dividir o código em arquivos menores e organizar melhor o projeto.</li>
+            <li><b>Transpilação e otimização:</b> Pode converter e otimizar código com ferramentas como Babel.</li>
+            <li><b>Carregamento eficiente:</b> Reduz o número de requisições HTTP, tornando a aplicação mais rápida.</li>
+            <li><b>Hot Module Replacement:</b> Atualiza partes do código no navegador sem precisar recarregar toda a página.</li>
+            <h4>Babel:</h4>
+            <p>
+                O Babel é um transpilador de JavaScript. Ele converte código moderno (ES6+, JSX, TypeScript) para uma versão compatível com 
+                navegadores mais antigos.
+            </p>
+            <li><b>Compatibilidade:</b> Permite usar recursos novos do JavaScript em navegadores antigos.</li>
+            <li><b>Suporte a JSX:</b> Converte JSX (usado no React) para JavaScript puro.</li>
+            <li><b>Conversão de TypeScript:</b> Pode transformar TypeScript para JavaScript comum.</li>
+            <li><b>Uso de sintaxe moderna:</b> Funciona com async/await, arrow functions, spread/rest operators, etc.</li>
+            <h4>Como Webpack e Babel trabalham juntos?</h4>
+            <p><b>1.</b> Escrevemos código moderno</p>
+            <p><b>2.</b> O Webpack usa o Babel-loader para converter o código para ES5.</p>
+            <p><b>3.</b> O código convertido é empacotado no bundle.js.</p>
+            <p><b>4.</b> O navegador pode executar o código normalmente, mesmo sem suporte a ES6+.</p>
         </section>
         <!--End of Container Here-->
     </main>
