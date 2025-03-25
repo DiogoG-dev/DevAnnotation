@@ -20,6 +20,7 @@
             <a href="#topicOne">- Introdução ao React</a>
             <a href="#topicTwo">- Componenteirização</a>
             <a href="#topicThree">- Webpack e Babel</a>
+            <a href="#topicFour">- JSX</a>
         </h5>
     </div>
     <main>
@@ -153,6 +154,80 @@
             <p><b>2.</b> O Webpack usa o Babel-loader para converter o código para ES5.</p>
             <p><b>3.</b> O código convertido é empacotado no bundle.js.</p>
             <p><b>4.</b> O navegador pode executar o código normalmente, mesmo sem suporte a ES6+.</p>
+        </section>
+        <section id="topicFour">
+            <h2>JSX:</h2>
+            <p>
+                JSX (JavaScript XML) é uma extensão de sintaxe para JavaScript usada com React, que facilita a escrita de código semelhante 
+                a HTML dentro de arquivos JavaScript. Ele torna a estruturação da interface do usuário mais intuitiva e legível.
+            </p>
+            <h4>Facilidade na Escrita de HTML dentro de JS:</h4>
+            <p>
+                JSX permite escrever estruturas HTML dentro do código JavaScript, tornando a criação de componentes mais natural e 
+                organizada.
+            </p>
+            <h4>Atributos em CamelCase:</h4>
+            <p>
+                Diferente do HTML tradicional, onde os atributos são escritos em letras minúsculas (ex: class, onclick), no JSX eles seguem 
+                o padrão camelCase. Exemplos:
+            </p>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>&lt;button className="btn-primary" onClick={handleClick}&gt;Clique aqui&lt;/button&gt;</pre>
+                </code>
+            </div>
+            <h4>Código JSX dentro do return:</h4>
+            <p>
+                JSX é utilizado dentro do método return de um componente React, definindo o que será renderizado na tela.
+            </p>
+            <h4>Apenas um Elemento Pai no return:</h4>
+            <p>
+                O JSX exige que o conteúdo retornado tenha um único elemento pai. Isso significa que múltiplos elementos precisam estar 
+                dentro de uma única &lt;div&gt; ou outra estrutura semelhante.
+            </p>
+            <h4>Uso de React Fragments (&lt;&gt;...&lt;/&gt;):</h4>
+            <p>
+                Caso não seja desejado adicionar uma &lt;div&gt; extra ao DOM, o React permite usar fragments:
+            </p>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>return (</pre>
+                    <pre>   &lt;&gt;</pre>
+                    <pre>       &lt;h1&gt;Título&lt;/h1&gt;</pre>
+                    <pre>       &lt;p&gt;Parágrafo&lt;/p&gt;</pre>
+                    <pre>   &lt;/&gt;</pre>
+                    <pre>);</pre>
+                </code>
+            </div>
+            <h4>JS dentro do JSX com {}:</h4>
+            <p>É possível inserir expressões JavaScript dentro do JSX utilizando {}:</p>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>const nome = "Diogo";</pre>
+                    <pre>return &lt;h1&gt;Olá, {nome}!&lt;/h1&gt;;</pre>
+                </code>
+            </div>
+            <h4>Declarando Funções no HTML com () em vez de {}:</h4>
+            <p>No JSX a forma como uma função é declarada no html é um pouco diferente:</p>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>{pessoa.map((ps) => (</pre>
+                    <pre>   &lt;div&gt;{ps}&lt;/div&gt;</pre>
+                    <pre>)}</pre>
+                </code>
+            </div>
+            <h4>Uso de JavaScript dentro de style:</h4>
+            <p>É possível também utiliza JS dentro de "style" em JSX, definir comportamentos com estilo:</p>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>&lt;span&gt; style={pessoa.name ? {color: 'green'} : {color: 'red'}} &lt;/span&gt;</pre>
+                </code>
+            </div>
         </section>
         <!--End of Container Here-->
     </main>
