@@ -18,6 +18,7 @@
         <h5>
             <p class="textAlignCenter">Tópicos do Módulo</p>
             <a href="#topicOne">- Introdução ao React</a>
+            <a href="#topicTwo">- Componenteirização</a>
         </h5>
     </div>
     <main>
@@ -89,6 +90,38 @@
             <li><b>App.css:</b> arquivo onde cada componente pode ter seu próprio estilo separado.</li>
             <li><b>main.jsx:</b> monta a aplicação no DOM, sendo o ponto de entrada da aplicação React.</li>
             <li><b>index.css:</b> contém estilos que afetam toda a aplicação e geralmente é importado no main.jsx</li>
+        </section>
+        <section id="topicTwo">
+            <h2>Componenteirização:</h2>
+            <p>
+                É um dos princípios fundamentais do React, consiste em dividir a interface em pequenos blocos reutilizáveis, chamados de 
+                componentes. Esses componentes podem ser divididos em dois tipos:
+            </p>
+            <li><b>Componetes de Apresentação:</b> Responsáveis apenas por renderizar a interface com base nas props recebidas, sem possuir 
+            estado interno, apenas exibe os dados.</li>
+            <li><b>Componentes de Lógica:</b> Contêm estado interno (useState) e podem manipular dados dinamicamente.</li>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre><span class="comment">// Apresentação</span></pre>
+                    <pre>const Botao = ({ texto }) => {</pre>
+                    <pre>    return &lt;button&gt;{texto}&lt;/button&gt;;</pre>
+                    <pre>};</pre>
+                    <pre>export default Botao;</pre><br>
+                    <pre><span class="comment">// Lógica</span></pre>
+                    <pre>import { useState } from "react";</pre>
+                    <pre>const Contador = () => {</pre>
+                    <pre>    const [count, setCount] = useState(0);</pre>
+                    <pre>    return (</pre>
+                    <pre>        &lt;div&gt;</pre>
+                    <pre>            &lt;p&gt;Contador: {count}&lt;/p&gt;</pre>
+                    <pre>            &lt;button&gt; onClick={() => setCount(count + 1)}>Incrementar&lt;/button&gt;</pre>
+                    <pre>        &lt;/div&gt;</pre>
+                    <pre>    );</pre>
+                    <pre>};</pre>
+                    <pre>export default Contador;</pre>
+                </code>
+            </div>
         </section>
         <!--End of Container Here-->
     </main>
