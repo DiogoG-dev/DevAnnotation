@@ -21,6 +21,7 @@
             <a href="#topicTwo">- Componenteirização</a>
             <a href="#topicThree">- Webpack e Babel</a>
             <a href="#topicFour">- JSX</a>
+            <a href="#topicFive">- Componentes e Props</a>
         </h5>
     </div>
     <main>
@@ -226,6 +227,54 @@
                 <span class="comment">[ jsx ]</span>
                 <code>
                     <pre>&lt;span&gt; style={pessoa.name ? {color: 'green'} : {color: 'red'}} &lt;/span&gt;</pre>
+                </code>
+            </div>
+        </section>
+        <section id="topicFive">
+            <h2>Componentes e Propriedades:</h2>
+            <p>
+                No React, componentes e propriedades (props) são conceitos fundamentais para construir interfaces reutilizáveis e dinâmicas.
+            </p>
+            <h4>Componentes:</h4>
+            <p>
+                Os componentes são blocos reutilizáveis de código que representam partes da interface do usuário. Eles podem ser funcionais 
+                ou de classe (comuns em projetos antigos).
+            </p>
+            <div class="card">
+                <span class="comment">[ JSX ]</span>
+                <code>
+                    <pre><span class="comment">// Componente Funcional:</span></pre>
+                    <pre><span class="comment">// São funções JavaScript que retornam JSX.</span></pre>
+                    <pre><span class="comment">// Utilizam o Hook useState para gerenciar estado, se necessário.</span></pre>
+                    <pre>function Saudacao() {</pre>
+                    <pre>  return (</pre>
+                    <pre>       &lt;h1&gt;Olá, mundo!&lt;/h1&gt;</pre>
+                    <pre>   )</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Componentes de Classe:</span></pre>
+                    <pre><span class="comment">// São classes que estendem React.Component.</span></pre>
+                    <pre><span class="comment">// Utilizam o this.state para gerenciar estado.</span></pre>
+                    <pre>class Saudacao extends React.Component {</pre>
+                    <pre>  render() {</pre>
+                    <pre>       return &lt;h1&gt;Olá, mundo!&lt;/h1&gt;;</pre>
+                    <pre>   }</pre>
+                    <pre>}</pre>
+                </code>
+            </div>
+            <h4>Propriedades:</h4>
+            <p>
+                As propriedades (props) são parâmetros que passamos para os componentes para torná-los dinâmicos e reutilizáveis. Elas são 
+                imutáveis dentro do componente que as recebe.
+            </p>
+            <h4>Exemplo:</h4>
+            <div class="card">
+                <span class="comment">[ JSX ]</span>
+                <code>
+                    <pre>function Mensagem(props) {</pre>
+                    <pre>  return &lt;h1&gt;Olá, {props.nome}!&lt;/h1&gt;;</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Uso do componente passando uma prop</span></pre>
+                    <pre>&lt;Mensagem nome="Diogo" /&gt;</pre>
                 </code>
             </div>
         </section>
