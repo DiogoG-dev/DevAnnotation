@@ -156,3 +156,9 @@ section {
 .linkModules:visited {
     color: var(--color-07);
 }
+
+hr {
+    border: none;
+    border-bottom: 1px solid var(--color-03);
+    margin: 35px 0;
+}
