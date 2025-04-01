@@ -245,7 +245,7 @@
                 ou de classe (comuns em projetos antigos).
             </p>
             <div class="card">
-                <span class="comment">[ JSX ]</span>
+                <span class="comment">[ jsx ]</span>
                 <code>
                     <pre><span class="comment">// Componente Funcional:</span></pre>
                     <pre><span class="comment">// São funções JavaScript que retornam JSX.</span></pre>
@@ -272,13 +272,50 @@
             </p>
             <h4>Exemplo:</h4>
             <div class="card">
-                <span class="comment">[ JSX ]</span>
+                <span class="comment">[ jsx ]</span>
                 <code>
                     <pre>function Mensagem(props) {</pre>
                     <pre>  return &lt;h1&gt;Olá, {props.nome}!&lt;/h1&gt;;</pre>
                     <pre>}</pre><br>
                     <pre><span class="comment">// Uso do componente passando uma prop</span></pre>
                     <pre>&lt;Mensagem nome="Diogo" /&gt;</pre>
+                </code>
+            </div>
+        </section>
+        <hr>
+        <section id="topicSix">
+            <h2>Eventos:</h2>
+            <p>
+                Eventos em React funcionam de forma semelhante aos eventos do JavaScript, mas com algumas diferenças importantes. Eles são 
+                manipulados através do synthetic event (evento sintético), que é uma abstração do evento nativo do navegador, garantindo 
+                compatibilidade entre diferentes navegadores.
+            </p>
+            <h4>Principais Características:</h4>
+            <li><b>Nomenclatura camelCase:</b> Em vez de usar onclick, onchange, etc., no React usamos onClick, onChange, etc.</li>
+            <li><b>Passagem de funções:</b> No React, passamos uma função de callback dentro da propriedade do evento, e não um string como em HTML tradicional.</li>
+            <li><b>Synthetic Events:</b> React usa um sistema de eventos sintéticos para otimizar a performance e manter a compatibilidade entre navegadores.</li>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre><span class="comment">//Componente receptor de button</span></pre>
+                    <pre>export function SideBar() {</pre>
+                    <pre>    function advent(){</pre>
+                    <pre>      alert('Clicou em entrar')</pre>
+                    <pre>    }</pre><br>
+                    <pre>    return (</pre>
+                    <pre>        &lt;div className='side-bar-container'&gt;</pre>
+                    <pre>            &lt;div className="side-bar-content"&gt;</pre>
+                    <pre>                &lt;Button name='ENTRAR' onClick={() => {advent()}}/&gt;</pre>
+                    <pre>            &lt;/div&gt;</pre>
+                    <pre>        &lt;/div&gt;</pre>
+                    <pre>    )</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">//Componente emissor de button</span></pre>
+                    <pre>export function Button({name, onClick}) {</pre>
+                    <pre>    return (</pre>
+                    <pre>        &lt;button onClick={onClick}&gt;{name}&lt;/button&gt;</pre>
+                    <pre>    )</pre>
+                    <pre>}</pre>
                 </code>
             </div>
         </section>
