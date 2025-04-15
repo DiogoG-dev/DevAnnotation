@@ -334,7 +334,15 @@
             <div class="card">
                 <span class="comment">[ jsx ]</span>
                 <code>
-                    <pre>const [valor, setValor] = useState(0);</pre>
+                    <pre><span class="comment">// Exporta o componente SideBar</span></pre>
+                    <pre>export function SideBar() {</pre>
+                    <pre>    const [value, setValue] = useState(0) <span class="comment">// Hook de estado para armazenar o número de cliques</span></pre>
+                    <pre>    </pre>
+                    <pre>    function advent(){</pre>
+                    <pre>        console.log('Clicou ' + value + (value === 1 ? ' vez!' : ' vezes!'))</pre>
+                    <pre>        setValue(value + 1); <span class="comment">// Atualiza o estado corretamente</span></pre>
+                    <pre>    }</pre>
+                    <pre>}</pre>
                 </code>
             </div>
             <h4>E quando não queremos mostrar os dados mas queremos mante-los após o re-render?</h4>
@@ -347,7 +355,15 @@
             <div class="card">
                 <span class="comment">[ jsx ]</span>
                 <code>
-                    <pre>const ref = useRef(0);</pre>
+                    <pre><span class="comment">// Componente SideBar exportado</span></pre>
+                    <pre>export function SideBar() {</pre>
+                    <pre>    const value = useRef(0) <span class="comment">// Referência para contar os cliques</span></pre>
+                    <pre>    </pre>
+                    <pre>    function advent(){</pre>
+                    <pre>        console.log(`Clicou ${value.current} ${value.current === 1 ? 'vez' : 'vezes'}!`);</pre>
+                    <pre>        value.current++;<span class="comment">// Incrementa o contador</span></pre>
+                    <pre>    }</pre>
+                    <pre>}</pre>
                 </code>
             </div>
         </section>
