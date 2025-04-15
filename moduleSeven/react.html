@@ -23,6 +23,7 @@
             <a href="#topicFour">- JSX</a>
             <a href="#topicFive">- Componentes e Props</a>
             <a href="#topicSix">- Eventos</a>
+            <a href="#topicSeven">- UseState</a>
         </h5>
     </div>
     <main>
@@ -317,6 +318,36 @@
                     <pre>        &lt;button onClick={onClick}&gt;{name}&lt;/button&gt;</pre>
                     <pre>    )</pre>
                     <pre>}</pre>
+                </code>
+            </div>
+        </section>
+        <hr>
+        <section id="topicSeven">
+            <h2>UseState:</h2>
+            <p>
+                O useState é um hook do React usado para criar estados em componentes funcionais. Ele permite que você armazene e atualize 
+                valores ao longo do tempo e os renderize em tela, diferente de quando se utiliza  uma variável comun, não atualiza em tela.
+            </p>
+            <li>Guarda estado da UI.</li>
+            <li>Causa re-render quando muda.</li>
+            <li>Exemplo: contador, campos de formulário.</li>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>const [valor, setValor] = useState(0);</pre>
+                </code>
+            </div>
+            <h4>E quando não queremos mostrar os dados mas queremos mante-los após o re-render?</h4>
+            <p>
+                Podemos usar o "useRef" quando não queremos exibir o dado na tela, mas ainda assim precisamos persistir seu valor entre 
+                renderizações. Ele não causa re-render do componente quando o valor muda, ao contrário do useState. Isso significa menos 
+                processamento, melhorando a performance. Além disso, o useRef é muito usado para manipular diretamente o DOM, como focar um 
+                input ou medir dimensões de elementos.
+            </p>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>const ref = useRef(0);</pre>
                 </code>
             </div>
         </section>
