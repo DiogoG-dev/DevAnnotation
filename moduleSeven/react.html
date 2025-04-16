@@ -24,6 +24,7 @@
             <a href="#topicFive">- Componentes e Props</a>
             <a href="#topicSix">- Eventos</a>
             <a href="#topicSeven">- UseState</a>
+            <a href="#topicEight">- UseEffect</a>
         </h5>
     </div>
     <main>
@@ -364,6 +365,56 @@
                     <pre>        value.current++;<span class="comment">// Incrementa o contador</span></pre>
                     <pre>    }</pre>
                     <pre>}</pre>
+                </code>
+            </div>
+        </section>
+        <hr>
+        <section id="topicEight">
+            <h2>UseEffect:</h2>
+            <p>
+                O useEffect é um hook do React que permite executar efeitos colaterais em componentes funcionais. Ou seja: coisas que 
+                acontecem "por fora" do fluxo normal do React, como:
+            </p>
+            <li>Buscar dados de uma API</li>
+            <li>Manipular o DOM diretamente</li>
+            <li>Usar timers (setTimeout, setInterval)</li>
+            <li>Escutar eventos (como scroll, resize)</li>
+            <h4>Estrutura:</h4>
+            <p>useEffect(() => { ... }, [dependências])</p>
+            <li>O primeiro argumento é uma função que será executada.</li>
+            <li>O segundo argumento é um array de dependências que diz quando o useEffect deve rodar.</li>
+            <h4>Ciclo de Vida:</h4>
+            <p><b>INÍCIO:</b> roda apenas uma vez (tipo componentDidMount)</p>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>useEffect(() => {</pre>
+                    <pre>  console.log("Executa só uma vez ao montar");</pre>
+                    <pre>}, []);</pre>
+                </code>
+            </div>
+            <p><b>DURANTE:</b> roda toda vez que algo mudar</p>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>useEffect(() => {</pre>
+                    <pre>  console.log("Roda sempre que 'nome' mudar");</pre>
+                    <pre>}, [nome]);</pre>
+                </code>
+            </div>
+            <p><b>FIM:</b> limpa algo quando o componente for desmontado</p>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>useEffect(() => {</pre>
+                    <pre>  const intervalo = setInterval(() => {</pre>
+                    <pre>    console.log("Rodando...");</pre>
+                    <pre>  }, 1000);</pre><br>
+                    <pre>  return () => {</pre>
+                    <pre>    clearInterval(intervalo);</pre>
+                    <pre>    console.log("Intervalo limpo!");</pre>
+                    <pre>  };</pre>
+                    <pre>}, []);</pre>
                 </code>
             </div>
         </section>
