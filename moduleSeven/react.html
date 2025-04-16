@@ -25,6 +25,7 @@
             <a href="#topicSix">- Eventos</a>
             <a href="#topicSeven">- UseState</a>
             <a href="#topicEight">- UseEffect</a>
+            <a href="#topicNine">- UseRef</a>
         </h5>
     </div>
     <main>
@@ -417,6 +418,35 @@
                     <pre>}, []);</pre>
                 </code>
             </div>
+        </section>
+        <hr>
+        <section id="topicNine">
+            <h2>UseRef:</h2>
+            <p>
+                A principal utilizade do useRef, além de evitar re-renderizações desnecessárias, como explicado anteriormente, é que ele 
+                nós ajuda a lidar com as referências dos elementos criados em tela. O useRef no React é um hook que serve para:
+            </p>
+            <li>Criar uma referência mutável que persiste durante o ciclo de vida do componente.</li>
+            <li>Acessar diretamente elementos DOM ou armazenar valores que não causam re-render quando atualizados.</li>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>export function SideBar() {</pre>
+                    <pre>   const video = useRef();</pre>
+                    <pre>   console.log("Render:", video.current);</pre><br>
+                    <pre>   useEffect(() => {</pre>
+                    <pre>       console.log("Depois da montagem:", video.current);</pre>
+                    <pre>   },[])</pre><br>
+                    <pre>   return (</pre>
+                    <pre>       &lt;video ref={video} /&gt;</pre>
+                    <pre>   )</pre>
+                    <pre>}</pre>
+                </code>
+            </div>
+            <h4>O que está acontecendo?</h4>
+            <li>Na renderização inicial, "video.current" ainda é "undefined", porque o DOM ainda não foi montado.</li>
+            <li>No "useEffect" com "[ ]", ele roda após a montagem, então o video.current já aponta para o elemento "&lt;video&gt;".</li>
+            <li>"ref={video}" conecta o DOM do vídeo à referência criada com "useRef".</li>
         </section>
         <!--End of Container Here-->
     </main>
