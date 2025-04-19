@@ -468,6 +468,21 @@
             </div>
             <p>Neste código o valor armazenado em "valorMemorizado" só será recalculado se os valores dos parâmetros mudarem.</p>
         </section>
+        <section id="topicTwelve">
+            <h2>UseCallBack:</h2>
+            <p>
+                Funciona da mesma forma do "useMemo", porém neste caso para armazenar e evitar recriar funções toda vez que o componente é 
+                atualizado.
+            </p>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>const funcaoMemorizada = useCallback(() => {</pre>
+                    <pre><span class="comment">  // lógica da função</span></pre>
+                    <pre>}, [dependencias]);</pre>
+                </code>
+            </div>
+        </section>
         <!--End of Container Here-->
     </main>
     <footer>
