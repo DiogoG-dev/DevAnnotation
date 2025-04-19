@@ -26,6 +26,8 @@
             <a href="#topicSeven">- UseState</a>
             <a href="#topicEight">- UseEffect</a>
             <a href="#topicNine">- UseRef</a>
+            <a href="#topicTen">- UseMemo</a>
+            <a href="#topicTwelve">- UseCallBack</a>
         </h5>
     </div>
     <main>
@@ -447,6 +449,24 @@
             <li>Na renderização inicial, "video.current" ainda é "undefined", porque o DOM ainda não foi montado.</li>
             <li>No "useEffect" com "[ ]", ele roda após a montagem, então o video.current já aponta para o elemento "&lt;video&gt;".</li>
             <li>"ref={video}" conecta o DOM do vídeo à referência criada com "useRef".</li>
+        </section>
+        <section id="topicTen">
+            <h2>UseMemo:</h2>
+            <p>
+                É um hook do React que serve para memorizar um valor calculado e evitar recomputações desnecessárias. Ele é útil quando você 
+                tem uma função pesada (custosa) ou um cálculo que só deveria ser refeito quando certos valores mudarem. Em outras palavras, 
+                mitiga a redundância de processamento salvando o resultado da primeira execução em cache e reexecutando somente quando as 
+                dependências mudam.
+            </p>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>const valorMemorizado = useMemo(() => {</pre>
+                    <pre>   return funcaoPesada(param1, param2);</pre>
+                    <pre>}, [param1, param2]);</pre>
+                </code>
+            </div>
+            <p>Neste código o valor armazenado em "valorMemorizado" só será recalculado se os valores dos parâmetros mudarem.</p>
         </section>
         <!--End of Container Here-->
     </main>
