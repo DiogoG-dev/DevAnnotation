@@ -28,6 +28,7 @@
             <a href="#topicNine">- UseRef</a>
             <a href="#topicTen">- UseMemo</a>
             <a href="#topicEleven">- UseCallback</a>
+            <a href="#topicTwelve">- UseContext</a>
         </h5>
     </div>
     <main>
@@ -489,7 +490,75 @@
             <li>Quando você quer evitar a criação de funções em loops de renderização.</li>
             <li>Quando a função depende de valores que mudam, e você quer controlar quando ela muda.</li>
         </section>
-        <section class="topicTwelve"></section>
+        <hr>
+        <section id="topicTwelve">
+            <h2>UseContext:</h2>
+            <p>
+                O "useContext" é utilizado quando se quer compartilhar ou armazenar dados ou funções globalmente. Ao envolver seus componentes 
+                com um Provider e passar um valor para ele, todos os filhos dentro desse Provider (e seus descendentes) terão acesso a esse 
+                valor, sem a necessidade de passar o valor como props.
+            </p>
+            <h4>Arquivo "Context.jsx":</h4>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>import { createContext } from 'react';</pre><br>
+                    <pre>export const TemaContext = createContext();</pre><br>
+                    <pre>export const MeuApp = ({children}) => {</pre>
+                    <pre>   const tema = 'dark';</pre>
+                    <pre>   return(</pre>
+                    <pre>       &lt;TemaContex.Provider value={tema}&gt;</pre>
+                    <pre>           {children}</pre>
+                    <pre>       &lt;/TemaContex.Provider&gt;</pre>
+                    <pre>}</pre>
+                    <pre></pre>
+                    <pre></pre>
+                </code>
+            </div>
+            <h4>Arquivo "Main.jsx":</h4>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>import { MeuApp } from './context/context.jsx'</pre><br>
+                    <pre>createRoot(document.getElementById('root')).render(</pre>
+                    <pre>  &lt;StrictMode&gt;</pre>
+                    <pre>    &lt;MeuApp&gt;</pre>
+                    <pre>      &lt;App /&gt;</pre>
+                    <pre>    &lt;/MeuApp&gt;</pre>
+                    <pre>  &lt;/StrictMode&gt;</pre>
+                    <pre>)</pre>
+                </code>
+            </div>
+            <h4>Arquivo "Button.jsx":</h4>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>import { TemaContext } from '../../context/context'</pre><br>
+                    <pre>export function Button({name, onClick}) {</pre>
+                    <pre>    const tema = useContext(TemaContext)</pre>
+                    <pre>    return (</pre>
+                    <pre>       &lt;&gt;</pre>
+                    <pre>           &lt;button onClick={() => {</pre>
+                    <pre>                onClick();</pre>
+                    <pre>                setLoading(!loading)</pre>
+                    <pre>            }}&gt;</pre>
+                    <pre>                {tema}</pre>
+                    <pre>            &lt;/button&gt;</pre>
+                    <pre>       &lt;/&gt;</pre>
+                    <pre>    )</pre>
+                    <pre>}</pre>
+                    <pre></pre>
+                    <pre></pre>
+                    <pre></pre>
+                    <pre></pre>
+                </code>
+            </div>
+            <h4>Analogia Simples:</h4>
+            <p>Pense no "Context" como um Wi-Fi da informação:</p>
+            <li>O Provider é o roteador → ele emite o sinal (dados/funções).</li>
+            <li>O useContext é o aparelho que se conecta a esse sinal.</li>
+            <li>Qualquer componente dentro do alcance do Provider pode usar o dado.</li>
+        </section>
         <!--End of Container Here-->
     </main>
     <footer>
