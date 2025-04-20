@@ -29,6 +29,7 @@
             <a href="#topicTen">- UseMemo</a>
             <a href="#topicEleven">- UseCallback</a>
             <a href="#topicTwelve">- UseContext</a>
+            <a href="#topicThirteen">- UseTransition</a>
         </h5>
     </div>
     <main>
@@ -558,6 +559,50 @@
             <li>O Provider é o roteador → ele emite o sinal (dados/funções).</li>
             <li>O useContext é o aparelho que se conecta a esse sinal.</li>
             <li>Qualquer componente dentro do alcance do Provider pode usar o dado.</li>
+        </section>
+        <hr>
+        <section id="topicThirteen">
+            <h2>UseTrasition:</h2>
+            <p>
+                O "useTransition" é um hook do React que te ajuda a marcar atualizações como "não urgentes". Isso permite que o React 
+                priorize as partes mais importantes da UI primeiro e deixe o que pode demorar um pouco mais para depois — sem travar a 
+                interface.
+            </p>
+            <h4>Exemplo de Uso:</h4>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>import { useState, useTransition } from 'react'</pre><br>
+                    <pre><span class="comment">// Lista de 20.000 produtos</span></pre>
+                    <pre>const productList = Array.from({length: 20000}, (_, i) => `Produto ${i + 1}`)</pre><br>
+                    <pre>const filterProducts = (search) => {</pre>
+                    <pre>    return productList.filter(product =></pre>
+                    <pre>        product.toLowerCase().includes(search.toLowerCase())</pre>
+                    <pre>    );</pre>
+                    <pre>}</pre><br>
+                    <pre>export function Content() {</pre>
+                    <pre>    const [search, setSearch] = useState('');</pre>
+                    <pre>    const products = filterProducts(search);</pre><br>
+                    <pre>    const [isPending, startTransition] = useTransition();</pre><br>
+                    <pre>    const handlerSearch = (event) => {</pre>
+                    <pre>        startTransition(() => setSearch(event.target.value));</pre>
+                    <pre>    }</pre><br>
+                    <pre>    return (</pre>
+                    <pre>        &lt;div&gt;</pre>
+                    <pre>            &lt;h2&gt;Produtos LJ&lt;/h2&gt;</pre>
+                    <pre>            &lt;input type="text" onChange={handlerSearch}/&gt;</pre><br>
+                    <pre>            {isPending ? </pre>
+                    <pre>            'Carregando' :</pre>
+                    <pre>            &lt;ul&gt;</pre>
+                    <pre>                {products.map((product, index) => (</pre>
+                    <pre>                    &lt;li key={index}&gt;{product}&lt;/li&gt;</pre>
+                    <pre>                ))}</pre>
+                    <pre>            &lt;/ul&gt;}</pre>
+                    <pre>        &lt;/div&gt;</pre>
+                    <pre>    )</pre>
+                    <pre>}</pre>
+                </code>
+            </div>
         </section>
         <!--End of Container Here-->
     </main>
