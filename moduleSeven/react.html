@@ -30,6 +30,7 @@
             <a href="#topicEleven">- UseCallback</a>
             <a href="#topicTwelve">- UseContext</a>
             <a href="#topicThirteen">- UseTransition</a>
+            <a href="#topicFourteen">- UseActionState</a>
         </h5>
     </div>
     <main>
@@ -601,6 +602,55 @@
                     <pre>        &lt;/div&gt;</pre>
                     <pre>    )</pre>
                     <pre>}</pre>
+                </code>
+            </div>
+        </section>
+        <hr>
+        <section id="topicFourteen">
+            <h2>UseActionState:</h2>
+            <p>
+                O "useActionState" é um hook do React (mais novo, introduzido no React 19) que serve para gerenciar o estado de uma ação 
+                assíncrona — tipo um formulário que envia dados para o servidor, ou um botão que executa uma ação e precisa atualizar a 
+                interface dependendo do resultado. Pensa nele como um useState, mas especializado para lidar com ações que podem demorar 
+                (tipo fetch, POST, etc).
+            </p>
+            <h4>A estrutura básica é assim:</h4>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>const [state, action] = useActionState(actionFunction, initialState);</pre>
+                </code>
+            </div>
+            <li><b>state:</b> é o estado atual, que pode mudar conforme a ação acontece.</li>
+            <li><b>action:</b> é a função que você chama para disparar a ação.</li>
+            <li><b>actionFunction:</b> é a função assíncrona que define como o estado vai mudar.</li>
+            <li><b>initialState:</b> o valor inicial do estado.</li>
+            <h2>Exemplo de Uso:</h2>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>import { useActionState } from 'react'</pre><br>
+                    <pre><span class="comment">// Função de login que valida email e senha</span></pre>
+                    <pre>export async function login(state, formData) {</pre>
+                    <pre>    if( formData.get('email') === 'diogo@gmail.com' && formData.get('password') === '12345678') {</pre>
+                    <pre>        return 'Login realizado com sucesso!'</pre>
+                    <pre>    } else {</pre>
+                    <pre>        return 'Login recusado!'</pre>
+                    <pre>    }</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Componente de formulário de login</span></pre>
+                    <pre>export function Form() {</pre>
+                    <pre>    const [response, formAction, isPending] = useActionState(login, null);</pre><br>
+                    <pre>    return (</pre>
+                    <pre>        &lt;form className='formLogin' action={formAction}&gt;</pre>
+                    <pre>            &lt;input type='email' name='email' className='inputs inputEmail' placeholder='Usuário'/&gt;</pre>
+                    <pre>            &lt;input type='password' name='password' className='inputs inputPassword' placeholder='Senha'/&gt;</pre>
+                    <pre>            &lt;button type='submit'&gt;Entrar&lt;/button&gt;</pre>
+                    <pre>            {isPending ? 'Carregando...' : response}</pre>
+                    <pre>        &lt;/form&gt;</pre>
+                    <pre>    )</pre>
+                    <pre>}</pre>
+
                 </code>
             </div>
         </section>
