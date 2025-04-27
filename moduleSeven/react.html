@@ -31,6 +31,7 @@
             <a href="#topicTwelve">- UseContext</a>
             <a href="#topicThirteen">- UseTransition</a>
             <a href="#topicFourteen">- UseActionState</a>
+            <a href="#topicFifteen">- UseOptimistic</a>
         </h5>
     </div>
     <main>
@@ -650,7 +651,75 @@
                     <pre>        &lt;/form&gt;</pre>
                     <pre>    )</pre>
                     <pre>}</pre>
-
+                </code>
+            </div>
+        </section>
+        <hr>
+        <section id="topicFifteen">
+            <h2>UseOptimistic:</h2>
+            <p>
+                O useOptimisticé um React Hook que permite exibir um estado diferente enquanto uma ação assíncrona está em andamento. Ele 
+                aceita um estado como argumento e retorna uma cópia desse estado, que pode ser diferente durante a duração de uma ação 
+                assíncrona, como uma solicitação de rede. O conceito é assumir que a operação será bem-sucedida e refletir isso na UI 
+                imediatamente. Caso o servidor não confirme (ou retorne um erro), você reverte a mudança.
+            </p>
+            <h4>Exemplo de Uso:</h4>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre><span class="comment">// Importando hooks necessários</span></pre>
+                    <pre>import { useOptimistic, useState, useRef } from "react";</pre><br>
+                    <pre><span class="comment">// Função simulando o envio da mensagem com delay</span></pre>
+                    <pre>async function deliverMessage(message) {</pre>
+                    <pre>    await new Promise((res) => setTimeout(res, 2000))</pre>
+                    <pre>    return message</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Componente de Thread que exibe as mensagens e gerencia o envio</span></pre>
+                    <pre>function Thread({messages, sendMessage}) {</pre>
+                    <pre>    const formRef = useRef();</pre>
+                    <pre><span class="comment">// Hook que controla mensagens otimistas, para simular envio</span></pre>
+                    <pre>    const [optimisticMessages, addOptimisticMessage] = useOptimistic(</pre>
+                    <pre>        messages,</pre>
+                    <pre>        (state, newMessage) => [</pre>
+                    <pre>            ...state,</pre>
+                    <pre>            {</pre>
+                    <pre>                text: newMessage,</pre>
+                    <pre>                sending: true</pre>
+                    <pre>            }</pre>
+                    <pre>        ]</pre>
+                    <pre>    );</pre>
+                    <pre><span class="comment">// Função acionada no envio do formulário</span></pre>
+                    <pre>    async function formAction(formData) {</pre>
+                    <pre>        addOptimisticMessage(formData.get('message'));</pre>
+                    <pre>        formRef.current.reset();</pre>
+                    <pre>        await sendMessage(formData);</pre>
+                    <pre>    }</pre>
+                    <pre><span class="comment">// Renderizando as mensagens com estilo de envio otimista</span></pre>
+                    <pre>    return (</pre>
+                    <pre>        &lt;&gt;</pre>
+                    <pre>            {optimisticMessages.map((message, index) =&gt; (</pre>
+                    <pre>                &lt;div key={index} style={{color: message.sending ? 'gray' : 'black'}}&gt;</pre>
+                    <pre>                    {message.text}</pre>
+                    <pre>                &lt;/div&gt;</pre>
+                    <pre>            ))}</pre>
+                    <pre>            &lt;form action={formAction} ref={formRef}&gt;</pre>
+                    <pre>                &lt;input type="text" name='message' placeholder="Digite algo..." /&gt;</pre>
+                    <pre>                &lt;button type="submit"&gt;Enviar&lt;/button&gt;</pre>
+                    <pre>            &lt;/form&gt;</pre>
+                    <pre>        &lt;/&gt;</pre>
+                    <pre>    )</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Componente Chat gerenciando as mensagens</span></pre>
+                    <pre>export default function Chat() {</pre>
+                    <pre>    const [messages, setMessage] = useState([]);</pre>
+                    <pre><span class="comment">// Função para simular o envio e atualização das mensagens</span></pre>
+                    <pre>    async function sendMessage(formData) {</pre>
+                    <pre>        const sentMessage = await deliverMessage(formData.get('message'))</pre>
+                    <pre>        setMessage((messages) =&gt; [...messages, { text: sentMessage }])</pre>
+                    <pre>    }</pre>
+                    <pre><span class="comment">// Renderizando o componente Thread</span></pre>
+                    <pre>    return &lt;Thread messages={messages} sendMessage={sendMessage} /&gt;</pre>
+                    <pre>}</pre>
                 </code>
             </div>
         </section>
