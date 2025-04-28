@@ -32,6 +32,7 @@
             <a href="#topicThirteen">- UseTransition</a>
             <a href="#topicFourteen">- UseActionState</a>
             <a href="#topicFifteen">- UseOptimistic</a>
+            <a href="#topicSixteen">- Rotas</a>
         </h5>
     </div>
     <main>
@@ -720,6 +721,116 @@
                     <pre><span class="comment">// Renderizando o componente Thread</span></pre>
                     <pre>    return &lt;Thread messages={messages} sendMessage={sendMessage} /&gt;</pre>
                     <pre>}</pre>
+                </code>
+            </div>
+        </section>
+        <hr>
+        <section id="topicSixteen">
+            <h2>Rotas:</h2>
+            <p>
+                Em React, rotas são a forma de fazer navegação entre páginas de um site ou aplicação, sem recarregar o navegador inteiro. 
+                Ou seja, você pode mudar de "página" dentro do app, mas tudo continua funcionando rápido e sem aquele carregamento 
+                tradicional de sites.
+            </p>
+            <h4>BrowserRouter:</h4>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>import App from './App.jsx'</pre>
+                    <pre>import { StrictMode } from 'react'</pre>
+                    <pre>import { createRoot } from 'react-dom/client'</pre>
+                    <pre>import { BrowserRouter } from 'react-router-dom'; <span class="comment">// Importando-o</span></pre><br>
+                    <pre>createRoot(document.getElementById('root')).render(</pre>
+                    <pre>  &lt;StrictMode&gt;</pre>
+                    <pre>    &lt;BrowserRouter&gt; <span class="comment">// Envolve toda a aplicação para habilitar o sistema de rotas</span></pre>
+                    <pre>      &lt;App /&gt;</pre>
+                    <pre>    &lt;/BrowserRouter&gt;</pre>
+                    <pre>  &lt;/StrictMode&gt;</pre>
+                    <pre>)</pre>
+                </code>
+            </div>
+            <h4>Routes e Route:</h4>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>import { Login } from './pages/login';</pre>
+                    <pre>import { ChatPage } from './pages/ChatPage';</pre>
+                    <pre>import { Routes, Route } from 'react-router-dom'; <span class="comment">// Importando-os</span></pre><br>
+                    <pre>function App() {</pre>
+                    <pre>  return (</pre>
+                    <pre>    &lt;Routes&gt; <span class="comment">// Contém todas as rotas</span></pre>
+                    <pre>      &lt;Route path='/' element={&lt;Login /&gt;} /&gt; <span class="comment">// Rota, cada uma com seu caminho e componente a ser exibido</span></pre>
+                    <pre>      &lt;Route path='/chat' element={&lt;ChatPage /&gt;} /&gt; <span class="comment">// Rota</span></pre>
+                    <pre>    &lt;/Routes&gt;</pre>
+                    <pre>  )</pre>
+                    <pre>}</pre><br>
+                    <pre>export default App</pre>
+                </code>
+            </div>
+            <h4>Rota Dinâmica:</h4>
+            <p>
+                Rotas dinâmicas são rotas que mudam conforme o conteúdo. Por exemplo, se você tem vários produtos, cada um com seu id, você 
+                não cria uma rota para cada produto manualmente. Você cria uma rota genérica que muda de acordo com o parâmetro.
+            </p>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>&lt;Route path="/produto/:id" element={&lt;Produto /&gt;} /&gt; <span class="comment">// Rota dinâmica</span></pre>
+                </code>
+            </div>
+            <h4>Link:</h4>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>import { Link } from 'react-router-dom'; <span class="comment">// Importando-o</span></pre><br>
+                    <pre>function Navbar() {</pre>
+                    <pre>  return (</pre>
+                    <pre>    &lt;nav&gt;</pre>
+                    <pre>      &lt;Link to="/"&gt;Início&lt;/Link&gt; <span class="comment">// Link de navegação para a rota, se existir</span></pre>
+                    <pre>      &lt;Link to="/sobre"&gt;Sobre&lt;/Link&gt; <span class="comment">// Link de navegação para a rota, se existir</span></pre>
+                    <pre>    &lt;/nav&gt;</pre>
+                    <pre>  )</pre>
+                    <pre>}</pre><br>
+                    <pre>export default Navbar</pre>
+                </code>
+            </div>
+            <h4>Navigate:</h4>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>import { useNavigate } from 'react-router-dom'; <span class="comment">// Importando-o</span></pre>
+                    <pre>function Home() {</pre>
+                    <pre>  const navigate = useNavigate();</pre><br>
+                    <pre>  function irParaSobre() {</pre>
+                    <pre>    navigate('/sobre');</pre>
+                    <pre>  }</pre><br>
+                    <pre>  return (</pre>
+                    <pre>    &lt;div&gt;</pre>
+                    <pre>      &lt;h1&gt;Home&lt;/h1&gt;</pre>
+                    <pre>      &lt;button onClick={irParaSobre}&gt;Ir para Sobre&lt;/button&gt;</pre>
+                    <pre>    &lt;/div&gt;</pre>
+                    <pre>  );</pre>
+                    <pre>}</pre><br>
+                    <pre>export default Home;</pre>
+                </code>
+            </div>
+            <h4>UseParams:</h4>
+            <p>É utilizado para acessar os valor passados na URL</p>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>import { useParams } from 'react-router-dom'; <span class="comment">// Importando-o</span></pre><br>
+                    <pre>function Produto() {</pre>
+                    <pre></pre>
+                    <pre>  const { id } = useParams(); <span class="comment">// Pega o valor do id da URL</span></pre><br>
+                    <pre>  return (</pre>
+                    <pre>    &lt;div&gt;</pre>
+                    <pre>      &lt;h1&gt;Produto {id}&lt;/h1&gt;</pre>
+                    <pre>      &lt;p&gt;Mostrando detalhes do produto {id}&lt;/p&gt;</pre>
+                    <pre>    &lt;/div&gt;</pre>
+                    <pre>  );</pre>
+                    <pre>}</pre><br>
+                    <pre>export default Produto;</pre>
                 </code>
             </div>
         </section>
