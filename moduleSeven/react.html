@@ -35,6 +35,7 @@
             <a href="#topicSixteen">- Rotas</a>
             <a href="#topicSeventeen">- PropTypes</a>
             <a href="#topicEighteen">- Lazy e Suspense</a>
+            <a href="#topicNineteen">- Memo</a>
         </h5>
     </div>
     <main>
@@ -912,6 +913,28 @@
             </div>
             <li>O fallback é o que será renderizado enquanto o componente estiver sendo carregado.</li>
             <li>Assim que o carregamento for concluído, MeuComponente será exibido normalmente.</li>
+        </section>
+        <hr>
+        <section id="topicNineteen">
+            <h2>Memo:</h2>
+            <p>
+                É uma função de alta ordem que memoriza um componente funcional, evitando que ele re-renderize desnecessariamente. Ou seja, 
+                ele só vai re-renderizar se as props mudarem.
+            </p>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>import React from 'react';</pre><br>
+                    <pre><span class="comment">// Componente funcional que recebe uma prop "nome"</span></pre>
+                    <pre>function Saudacao({ nome }) {</pre>
+                    <pre>  console.log('Renderizou Saudacao'); <span class="comment">// Loga no console sempre que o componente renderiza</span></pre>
+                    <pre>  return &lt;h2&gt;Olá, {nome}!&lt;/h2&gt;;</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// React.memo evita renderizações desnecessárias se as props não mudarem</span></pre>
+                    <pre>export default React.memo(Saudacao);</pre>
+                </code>
+            </div>
+            <li>Se props.nome não mudar, o React não vai re-renderizar MeuComponente na próxima atualização.</li>
         </section>
         <!--End of Container Here-->
     </main>
