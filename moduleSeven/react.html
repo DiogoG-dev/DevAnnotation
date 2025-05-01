@@ -33,6 +33,7 @@
             <a href="#topicFourteen">- UseActionState</a>
             <a href="#topicFifteen">- UseOptimistic</a>
             <a href="#topicSixteen">- Rotas</a>
+            <a href="#topicSeventeen">- PropTypes</a>
         </h5>
     </div>
     <main>
@@ -831,6 +832,36 @@
                     <pre>  );</pre>
                     <pre>}</pre><br>
                     <pre>export default Produto;</pre>
+                </code>
+            </div>
+        </section>
+        <hr>
+        <section id="topicSeventeen">
+            <h2>PropTypes:</h2>
+            <p>
+                O propTypes no React são uma forma de verificação de tipos (type checking) para as propriedades (props) que um componente 
+                recebe. Eles ajudam a garantir que os dados passados para o componente sejam do tipo esperado, o que reduz erros e facilita 
+                a manutenção do código.
+            </p>
+            <h4>Para que servem?</h4>
+            <li>Avisam no console se uma prop está faltando ou é do tipo errado.</li>
+            <li>São úteis durante o desenvolvimento (não impedem o app de funcionar, apenas avisam).</li>
+            <h4>Exemplo de Uso:</h4>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>import React from 'react';</pre>
+                    <pre>import PropTypes from 'prop-types';</pre><br>
+                    <pre><span class="comment">// Componente funcional que recebe props nome e idade</span></pre>
+                    <pre>function Saudacao({ nome, idade }) {</pre>
+                    <pre>  return &lt;h1&gt;Olá, {nome}! Você tem {idade} anos.&lt;/h1&gt;;</pre>
+                    <pre>}</pre><br>
+                    <pre><span class="comment">// Definindo os tipos esperados para as props</span></pre>
+                    <pre>Saudacao.propTypes = {</pre>
+                    <pre>  nome: PropTypes.string.isRequired, <span class="comment">// nome deve ser uma string obrigatória</span></pre>
+                    <pre>  idade: PropTypes.number <span class="comment">// idade deve ser um número (opcional)</span></pre>
+                    <pre>};</pre><br>
+                    <pre>export default Saudacao;</pre>
                 </code>
             </div>
         </section>
