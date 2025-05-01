@@ -34,6 +34,7 @@
             <a href="#topicFifteen">- UseOptimistic</a>
             <a href="#topicSixteen">- Rotas</a>
             <a href="#topicSeventeen">- PropTypes</a>
+            <a href="#topicEighteen">- Lazy e Suspense</a>
         </h5>
     </div>
     <main>
@@ -864,6 +865,53 @@
                     <pre>export default Saudacao;</pre>
                 </code>
             </div>
+        </section>
+        <hr>
+        <section id="topicEighteen">
+            <h2>Lazy e Supense:</h2>
+            <p>
+                O lazy e o Suspense no React, que são ferramentas usadas para otimizar o carregamento de componentes — especialmente úteis 
+                quando trabalhamos com code-splitting.
+            </p>
+            <h4>Lazy:</h4>
+            <p>
+                Permite carregar componentes sob demanda, ou seja, só quando eles forem realmente necessários (lazy loading). Isso reduz o 
+                tamanho inicial do bundle e melhora a performance da aplicação.
+            </p>
+            <li>O componente será carregado somente quando for renderizado.</li>
+            <li>O import() retorna uma Promise que carrega o módulo dinamicamente.</li>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>const MeuComponente = React.lazy(() => import('./MeuComponente'));</pre>
+                </code>
+            </div>
+            <h4>Suspense:</h4>
+            <p>
+                É usado junto com React.lazy para indicar o que deve ser exibido enquanto o componente está sendo carregado. Por exemplo, 
+                um spinner ou uma mensagem de "Carregando...".
+            </p>
+            <div class="card">
+                <span class="comment">[ jsx ]</span>
+                <code>
+                    <pre>import React, { Suspense } from 'react';</pre><br>
+                    <pre><span class="comment">// Carregamento dinâmico do componente</span></pre>
+                    <pre>const MeuComponente = React.lazy(() =&gt; import('./MeuComponente'));</pre><br>
+                    <pre><span class="comment">// Componente principal da aplicação</span></pre>
+                    <pre>function App() {</pre>
+                    <pre>  return (</pre>
+                    <pre>    &lt;div&gt;</pre>
+                    <pre>      &lt;h1&gt;Minha aplicação&lt;/h1&gt;</pre>
+                    <pre>      &lt;Suspense fallback={&lt;p&gt;Carregando componente...&lt;/p&gt;}&gt;</pre>
+                    <pre>        &lt;MeuComponente /&gt;</pre>
+                    <pre>      &lt;/Suspense&gt;</pre>
+                    <pre>    &lt;/div&gt;</pre>
+                    <pre>  );</pre>
+                    <pre>}</pre>
+                </code>
+            </div>
+            <li>O fallback é o que será renderizado enquanto o componente estiver sendo carregado.</li>
+            <li>Assim que o carregamento for concluído, MeuComponente será exibido normalmente.</li>
         </section>
         <!--End of Container Here-->
     </main>
