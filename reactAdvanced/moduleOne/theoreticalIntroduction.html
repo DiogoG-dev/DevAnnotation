@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/cards.css">
+    <link rel="stylesheet" href="theoreticalIntroduction.css">
+    <title>DevAnnotation</title>
+</head>
+<body>
+    <header>
+        <div class="textAlignCenter">
+            <a class="return" href="../index.html"><h3>Voltar</h3></a>
+            <h1><a href="#">Introdução Teórica</a></h1>
+        </div>
+    </header>
+    <div class="selectSection">
+        <h5>
+            <p class="textAlignCenter">Tópicos do Módulo</p>
+            <a href="#topicOne">- Introdução ao Next</a>
+        </h5>
+    </div>
+    <main>
+        <section id="topicOne">
+            <h2>Introdução ao Next:</h2>
+            <p>
+                O Next é um framework desenvolvido a partir do ReactJS em 2016 por Guilherme Rauch (Cofundador da Vercel), é sistema 
+                opinativo com estrutura e ferramentas já definidas. Para evitar a criação de conceitos especificos que atrasam o projeto.
+            </p>
+            <h4>O que o Next tem/faz?</h4>
+            <li>Tem suporte a SPA, SSG e SSR</li>
+            <li>Contém o CSS no Javascript</li>
+            <li>Não a necessidade de configuração inicial (rotas, hot reloding, code splitting, etc, são por padrão)</li>
+            <li>100% extensível (Controle completo)</li>
+            <li>E otimizado para a produção</li>
+            <h3>SSG:</h3>
+            <p>
+                É útil para sites simples, sem muita interação, quando o conteúdo muda pouco. Quando se quer uma performance maior, como em 
+                Landing Pages, Blogs, Portifólios, etc.
+            </p>
+            <div class="advantageDisadvantage-continer">
+                <div class="advantage-content">
+                    <h4>Vantagens:</h4>
+                    <li>Uso quase nulo do servidor</li>
+                    <li>Pode ser servido numa CDN</li>
+                    <li>Melhor performance</li>
+                    <li>Flexibilidade para usar qualquer servidor</li></div>
+                <div class="disadvantage-content">
+                    <h4>Desvantagens:</h4>
+                    <li>Tempo de build maior</li>
+                    <li>Dificuldade de escalar a aplicação</li>
+                    <li>Dificuldade de lançar atualizações constantes</li>
+                </div>
+            </div>
+            <h3>SPA:</h3>
+            <p>
+                Ideal para sites que exigem inúmeras interações sem refresh, informações diferentes para diferentes usuários, autenticação 
+                do usuário e sem muita necessidade de indexar informações, como Twitter Web, Facebook Web, Spotify, Sites internos de 
+                empresas, etc.
+            </p>
+            <div class="advantageDisadvantage-continer">
+                <div class="advantage-content">
+                    <h4>Vantagens:</h4>
+                    <li>Permite interações sem carregar</li>
+                    <li>Site rápido após o primeiro carregamento</li>
+                    <li>Otimo para aplicações Web</li>
+                    <li>Possui diversas bibliotecas</li>
+                </div>
+                <div class="disadvantage-content">
+                    <h4>Desvantagens:</h4>
+                    <li>Carregamento inicial demorado</li>
+                    <li>Performance imprevisível</li>
+                    <li>Dificuldade no SEO</li>
+                    <li>A maioria do conteúdo não é indexado</li>
+                </div>
+            </div>
+            <h3>SSR:</h3>
+            <p>
+                Utilizado quando se quer um SPA com carregamento menor, quando o conteúdo é dinâmico, contêm muitas páginas e quando se quer 
+                ótima indexação de conteúdo, como em Ecommerces, Sites de Notícias, etc.
+            </p>
+            <div class="advantageDisadvantage-continer">
+                <div class="advantage-content">
+                    <h4>Vantagens:</h4>
+                    <li>Ótimos para SEO</li>
+                    <li>Meta tags com previews mais adequados</li>
+                    <li>Melhor performance para o usuário</li>
+                    <li>Código compartilhado com o backend Node</li>
+                    <li>Menor processamento no usuário</li>
+                </div>
+                <div class="disadvantage-content">
+                    <h4>Desvantagens:</h4>
+                    <li>Demora no primeiro carregamento</li>
+                    <li>HTML maior</li>
+                    <li>Reload completo nas mudanças de rota* (pode ser contornado com macetes)</li>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <!--End of Container Here-->
+    </main>
+    <footer>
+        <p class="textAlignCenter">
+            <small>&copy; 2025 Diogo Gabriel - <b>Desenvolvido para compartilhar conhecimento sobre programação e design web</b>. Todos os 
+            direitos reservados.</small>
+        </p>
+    </footer>
+</body>
+</html>

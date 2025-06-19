@@ -1,0 +1,16 @@
+.advantageDisadvantage-continer {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.advantageDisadvantage-continer h4 {
+    margin-top: 0;
+}
+
+.advantage-content, .disadvantage-content {
+    width: 50%;
+}
